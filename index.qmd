@@ -20,6 +20,7 @@ about:
       text: Email
       href: samdani1593@gmail.com
 ---
+
 ### Welcome!
 
 I am Samdani Ansar and I am a PostDoctoral Fellow student in the [Strucural Bioinformatics & Cheinformatics](https://www.icoa.fr/fr/bonnet) group of [Prof. Dr. Pascal Bonnet](https://www.icoa.fr/fr/bonnet/equipe) at the [Institut de Chimie Organique et Analytique](https://www.icoa.fr/) (ICOA). I work under the supervision of [Samia ACI-SÈCHE](https://www.icoa.fr/fr/content/samia-aci-s%C3%A8che) on Computational PROTAC modelling.
@@ -67,3 +68,7 @@ I did my Ph.D. in Bioinformatics from SASTRA Deemed to be University, India unde
 <p class="custom-subtitle">{{< fa medal >}} **Anna University Rank holder, 2018**</p>   
 <p class="custom-subtitle2">University 8<sup>th<sup></p>  
 </div>
+
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
