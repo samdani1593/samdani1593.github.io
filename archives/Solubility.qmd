@@ -1,0 +1,20 @@
+---
+title: "LogP calculation"
+subtitle: "Articles on ligand logP prediction using ML and other methods"
+toc: false
+categories:
+- Cheminformatics
+---
+
+* [2023 A Computational Physics-based Approach to Predict Unbound Brain-to-Plasma Partition Coefficient, Kp,uuA Computational Physics-based Approach to Predict Unbound Brain-to-Plasma Partition Coefficient, Kp,uu](https://doi.org/10.1021/acs.jcim.3c00150https://doi.org/10.1021/acs.jcim.3c00150){target="_blank"}
+* [2023 Improved GNNs for Log D7.4 Prediction by Transferring Knowledge from Low-Fidelity Data](https://doi.org/10.1021/acs.jcim.2c01564){target="_blank"}
+* [2023 MolTaut: A Tool for the Rapid Generation of Favorable Tautomer in Aqueous Solution](https://doi.org/10.1021/acs.jcim.2c01393){target="_blank"}
+* [2023 Using Machine Learning To Predict Partition Coefficient (Log P) and Distribution Coefficient (Log D) with Molecular Descriptors and Liquid Chromatography Retention Time](https://doi.org/10.1021/acs.jcim.2c01373){target="_blank"}
+* [2023 Machine Learning for Fast, Quantum Mechanics-Based Approximation of Drug Lipophilicity](https://doi.org/10.1021/acsomega.2c05607){target="_blank"}
+* [2023 SAMPL9 blind predictions for toluene/water partition coefficients using nonequilibrium alchemical approaches](https://doi.org/10.1063/5.0143824){target="_blank"}
+* [2022 ALipSol: An Attention-Driven Mixture-of-Experts Model for Lipophilicity and Solubility Prediction](https://doi.org/10.1021/acs.jcim.2c01290){target="_blank"}
+* [2022 Predicting octanol/water partition coefficients and pKa for the SAMPL7 challenge using the SM12, SM8 and SMD solvation models](https://doi.org/10.1007/s10822-022-00474-1){target="_blank"}
+* [2021 Multitask machine learning models for predicting lipophilicity (logP) in the SAMPL7 challenge](https://doi.org/10.1007/s10822-021-00405-6){target="_blank"}
+* [2021 Precise force-field-based calculations of octanol-water partition coefficients for the SAMPL7 molecules](https://doi.org/10.1007/s10822-021-00407-4){target="_blank"}
+* [2021 SAMPL7 blind challenge: quantum–mechanical prediction of partition coefficients and acid dissociation constants for small drug-like molecules](https://doi.org/10.1007/s10822-021-00402-9){target="_blank"}
+

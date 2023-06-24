@@ -1,0 +1,13 @@
+---
+title: "Interesting articles"
+subtitle: "Articles on different topics"
+toc: false
+categories:
+- Others
+---
+
+* [2023 Structure property relationships of fluorinated carboxylic acid bioisosteres](https://doi.org/10.1016/j.bmcl.2023.129363){target="_blank"}
+* [2022 Observing Noncovalent Interactions in Experimental Electron Density for Macromolecular Systems: A Novel Perspective for Protein–Ligand Interaction Research](https://doi.org/10.1021/acs.jcim.1c01406){target="_blank"}
+* [2022 Analysis of protein structures containing HEPES and MES molecules](https://doi.org/10.1002/pro.4415){target="_blank"}
+* [2019 Finding High-Quality Metal Ion-Centric Regions Across the Worldwide Protein Data Bank](https://doi.org/10.3390/molecules24173179){target="_blank"}
+* [2019 Evaluating Unexpectedly Short Non-covalent Distances in X-ray Crystal Structures of Proteins with Electronic Structure Analysis](https://doi.org/10.1021/acs.jcim.9b00144){target="_blank"}

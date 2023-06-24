@@ -1,0 +1,20 @@
+---
+title: "PROTAC Reviews"
+subtitle: "Review articles on PROTAC"
+categories:
+- PROTAC
+toc: false
+---
+* [2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs](https://doi.org/10.1016/j.bmc.2023.117334){target="_blank"}
+* [2023 Computer aided drug design in the development of proteolysis targeting chimeras](https://doi.org/10.1016/j.csbj.2023.02.042){target="_blank"}
+* [2023 Progress of small molecules for targeted protein degradation: PROTACs and other technologies](https://doi.org/10.1002/ddr.22026){target="_blank"}
+* [2023 The most common linkers in bioactive molecules and their bioisosteric replacement network](https://doi.org/10.1016/j.bmc.2023.117194){target="_blank"}
+* [2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs](https://doi.org/10.1016/j.bmc.2023.117334){target="_blank"}
+* [2023 Design and Evaluation of a Low Hydrogen Bond Donor Count Fragment Screening Set to Aid Hit Generation of PROTACs Intended for Oral Delivery](https://doi.org/10.1021/acs.jmedchem.3c00493){target="_blank"}
+* [2022 Biochemical Principles of Targeted Protein Degradation](https://doi.org/10.1002/9781119774198.ch10){target="_blank"}
+* [2022 Cellular Principles of Targeted Protein Degradation](https://doi.org/10.1002/9783527836208.ch2){target="_blank"}
+* [2022 Inducing Targeted Protein Degradation: From Chemical Biology to Drug Discovery and Clinical Applications](10.1002/9783527836208){target="_blank"}
+
+
+
+

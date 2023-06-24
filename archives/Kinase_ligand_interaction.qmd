@@ -1,0 +1,15 @@
+---
+title: "Kinase ligand interaction"
+subtitle: "Articles about different inhibitors interaction pattern with kinases"
+categories:
+- Kinome
+toc: false
+---
+
+* [2023 How Ligands Interact with the Kinase Hinge](https://doi.org/10.26434/chemrxiv-2023-lspmv){target="_blank"}
+* [2023 Analysis of KRAS–Ligand Interaction Modes and Flexibilities Reveals the Binding Characteristics](https://doi.org/10.1021/acs.jcim.3c00097){target="_blank"}
+* [2023 Rigid Scaffolds are Promising for Designing Macrocyclic Kinase Inhibitors](https://doi.org/10.1101/2023.03.17.533119){target="_blank"}
+* [2020 C─H⋯O hydrogen bonds in kinase-inhibitor interfaces](https://doi.org/10.1002/iub.2282){target="_blank"}
+
+
+

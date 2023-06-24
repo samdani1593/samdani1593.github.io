@@ -1,0 +1,11 @@
+---
+title: "Ligand preparion tools"
+subtitle: "Articles of softwares for ligand preparation for Virtual screening"
+toc: false
+categories:
+- Structural Bioinformatics
+---
+
+* [2019 Gypsum-DL: an open-source program for preparing small-molecule libraries for structure-based virtual screening](https://doi.org/10.1186/s13321-019-0358-3){target="_blank"}
+
+

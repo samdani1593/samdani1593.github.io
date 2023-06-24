@@ -1,0 +1,10 @@
+---
+title: "QM/MM MD simulation"
+subtitle: "Articles on QM/MM MD simulation"
+categories:
+- Molecular Dynamics simulation
+toc: false
+---
+
+
+* [2023 Drug Design in the Exascale Era: A Perspective from Massively Parallel QM/MM Simulations](https://doi.org/10.1021/acs.jcim.3c00557){target="_blank"}

@@ -1,0 +1,16 @@
+---
+title: "Quantum Mechanics"
+subtitle: "Articles on QM"
+toc: false
+categories:
+- QM
+---
+
+
+* [2023 QDπ: A Quantum Deep Potential Interaction Model for Drug Discovery](https://doi.org/10.1021/acs.jctc.2c01172){target="_blank"}
+* [2023 How well do semiempirical QM methods describe the structure of proteins?](https://doi.org/10.1063/5.0135091){target="_blank"}
+* [2023 Best Practices on QM/MM Simulations of Biological Systems](https://doi.org/10.1021/acs.jcim.2c01522){target="_blank"}
+* [2023 MiMiCPy: An Efficient Toolkit for MiMiC-Based QM/MM Simulations](https://doi.org/10.1021/acs.jcim.2c01620){target="_blank"}
+* [2023 Combining QM/MM Calculations with Classical Mining Minima to Predict Protein–Ligand Binding Free Energy](https://doi.org/10.1021/acs.jcim.2c01637){target="_blank"}
+* [2020 Benchmarking of Semiempirical Quantum-Mechanical Methods on Systems Relevant to Computer-Aided Drug Design](https://pubs.acs.org/doi/10.1021/acs.jcim.9b01171){target="_blank"}
+* [2020 SQM/COSMO Scoring Function: Reliable Quantum-Mechanical Tool for Sampling and Ranking in Structure-Based Drug Design](https://doi.org/10.1002/cplu.202000120){target="_blank"}

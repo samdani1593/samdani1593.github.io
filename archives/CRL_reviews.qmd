@@ -1,0 +1,23 @@
+---
+title: "CRL complex"
+subtitle: "Articles related to CRL complex reviews"
+toc: false
+categories:
+- PROTAC
+---
+
+* [2023 CAND1 orchestrates CRLs through rock and roll](https://doi.org/10.1016/j.cell.2023.04.001){target="_blank"}
+* [2023 Activity-based profiling of cullin-RING ligase networks by conformation-specific probes](https://doi.org/10.1101/2023.01.14.524048){target="_blank"}
+* [2023 Ubiquitin-independent proteasomal degradation driven by C-degron pathways](https://doi.org/10.1016/j.molcel.2023.04.023){target="_blank"}
+* [2022 E3 Ubiquitin Ligases as Molecular Machines and Platforms for Drug Development](https://doi.org/10.1002/9783527836208.ch3){target="_blank"}
+* [2021 UbiNet 2.0: a verified, classified, annotated and updated database of E3 ubiquitin ligase–substrate interactions](https://doi.org/10.1093/database/baab010){target="_blank"}
+* [2021 NEDD8 and ubiquitin ligation by cullin-RING E3 ligases](https://doi.org/10.1016/j.sbi.2020.10.007){target="_blank"}
+* [2021 An E3 ligase guide to the galaxy of small-molecule-induced protein degradation](https://doi.org/10.1016/j.chembiol.2021.04.002){target="_blank"}
+* [2021 Building ubiquitination machineries: E3 ligase multi-subunit assembly and substrate targeting by PROTACs and molecular glues](https://doi.org/10.1016/j.sbi.2020.10.009){target="_blank"}
+* [2020 Structural Biology of CRL Ubiquitin Ligases](https://doi.org/10.1007/978-981-15-1025-0_2){target="_blank"}
+* [2011 The cullin protein family](https://doi.org/10.1186/gb-2011-12-4-220){target="_blank"}
+
+
+
+
+

@@ -1,0 +1,55 @@
+---
+title: "PROTAC applicability"
+subtitle: "Articles related to PROAC used in different targeting"
+toc: false
+categories:
+- PROTAC
+---
+
+## Virus
+
+* [2023 Antiviral PROTACs: Opportunity borne with challenge](https://doi.org/10.1016/j.cellin.2023.100092){target="_blank"}
+* [2023 Recent Advances in PROTAC-Based Antiviral Strategies](https://doi.org/10.3390%2Fvaccines11020270){target="_blank"}
+* [2022 A new route to vaccines using PROTACs](https://doi.org/10.1038/s41587-022-01406-y){target="_blank"}
+* [2022 Proteolysis targeting chimeras in antiviral research](https://doi.org/10.4155/fmc-2022-0005){target="_blank"}
+
+
+## Generalised
+
+* [2022 Targeted Protein Degradation for Infectious Diseases: from Basic Biology to Drug Discovery](https://doi.org/10.1021/acsbiomedchemau.2c00063){target="_blank"}
+* [2022 A Perspective on Newly Emerging Proteolysis-Targeting Strategies in Antimicrobial Drug Discovery](https://doi.org/10.3390%2Fantibiotics11121717){target="_blank"}
+* [2022 Hijacking Methyl Reader Proteins for Nuclear-Specific Protein Degradation](https://doi.org/10.1021/jacs.2c00874){target="_blank"}
+
+
+## Bacteria
+
+* [2022 BacPROTACs mediate targeted protein degradation in bacteria](https://doi.org/10.1016/j.cell.2022.05.009){target="_blank"}
+* [2021 Applications of Bacterial Degrons and Degraders — Toward Targeted Protein Degradation in Bacteria](https://doi.org/10.3389/fmolb.2021.669762){target="_blank"}
+* [2020 Targeted protein degradation in antibacterial drug discovery?](https://doi.org/10.1016/j.pbiomolbio.2019.11.005){target="_blank"}
+
+## Pyroptosis Inducer
+
+* [2023 Small-Molecule Ferritin Degrader as a Pyroptosis Inducer](https://doi.org/10.1021/jacs.3c01852){target="_blank"}
+
+
+
+## RNA degrader PROTAC
+* [2023 Programming inactive RNA-binding small molecules into bioactive degraders](https://doi.org/10.1038/s41586-023-06091-8){target="_blank"}
+
+
+## Others
+* [2023 Examination of the Impact of Triazole Position within Linkers on Solubility and Lipophilicity of a CDK9 Degrader Series](https://doi.org/10.1021/acsmedchemlett.3c00082){target="_blank"}
+* [2023 An in-silico approach for novel molecular glue design by rationalizing known molecular glue mediated ternary complex formation ](https://doi.org/10.1101/2022.10.04.510266){target="_blank"}
+*[2023 A New In-Silico Approach for PROTAC Design and Quantitative Rationalization of PROTAC mediated Ternary Complex Formation](https://doi.org/10.1101/2022.07.11.499663 ){target="_blank"}
+* [2023 Reversible Dual-Covalent Molecular Locking of the 14-3-3/ERRγ Protein–Protein Interaction as a Molecular Glue Drug Discovery Approach](https://doi.org/10.1021/jacs.2c12781){target="_blank"}
+
+## Mitochondrial PROTAC
+* [2023 Mitochondrial Protease Targeting Chimeras for Mitochondrial Matrix Protein Degradation](https://doi.org/10.1021/jacs.3c03756){target="_blank"}
+
+## PROTAC for membrane proteins
+* [2023 Development of Oligomeric Mannose-6-phosphonate Conjugates for Targeted Protein Degradation](https://doi.org/10.1021/acsmedchemlett.2c00479){target="_blank"}
+
+## Ab-PROTAC
+* [2023 Antibody-PROTAC Conjugate Enables Selective Degradation of Receptor-Interacting Serine/Threonine-Protein Kinase 2 (RIPK2) in HER+ Cell Lines](https://doi.org/10.26434/chemrxiv-2023-97zdb){target="_blank"}
+
+

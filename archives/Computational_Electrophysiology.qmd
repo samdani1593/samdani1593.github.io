@@ -1,0 +1,16 @@
+---
+title: "Computational Electrophysiology"
+subtitle: "Articles on Computational Electrophysiology for ion channels MD simulation"
+categories:
+- MD simulation
+toc: false
+---
+
+* [2022 Differential interactions of resting, activated, and desensitized states of the α7 nicotinic acetylcholine receptor with lipidic modulators](https://doi.org/10.1073/pnas.2208081119){target="_blank"}
+* [2022 Computational methods and theory for ion channel research](https://doi.org/10.1080/23746149.2022.2080587){target="_blank"}
+* [2020 On the Functional Annotation of Open-Channel Structures in the Glycine Receptor](https://doi.org/10.1016/j.str.2020.05.003){target="_blank"}
+* [2016 Insights into the function of ion channels by computational electrophysiology simulations](https://doi.org/10.1016/j.bbamem.2016.02.006){target="_blank"}
+* [2011 Computational Electrophysiology: The Molecular Dynamics of Ion Channel Permeation and Selectivity in Atomistic Detail](https://doi.org/10.1016%2Fj.bpj.2011.06.010){target="_blank"}
+* [Computational Electrophysiology - Gromacs](https://manual.gromacs.org/documentation/nightly/reference-manual/special/comp-electrophys.html){target="_blank"}
+* [Studying ion channel permeation and selectivity with Computational Electrophysiology](https://www.mpinat.mpg.de/grubmueller/compel){target="_blank"}
+* [Ions in Action! Studying ion channels by Computational Electrophysiology](https://www.gromacs.org/topic/compEl.html){target="_blank"}

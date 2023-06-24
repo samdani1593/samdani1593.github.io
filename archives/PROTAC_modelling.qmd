@@ -1,0 +1,50 @@
+---
+title: "PROTAC"
+subtitle: "Computational PROTAC modelling articles"
+categories:
+- PROTAC
+toc: false
+---
+
+## PROTAC
+
+* [Ciulli Group Journal Club](https://lifesci.dundee.ac.uk/groups/alessio-ciulli/publications/journal-club){target="_blank"}
+* [2023 Fragment Linker Prediction Using Deep Encoder-Decoder Network for PROTAC Drug Design](https://doi.org/10.1021/acs.jcim.2c01287){target="_blank"}
+* [2023 Exploring PROTAC Cooperativity with Coarse-Grained Alchemical Methods](https://doi.org/10.1021/acs.jpcb.2c05795){target="_blank"}
+* [2023 High Accuracy Prediction of PROTAC Complex Structures](https://doi.org/10.1021/jacs.2c09387){target="_blank"}
+* [2023 A New In-Silico Approach for PROTAC Design and Quantitative Rationalization of PROTAC mediated Ternary Complex Formation](https://doi.org/10.1101/2022.07.11.499663){target="_blank"}
+* [2023 Bayesian Optimization for Ternary Complex Prediction (BOTCP)](https://doi.org/10.1016/j.ailsci.2023.100072){target="_blank"}
+* [2023 PROTAC-Design-Evaluator (PRODE) : An Advanced Method for in-silico PROTAC design](https://doi.org/10.1101/2023.06.12.544569){target="_blank"}
+* [2023 Reinforcement Learning-Driven Linker Design via Fast Attention-based Point Cloud Alignment](https://arxiv.org/abs/2306.08166v1){target="_blank"}
+* [2023 Fragment Linker Prediction Using the Deep Encoder-Decoder Network for PROTACs Drug Design](https://doi.org/10.1021/acs.jcim.2c01287){target="_blank"}
+* [2023 On Ternary Complex Stability in Protein Degradation: In Silico Molecular Glue Binding Affinity Calculations](https://doi.org/10.1021/acs.jcim.2c01386){target="_blank"}
+* [2023 Rational Prediction of PROTAC-compatible Protein-Protein Interfaces by Molecular Docking](https://doi.org/10.1101/2023.02.16.528819){target="_blank"}
+* [2023 Exploring PROTAC Cooperativity with Coarse-Grained Alchemical Methods](https://doi.org/10.1021/acs.jpcb.2c05795){target="_blank"}
+* [2022 In Silico Modeling and Scoring of PROTAC-Mediated Ternary Complex Poses](https://doi.org/10.1021/acs.jmedchem.1c02155){target="_blank"}
+* [2022 DeepPROTACs is a deep learning-based targeted degradation predictor for PROTACs](https://doi.org/10.1038/s41467-022-34807-3){target="_blank"}
+* [2022 Accelerated rational PROTAC design via deep learning and molecular simulations](https://doi.org/10.1038/s42256-022-00527-y){target="_blank"}
+* [2022 De novo PROTAC design using graph-based deep generative models](https://doi.org/10.48550/arXiv.2211.02660){target="_blank"}
+* [2022 DRlinker: Deep Reinforcement Learning for Optimization in Fragment Linking Design](https://doi.org/10.1021/acs.jcim.2c00982){target="_blank"}
+* [2022 An expanded lexicon for the ubiquitin code](https://doi.org/10.1038/s41580-022-00543-1){target="_blank"}
+* [2021 Integrative Modeling of PROTAC-Mediated Ternary Complexes](https://doi.org/10.1021/acs.jmedchem.1c01576){target="_blank"}
+* [2021 Rationalizing PROTAC-Mediated Ternary Complex Formation Using Rosetta](https://doi.org/10.1021/acs.jcim.0c01451){target="_blank"}
+* [2020 Improved Accuracy for Modeling PROTAC-Mediated Ternary Complex Formation and Targeted Protein Degradation via New In Silico Methodologies](https://doi.org/10.1021/acs.jcim.0c00897){target="_blank"}
+* [2020 PRosettaC: Rosetta Based Modeling of PROTAC Mediated Ternary Complexes](https://doi.org/10.1021/acs.jcim.0c00589){target="_blank"}
+* [2020 Deep Generative Models for 3D Linker Design](https://doi.org/10.1021/acs.jcim.9b01120){target="_blank"}
+* [2019 In Silico Modeling of PROTAC-Mediated Ternary Complexes: Validation and Application](https://doi.org/10.1021/acs.jcim.8b00872){target="_blank"}
+
+
+
+
+# Molecular GLues
+* [2023 Protein–protein interfaces in molecular glue-induced ternary complexes: classification, characterization, and prediction](https://doi.org/10.1039/D2CB00207H){target="_blank"}
+
+
+
+
+
+
+
+
+
+

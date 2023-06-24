@@ -1,0 +1,55 @@
+---
+title: "Video lectures on MD"
+subtitle: "Collection of video lectures"
+categories:
+- Molecular Dynamics simulation
+toc: false
+---
+
+## Free Energy Perturbation
+
+* [2023 Teaching free energy calculations to learn by J. Chodera](https://youtu.be/NiQYxnKx7kw){target="_blank"}
+* [2023 Active Learning for Absolute Binding Free Energy Calculations in Drug Discovery; Steven Jerome](https://youtu.be/boQ5VDYvMKM){target="_blank"}
+* [2022 BioExcel Webinar #64: BioExcel HPC Workflows: predictive power and its applications in pharmacology](https://youtu.be/cQVihLZSzfI){target="_blank"}
+* [2022 BioExcel Webinar #63 - GROMACS/pmx large-scale alchemical protein-ligand binding affinity screening](https://youtu.be/hXg61gmpQw4){target="_blank"}
+* [2021 Alchemical free energy calculations using pmx](https://youtu.be/iweSKUD2YBI){target="_blank"}
+* [2021 PMX demonstration and hands-on session](https://youtu.be/NSeiQUwc8-I){target="_blank"}
+* [2022 Introduction to free energy calculations with PMX](https://youtu.be/XE-xOhFRJn4){target="_blank"}
+* [2021 Lecture 06, concept 21: Calculating binding free energy - alchemical transformation](https://youtu.be/ov0mMvR3wrM){target="_blank"}
+* [2021 Lecture 13, concept 01: Free energy calculation provides good relative binding free energies](https://youtu.be/rgN9noKQoVg){target="_blank"}
+* [2021 Lecture 06, concept 22: Binding free energy - the free energy cycle & DDG values](https://youtu.be/LJOmgrwncY0){target="_blank"}
+* [2021 Could FE calculations with GROMACS be faster?](https://youtu.be/--ldPeGFcGc){target="_blank"}
+* [2020 Using GROMACS and pmx with the BioExcel Building Blocks library to tackle COVID-19 research](https://youtu.be/9IYsPH6iaw4){target="_blank"}
+* [2020 Applications of alchemical free energy calculations](https://youtu.be/MdaTPYLL2Gs){target="_blank"}
+* [2020 Introduction to free energy calculations](https://youtu.be/-FAdiM7PkWc){target="_blank"}
+* [2020 Bert de Groot 2020-10-20](https://youtu.be/-RFj4nR62YE){target="_blank"}
+* [2019 OFF Webinar by Vytautas Gapsys: Binding free energy calculations for protein-ligand systems](https://youtu.be/hHCUW50cRuA){target="_blank"}
+* [2018 Introduction to Free Energy Calculations - Chris Chipot](https://youtu.be/LCKtsR1ijsA){target="_blank"}
+* [2016 BioExcel Webinar Series #4: Mutation free energy calculations with pmx](https://youtu.be/tIAzMZP8BlU){target="_blank"}
+* [2015 Introduction to Free-Energy Calculations - Chris Chipot](https://youtu.be/zn7Fd6F9lB0){target="_blank"}
+* [2015 Introduction to Free-Energy Calculations - Chris Chipot - Part 2](https://youtu.be/WIdZNjZFGRM){target="_blank"}
+
+
+## Charmm-GUI Free energy Calculation
+* [2020 Free Energy Calculator Tutorial 1: Overview](https://youtu.be/AAVrtEX1Ggc){target="_blank"}
+* [2020 Free Energy Calculator Tutorial 2: Absolute Ligand Solvator](https://youtu.be/Zfkv84PA1nY){target="_blank"}
+* [2020 Free Energy Calculator Tutorial 3: Relative Ligand Solvator](https://youtu.be/B-PwQRqNsoM){target="_blank"}
+* [2020 Free Energy Calculator Tutorial 4: Absolute Ligand Binder for Solution Systems](https://youtu.be/b-NXIMlIicM){target="_blank"}
+* [2020 Free Energy Calculator Tutorial 5: Relative Ligand Binder for Solution Systems](https://youtu.be/SzCEcdvBVLk){target="_blank"}
+* [2020 Free Energy Calculator Tutorial 6: Absolute Ligand Binder for Membrane Systems](https://youtu.be/byVoJ-C_Kpo){target="_blank"}
+* [2020 Free Energy Calculator Tutorial 7: Relative Ligand Binder for Membrane Systems](https://youtu.be/5WZc0L-2eLk){target="_blank"}
+
+## Enhanced sampling
+* [2021 Chris Chipot - Enhanced sampling and free energy calculations in NAMD (Part I)](https://youtu.be/FHSnQ121hDI){target="_blank"}
+* [2021 Chris Chipot - Enhanced sampling and free energy calculations in NAMD (Part II)](https://youtu.be/MIm0MOckdzY){target="_blank"}
+
+## Urbana 2018 Workshop on Enhanced Sampling and Free-Energy Calculation
+* [2018 TCBG UIUC Live Stream](https://www.youtube.com/live/PDB1a7wR8KQ?feature=share){target="_blank"}
+* [2018 Specialized Algorithms for Enhanced Ergodic Sampling, Chris Chipot](https://www.youtube.com/live/st5XKYuJHQE?feature=share){target="_blank"}
+* [2018 Accelerating Convergence of Free-Energy Calculation with Replica Exchange Solute Tempering,Wei Jiang](https://www.youtube.com/live/5w6rRqq2Dhg?feature=share){target="_blank"}
+* [2018 Exploring Complex Reaction Pathways Part I - Mahmoud Moradi](https://www.youtube.com/live/ax74TgWY3wA?feature=share){target="_blank"}
+* [2018 Exploring Complex Reaction Pathways Part II - Mahmoud Moradi](https://www.youtube.com/live/3hCaeFF05Jc?feature=share){target="_blank"}
+* [2018 Geometrical Free-Energy Methods: Strengths and Limitations, Jérôme Hénin](https://www.youtube.com/live/z2C6siB6Qqo?feature=share){target="_blank"}
+
+
+

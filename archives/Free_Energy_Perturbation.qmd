@@ -1,0 +1,22 @@
+---
+title: "Free Energy Perturbation"
+subtitle: "Articles on Free Energy Perturbation"
+categories:
+- MD simulation
+toc: false
+---
+* [2023 Broadening the scope of binding free energy calculations using a Separated Topologies approach](https://doi.org/10.26434/chemrxiv-2023-9678k){target="_blank"}
+* [2023 Flexible Topology: A new method for dynamic drug design](https://doi.org/10.26434/chemrxiv-2022-g7src-v2){target="_blank"}
+* [2023 Using Neural Network Potentials to efficiently calculate indirect free energy estimates](https://doi.org/10.26434/chemrxiv-2023-qq206https://doi.org/10.26434/chemrxiv-2023-qq206){target="_blank"}
+* [2023 Identifying and overcoming the sampling challenges in relative binding free energy calculations of a model protein:protein complex](https://doi.org/10.1101/2023.03.07.530278){target="_blank"}
+* [2023 To Design Scalable Free Energy Perturbation Networks, Optimal Is Not Enough](https://doi.org/10.1021/acs.jcim.2c01579){target="_blank"}
+* [2023 Validation of the Alchemical Transfer Method for the Estimation of Relative Binding Affinities of Molecular Series](https://doi.org/10.1021/acs.jcim.3c00178){target="_blank"}
+* [2022 Collaborative Assessment of Molecular Geometries and Energies from the Open Force Field](https://doi.org/10.1021/acs.jcim.2c01185){target="_blank"}
+* [2022 Pre-Exascale Computing of Protein–Ligand Binding Free Energies with Open Source Software for Drug Design](https://doi.org/10.1021/acs.jcim.1c01445){target="_blank"}
+* [2022 Best Practices for Constructing, Preparing, and Evaluating Protein-Ligand Binding Affinity Benchmarks](https://doi.org/10.33011/livecoms.4.1.1497){target="_blank"}
+* [2022 Chemical Space Exploration with Active Learning and Alchemical Free Energies](https://doi.org/10.1021/acs.jctc.2c00752){target="_blank"}
+* [2022 Skin permeability prediction with MD simulation sampling spatial and alchemical reaction coordinates](https://doi.org/10.1016/j.bpj.2022.09.009){target="_blank"}
+* [2021 DeepBAR: A Fast and Exact Method for Binding Free Energy Computation](https://doi.org/10.1021/acs.jpclett.1c00189){target="_blank"}
+* [2021 Optimizing Simulations Protocols for Relative Free Energy Calculations](https://pubs.acs.org/doi/abs/10.1021/bk-2021-1397.ch009){target="_blank"}
+* [2020 Large-Scale Assessment of Binding Free Energy Calculations in Active Drug Discovery Projects](https://doi.org/10.1021/acs.jcim.0c00900){target="_blank"}
+* [2013 Separated topologies—A method for relative binding free energy calculations using orientational restraints](https://doi.org/10.1063%2F1.4792251){target="_blank"}

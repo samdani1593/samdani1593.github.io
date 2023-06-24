@@ -1,0 +1,108 @@
+---
+title: "Enhanced sampling MD"
+subtitle: "Different enhanced sampling techniques available in MD simulation"
+categories:
+- MD Simulation
+---
+
+(KBbox)[https://kbbox.h-its.org/toolbox/methods/molecular-simulation/]
+
+
+## Acceelrated MD
+* [Accelerated molecular dynamics: A promising and efficient simulation method for biomolecules](https://doi.org/10.1063/1.1755656){target="_blank"}
+
+* [Mechanisms for Benzene Dissociation through the Excited State of T4 Lysozyme L99A Mutant.](https://doi.org/10.1016/j.bpj.2018.09.035){target="_blank"}
+
+* [Role of Molecular Interactions and Protein Rearrangement in the Dissociation Kinetics of p38α MAP Kinase Type-I/II/III Inhibitors.](https://doi.org/10.1021/acs.jcim.7b00640){target="_blank"}
+
+
+## GAMD
+* [Gaussian Accelerated Molecular Dynamics: Unconstrained Enhanced Sampling and Free Energy Calculation](https://doi.org/10.1021/acs.jctc.5b00436){target="_blank"}
+
+* [Protein–Protein Interaction-Gaussian Accelerated Molecular Dynamics (PPI-GaMD): Characterization of Protein Binding Thermodynamics and Kinetics](https://doi.org/10.1021/acs.jctc.1c00974){target="_blank"}
+
+* [Ligand Gaussian Accelerated Molecular Dynamics (LiGaMD): Characterization of Ligand Binding Thermodynamics and Kinetics.](https://doi.org/10.1021/acs.jctc.0c00395){target="_blank"}
+
+* [Peptide Gaussian accelerated molecular dynamics (Pep-GaMD): Enhanced sampling and free energy and kinetics calculations of peptide binding.](https://doi.org/10.1063/5.0021399){target="_blank"}
+
+* [Ligand Binding Pathways and Conformational Transitions of the HIV Protease.](https://doi.org/10.1021/acs.biochem.7b01248){target="_blank"}
+
+## Adaptive Multilevel Splitting (AMS)
+* [Adaptive Multilevel Splitting Method for Molecular Dynamics Calculation of Benzamidine-Trypsin Dissociation Time.](https://doi.org/10.1021/acs.jctc.6b00277){target="_blank"}
+
+## Adiabatic-bias Molecular Dynamics (ABMD)
+
+* [Investigating Drug-Target Residence Time in Kinases through Enhanced Sampling Simulations.](https://doi.org/10.1021/acs.jctc.9b00104){target="_blank"}
+
+* [Decoding the Role of Water Dynamics in Ligand-Protein Unbinding: CRF1R as a Test Case.](https://doi.org/10.1021/acs.jcim.5b00440){target="_blank"}
+
+## Bias-exchange Metadynamics (BEMD)
+* [Substrate binding mechanism of HIV-1 protease from explicit-solvent atomistic simulations.](https://doi.org/10.1021/ja903045y){target="_blank"}
+
+## Markov State Modeling
+* [Link](https://kbbox.h-its.org/toolbox/methods/molecular-simulation/markov-state-modeling/){target="_blank"}
+
+
+## Metadynamics
+
+* [LINK](https://kbbox.h-its.org/toolbox/methods/molecular-simulation/metadynamics/){target="_blank"}
+* [2023 General Metadynamics Protocol To Simulate Activation/Deactivation of Class A GPCRs: Proof of Principle for the Serotonin Receptor](https://doi.org/10.1021/acs.jcim.3c00208){target="_blank"}
+* [2023 Unbinding Kinetics of Muscarinic M3 Receptor Antagonists Explained by Metadynamics Simulations](https://doi.org/10.1021/acs.jcim.3c00042){target="_blank"}
+* [2023 Structure–Kinetics Relationships of Opioids from Metadynamics and Machine Learning Analysis](https://doi.org/10.1021/acs.jcim.3c00069){target="_blank"}
+* [2019 Can One Trust Kinetic and Thermodynamic Observables from Biased Metadynamics Simulations?: Detailed Quantitative Benchmarks on Millimolar Drug Fragment Dissociation](https://doi.org/10.1021/acs.jpcb.9b01813){target="_blank"}
+
+
+
+* [Unbinding Kinetics of a p38 MAP Kinase Type II Inhibitor from Metadynamics Simulations](https://doi.org/10.1021/jacs.6b12950){target="_blank"}
+
+##PLUMED
+
+* [Promoting transparency and reproducibility in enhanced molecular simulations](https://www.nature.com/articles/s41592-019-0506-8){target="_blank"}
+
+
+
+* [Ligand binding free energy and kinetics calculation in 2020](https://doi.org/10.1002/wcms.1455){target="_blank"}
+
+## Random Acceleration Molecular Dynamics (RAMD)
+[LINK](https://kbbox.h-its.org/toolbox/methods/molecular-simulation/random-acceleration-molecular-dynamics-ramd/)
+
+## τ-Random Acceleration Molecular Dynamics (τRAMD)
+
+[LINK](https://kbbox.h-its.org/toolbox/methods/molecular-simulation/-random-acceleration-molecular-dynamics-ramd/)
+
+## Replica-Exchange Molecular Dynamics (REMD)
+* [De Novo Prediction of Binders and Nonbinders for T4 Lysozyme by gREST Simulations.](https://doi.org/10.1021/acs.jcim.9b00416){target="_blank"}
+
+## Selectively Scaled MD
+
+* [Accelerating Rare Dissociative Processes in Biomolecules Using Selectively Scaled MD Simulations.](https://doi.org/10.1021/acs.jctc.9b00262){target="_blank"}
+
+* [Contact Map Fingerprints of Protein-Ligand Unbinding Trajectories Reveal Mechanisms Determining Residence Times Computed from Scaled Molecular Dynamics.](https://doi.org/10.1021/acs.jctc.1c00453){target="_blank"}
+
+## Targeted molecular dynamics
+
+* [Targeted molecular dynamics: a new approach for searching pathways of conformational transitions.](https://www.ncbi.nlm.nih.gov/pubmed/7918256){target="_blank"}
+
+* [Estimation of Protein-Ligand Unbinding Kinetics Using Non-Equilibrium Targeted Molecular Dynamics Simulations.](https://doi.org/10.1021/acs.jcim.9b00592){target="_blank"}
+
+* [Targeted Molecular Dynamics Calculations of Free Energy Profiles Using a Nonequilibrium Friction Correction.](https://doi.org/10.1021/acs.jctc.8b00835){target="_blank"}
+
+## Umbrella Sampling (US)
+[Link](https://kbbox.h-its.org/toolbox/methods/molecular-simulation/umbrella-sampling-us/)
+
+## Weighted Ensemble Molecular Dynamics (WEMD)
+[LINK](https://kbbox.h-its.org/toolbox/methods/molecular-simulation/weighted-ensemble-molecular-dynamics-wemd/)
+
+## dcTMD with T-boosted Langevin Simulations
+* [Multisecond ligand dissociation dynamics from atomistic simulations.](https://doi.org/10.1038/s41467-020-16655-1){target="_blank"}
+
+## Adaptive biasing force MD
+
+* [The Adaptive Biasing Force Method: Everything You Always Wanted To Know but Were Afraid To Ask](https://doi.org/10.1021/jp506633n){target="_blank"}
+
+## Accelerated Weighted Histogram method
+
+* [The accelerated weight histogram method for alchemical free energy calculations](https://doi.org/10.1063/5.0044352){target="_blank"}
+
+* [2023 MDverse: Shedding Light on the Dark Matter of Molecular Dynamics SimulationsMDverse: Shedding Light on the Dark Matter of Molecular Dynamics Simulations ](https://doi.org/10.1101/2023.05.02.538537 ){target="_blank"}
+* [2023 Comprehensive Approach to Simulating Large Scale Conformational Changes in Biological Systems Utilizing a Path Collective Variable and New Barrier Restraint](https://doi.org/10.1021/acs.jpcb.3c02028){target="_blank"}

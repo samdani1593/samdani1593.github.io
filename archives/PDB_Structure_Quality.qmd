@@ -1,0 +1,10 @@
+---
+title: "PDB Structure Quality"
+subtitle: "Articles on protein structure quality"
+toc: false
+categories:
+- Structural Bioinformatics
+---
+
+* [2021 ‘All That Glitters Is Not Gold’: High-Resolution Crystal Structures of Ligand-Protein Complexes Need Not Always Represent Confident Binding Poses](https://doi.org/10.3390/ijms22136830){target="_blank"}
+

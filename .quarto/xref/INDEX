@@ -1,0 +1,257 @@
+{
+  "about.qmd": {
+    "about.html": "831f290d"
+  },
+  "index.qmd": {
+    "index.html": "61e03c56"
+  },
+  "publications.qmd": {
+    "publications.html": "c013628a"
+  },
+  "Publications.qmd": {
+    "Publications.html": "3d9419f2"
+  },
+  "Softwares.qmd": {
+    "Softwares.html": "85c98cca"
+  },
+  "posts.qmd": {
+    "posts.html": "7ea38ae5"
+  },
+  "posts/2023-04-23-RDkit-cheatsheet.ipynb": {
+    "2023-04-23-RDkit-cheatsheet.html": "c4ff1012"
+  },
+  "posts/2023-04-24-Pymol-cheatsheet.ipynb": {
+    "2023-04-24-Pymol-cheatsheet.html": "c0d5ab20"
+  },
+  "posts/2023-04-25-PROTAC-linker-library-renumeration.ipynb": {
+    "2023-04-25-PROTAC-linker-library-renumeration.html": "2f6f8685"
+  },
+  "archives.qmd": {
+    "archives.html": "6c54d2a1"
+  },
+  "archives/PROTAC.qmd": {
+    "PROTAC.html": "7ff7ac94"
+  },
+  "posts/2023-05-03-DeepChem-cheatsheet.ipynb": {
+    "2023-05-03-DeepChem-cheatsheet.html": "9bfe38aa"
+  },
+  "posts/2023-05-03-NGLview-cheatsheet.ipynb": {
+    "2023-05-03-NGLview-cheatsheet.html": "a198a2c8"
+  },
+  "posts/2023-05-03-PandasAI.ipynb": {
+    "2023-05-03-PandasAI.html": "6f8d574a"
+  },
+  "posts/2023-05-03-Free-Energy-Perturbaion-using-YANK.ipynb": {
+    "2023-05-03-Free-Energy-Perturbaion-using-YANK.html": "63eeed12"
+  },
+  "posts/2023-05-03-OpenMM.ipynb": {
+    "2023-05-03-OpenMM.html": "c0f7611a"
+  },
+  "archives/Enhanced_samplng.qmd": {
+    "Enhanced_samplng.html": "2514f48b"
+  },
+  "posts/2023-05-03-QM-MM-Simulation.ipynb": {
+    "2023-05-03-QM-MM-Simulation.html": "b1c6dbf2"
+  },
+  "archives/Ultra_Large_Virtual_screening.qmd": {
+    "Ultra_Large_Virtual_screening.html": "74acc754"
+  },
+  "archives/Quantum_Mechanics.qmd": {
+    "Quantum_Mechanics.html": "9bd6e9c3"
+  },
+  "toolbox/Quantum_Mechanics.qmd": {
+    "Quantum_Mechanics.html": "d9321083"
+  },
+  "toolbox.qmd": {
+    "toolbox.html": "670a6145"
+  },
+  "archives/Positional_Analogue_Scanning.qmd": {
+    "Positional_Analogue_Scanning.html": "58fc4055"
+  },
+  "posts/2023-05-03-Positional_Analogue_Scanning.ipynb": {
+    "2023-05-03-Positional_Analogue_Scanning.html": "0e0200e4"
+  },
+  "toolbox/Molecular_Docking.qmd": {
+    "Molecular_Docking.html": "ea230412"
+  },
+  "toolbox/Molecular_Dynamics_Simulation.qmd": {
+    "Molecular_Dynamics_Simulation.html": "bc4dd5d7"
+  },
+  "toolbox/Molecular_Modelling.qmd": {
+    "Molecular_Modelling.html": "aa0aadc8"
+  },
+  "toolbox/QM_MM_Simulation.qmd": {
+    "QM_MM_Simulation.html": "5f6ba8d9"
+  },
+  "toolbox/PROTAC_modelling.qmd": {
+    "PROTAC_modelling.html": "b11aa0d3"
+  },
+  "archives/PROTAC_Solubility.qmd": {
+    "PROTAC_Solubility.html": "403f8b15"
+  },
+  "archives/Fast_Molecule_generation.qmd": {
+    "Fast_Molecule_generation.html": "fd6be799"
+  },
+  "archives/PROTAC_Permeability.qmd": {
+    "PROTAC_Permeability.html": "7def0294"
+  },
+  "backup/2023-04-23-RDkit-cheatsheet.ipynb": {
+    "2023-04-23-RDkit-cheatsheet.html": "65727a3b"
+  },
+  "backup/2023-04-24-Pymol-cheatsheet.ipynb": {
+    "2023-04-24-Pymol-cheatsheet.html": "bd04a814"
+  },
+  "backup/2023-04-25-PROTAC-linker-library-renumeration.ipynb": {
+    "2023-04-25-PROTAC-linker-library-renumeration.html": "f4bd975f"
+  },
+  "backup/2023-05-03-Clash_score_calculation.ipynb": {
+    "2023-05-03-Clash_score_calculation.html": "ec8ab1e9"
+  },
+  "backup/2023-05-03-Create_database_Using_RDkit.ipynb": {
+    "2023-05-03-Create_database_Using_RDkit.html": "c4555c59"
+  },
+  "backup/2023-05-03-DeepChem-cheatsheet.ipynb": {
+    "2023-05-03-DeepChem-cheatsheet.html": "afaf8051"
+  },
+  "backup/2023-05-03-Free-Energy-Perturbaion-using-YANK.ipynb": {
+    "2023-05-03-Free-Energy-Perturbaion-using-YANK.html": "1d1a7850"
+  },
+  "backup/2023-05-03-NGLview-cheatsheet.ipynb": {
+    "2023-05-03-NGLview-cheatsheet.html": "10474820"
+  },
+  "backup/2023-05-03-OpenMM.ipynb": {
+    "2023-05-03-OpenMM.html": "5cd9d343"
+  },
+  "backup/2023-05-03-PandasAI.ipynb": {
+    "2023-05-03-PandasAI.html": "ec62de8d"
+  },
+  "backup/2023-05-03-Positional_Analogue_Scanning.ipynb": {
+    "2023-05-03-Positional_Analogue_Scanning.html": "9a9ae34d"
+  },
+  "backup/2023-05-03-QM-MM-Simulation.ipynb": {
+    "2023-05-03-QM-MM-Simulation.html": "8314c0c6"
+  },
+  "backup/2023-05-12-Add_fragment_R-group.ipynb": {
+    "2023-05-12-Add_fragment_R-group.html": "b1498c8b"
+  },
+  "backup/2023-05-12-Hetero_shuffling.ipynb": {
+    "2023-05-12-Hetero_shuffling.html": "5de20ecd"
+  },
+  "toolbox/Cheminformatics.qmd": {
+    "Cheminformatics.html": "51d6cbf0"
+  },
+  "archives/DeepLearning_Binding_Affinity_predictions.qmd": {
+    "DeepLearning_Binding_Affinity_predictions.html": "6972aa47"
+  },
+  "archives/Fragment_Based_Drug_Design.qmd": {
+    "Fragment_Based_Drug_Design.html": "4ebb8a67"
+  },
+  "archives/Ligand_pKa.qmd": {
+    "Ligand_pKa.html": "25a9752e"
+  },
+  "archives/Ligand_preparation_for_VS.qmd": {
+    "Ligand_preparation_for_VS.html": "c18c2926"
+  },
+  "archives/Solubility.qmd": {
+    "Solubility.html": "f705bac9"
+  },
+  "archives/Cheminformatics.qmd": {
+    "Cheminformatics.html": "ae170062"
+  },
+  "archives/PROTAC_Applicability.qmd": {
+    "PROTAC_Applicability.html": "13c59b8d"
+  },
+  "toolbox/Cheminformatics_blogs.qmd": {
+    "Cheminformatics_blogs.html": "4eccf994"
+  },
+  "archives/Computational_Electrophysiology.qmd": {
+    "Computational_Electrophysiology.html": "efbdb636"
+  },
+  "archives/Free_Energy_Perturbation.qmd": {
+    "Free_Energy_Perturbation.html": "109bd4de"
+  },
+  "archives/Induced_Fit_Docking.qmd": {
+    "Induced_Fit_Docking.html": "380c96b6"
+  },
+  "archives/Kinase_off_target.qmd": {
+    "Kinase_off_target.html": "ec2bdcd9"
+  },
+  "archives/Molecular_Docking.qmd": {
+    "Molecular_Docking.html": "38ae79e2"
+  },
+  "archives/PDB_Structure_Quality.qmd": {
+    "PDB_Structure_Quality.html": "2abb7237"
+  },
+  "archives/Protein-Peptide-Docking.qmd": {
+    "Protein-Peptide-Docking.html": "9bcb833f"
+  },
+  "archives/Protein_pKa.qmd": {
+    "Protein_pKa.html": "6b5676f9"
+  },
+  "archives/Supervised_Molecular_Dynamics_Simulation.qmd": {
+    "Supervised_Molecular_Dynamics_Simulation.html": "5ded3f2a"
+  },
+  "toolbox/Protein_pKa.qmd": {
+    "Protein_pKa.html": "b636d65b"
+  },
+  "posts/2023-05-21-PLIP-cheatsheet.ipynb": {
+    "2023-05-21-PLIP-cheatsheet.html": "51e5916b"
+  },
+  "posts/2023-05-21-PROTAC_enumeration.ipynb": {
+    "2023-05-21-PROTAC_enumeration.html": "ba3969f4"
+  },
+  "posts/2023-04-24-Prody-cheatsheet.ipynb": {
+    "2023-04-24-Prody-cheatsheet.html": "04365ef5"
+  },
+  "posts/2023-05-03-PDB_structure_Quality.ipynb": {
+    "2023-05-03-PDB_structure_Quality.html": "13033023"
+  },
+  "posts/2023-05-23-Kinome_numbering.ipynb": {
+    "2023-05-23-Kinome_numbering.html": "e699d6f0"
+  },
+  "archives/Covalent_kinase_inhibitors.qmd": {
+    "Covalent_kinase_inhibitors.html": "28ec6bd5"
+  },
+  "archives/CRL_reviews.qmd": {
+    "CRL_reviews.html": "6d373a5a"
+  },
+  "archives/CRL_structures_modelling.qmd": {
+    "CRL_structures_modelling.html": "40ec2cfe"
+  },
+  "archives/Interesting_articles.qmd": {
+    "Interesting_articles.html": "353e7d7d"
+  },
+  "archives/Kinase_hinge_binders.qmd": {
+    "Kinase_hinge_binders.html": "d3e6ad6c"
+  },
+  "archives/Kinase_ligand_interaction.qmd": {
+    "Kinase_ligand_interaction.html": "234b7af4"
+  },
+  "archives/PROTAC_modelling.qmd": {
+    "PROTAC_modelling.html": "23eb4073"
+  },
+  "archives/PROTAC_Review.qmd": {
+    "PROTAC_Review.html": "8a2d6993"
+  },
+  "posts/2023-05-12-Add_fragment_R-group.ipynb": {
+    "2023-05-12-Add_fragment_R-group.html": "c00b3679"
+  },
+  "posts/2023-05-12-Hetero_shuffling.ipynb": {
+    "2023-05-12-Hetero_shuffling.html": "374a0ecc"
+  },
+  "posts/2023-05-21-KLIFS.ipynb": {
+    "2023-05-21-KLIFS.html": "8cf1a6d2"
+  },
+  "archives/MD_simulation_workflows.qmd": {
+    "MD_simulation_workflows.html": "eedfb095"
+  },
+  "archives/QM_MM_simulation.qmd": {
+    "QM_MM_simulation.html": "5586d576"
+  },
+  "archives/Video_lectures.qmd": {
+    "Video_lectures.html": "113749ab"
+  },
+  "toolbox/Free_energy_Pertrurbation.qmd": {
+    "Free_energy_Pertrurbation.html": "c1e41a84"
+  }
+}

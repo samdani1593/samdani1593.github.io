@@ -1,0 +1,19 @@
+---
+title: "pKa Calculation for proteins Sofwares"
+subtitle: "Collection of Softwares for protein pKa calcualtion"
+---
+
+* [DeepKa](https://gitlab.com/yandonghuang/deepka)
+* [pKAI](https://github.com/bayer-science-for-a-better-life/pKAI)
+* [Protein-pKa-prediction-by-tree-based-machine-learning](https://github.com/adajhu/Protein-pKa-prediction-by-tree-based-machine-learning)
+* [MolGpka](https://github.com/xundrug/molgpka)
+* [Propka](https://github.com/jensengroup/propka)
+* [Protoss](https://proteins.plus/help/protoss_rest)
+* [PypKa](https://github.com/mms-fcul/PypKa)
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+---
+title: "Cheminformatics"
+subtitle: "Articles on Cheminformatics"
+categories:
+- Cheminformatics
+toc: false
+---
+* [2023 Introduction to artificial intelligence and deep learning using interactive electronic programming notebooks](https://doi.org/10.1002/ardp.202200628){target="_blank"}
+* [2023 Fast Substructure Search in Combinatorial Library Spaces](https://doi.org/10.1021/acs.jcim.3c00290){target="_blank"}
+* [2023 MolScribe: Robust Molecular Structure Recognition with Image-to-Graph Generation](https://doi.org/10.1021/acs.jcim.2c01480){target="_blank"}
+* [2020 An open source chemical structure curation pipeline using RDKit](https://doi.org/10.1186%2Fs13321-020-00456-1){target="_blank"}

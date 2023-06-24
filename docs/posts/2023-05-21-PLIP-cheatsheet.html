@@ -1,0 +1,2927 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Samdani Ansar">
+<meta name="dcterms.date" content="2023-05-21">
+<meta name="description" content="Different interaction calculation using PLIP">
+
+<title>Sam - Interaction calculation using PLIP</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Sam</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Softwares.html" rel="" target="">
+ <span class="menu-text">Softwares</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Publications.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../posts.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../archives.html" rel="" target="">
+ <span class="menu-text">Archives</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../toolbox.html" rel="" target="">
+ <span class="menu-text">ToolBox</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#protein-ligand-interaction" id="toc-protein-ligand-interaction" class="nav-link active" data-scroll-target="#protein-ligand-interaction">Protein-Ligand interaction</a></li>
+  <li><a href="#protein-peptide-protein-protein-interaction" id="toc-protein-peptide-protein-protein-interaction" class="nav-link" data-scroll-target="#protein-peptide-protein-protein-interaction">Protein-peptide/ Protein-Protein interaction</a></li>
+  <li><a href="#intra-protein-interaction" id="toc-intra-protein-interaction" class="nav-link" data-scroll-target="#intra-protein-interaction">Intra Protein interaction</a></li>
+  <li><a href="#dnarna-interaction" id="toc-dnarna-interaction" class="nav-link" data-scroll-target="#dnarna-interaction">DNA/RNA interaction</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Interaction calculation using PLIP</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Structural Bioinformatics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Different interaction calculation using PLIP
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Samdani Ansar </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 21, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>In this post we will see how to use PLIP to calculate interactions of * protein-ligand * protein-peptide/protein-protein * Intra protein * protein-dna interaction</p>
+<p>All the demonstration in this post uses PLIP python function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title *Install PLIP**</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>conda install <span class="op">-</span>c conda<span class="op">-</span>forge plip <span class="op">-</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plip.basic <span class="im">import</span> config</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plip.structure.preparation <span class="im">import</span> PDBComplex</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plip.exchange.report <span class="im">import</span> BindingSiteReport</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#To know the Default variables used in PLIP</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># For more information on each variable look into https://github.com/pharmai/plip/blob/master/plip/basic/config.py</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># dir(config)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">Few variable which we need to consider for performing different calculations</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">'INTRA' # For intramolecular interaction</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">'NOHYDRO' # For adding protonation</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">'PEPTIDES' # For protein-protein or protein/peptide interaction</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">'NOFIXFILE' # For not writing the pdb fix file by plip</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'--Default values stored in PLIP--'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'INTRA : '</span>,config.INTRA)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'NOHYDRO :'</span>,config.NOHYDRO)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'PEPTIDES :'</span>,config.PEPTIDES)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'NOFIXFILE :'</span>,config.NOFIXFILE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>--Default values stored in PLIP--
+INTRA :  None
+NOHYDRO : False
+PEPTIDES : []
+NOFIXFILE : False</code></pre>
+</div>
+</div>
+<section id="protein-ligand-interaction" class="level1">
+<h1>Protein-Ligand interaction</h1>
+<p>In this section we will calculate the protein (ROCK1) and ligand (Y27) inhibitor interactions from the PDB 2ETR.</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>interaction_types <span class="op">=</span> {<span class="st">'hbond'</span>: [], <span class="st">'hydrophobic'</span>: [], <span class="st">'pication'</span>: [], <span class="st">'pistacking'</span>: [], <span class="st">'saltbridge'</span>: [],</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                         <span class="st">'halogen'</span>: [], <span class="st">'metal'</span>: [], <span class="st">'waterbridge'</span>: []}</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>config.NOFIXFILE <span class="op">=</span> <span class="va">True</span>  <span class="co"># Do not write pdb fix file</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>protonate <span class="op">=</span> <span class="dv">1</span> <span class="co">#Perform protonation by PLIP</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> protonate: <span class="co"># Perform protonation by PLIP which uses openbabel</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: <span class="co"># Do not protonate by PLIP if input pdb is already protonated</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the PLIP class</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>pdbfile <span class="op">=</span> PDBComplex()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>pdbfile.load_pdb(<span class="st">'data/2etr.pdb'</span>)  <span class="co"># Load PDB file</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse and get the ligands</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>ligands <span class="op">=</span> []</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lig <span class="kw">in</span> pdbfile.ligands:</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    ligands.append(lig)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check for specific ligand name, chain and position to calculate that alone</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if (ligname == lig.hetid) &amp; (ligchain == lig.chain) &amp; (lignum == lig.position):</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">#   ligands.append(lig)</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print(lig.hetid, lig.chain, lig.position)</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculate interaction with the specific ligands and add as dict to interaction_sets</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    pdbfile.characterize_complex(lig)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, site <span class="kw">in</span> pdbfile.interaction_sets.items():</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    report <span class="op">=</span> BindingSiteReport(site)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> interaction <span class="kw">in</span> interaction_types.keys():</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> interaction_data <span class="kw">in</span> <span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_info'</span>):</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>            interaction_types[interaction].append(<span class="bu">dict</span>(<span class="bu">zip</span>(<span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_features'</span>), interaction_data)))</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>interaction_types.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>dict_keys(['hbond', 'hydrophobic', 'pication', 'pistacking', 'saltbridge', 'halogen', 'metal', 'waterbridge'])</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># H-bond interaction</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'hbond'</span>])</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">SIDECHAIN</th>
+<th data-quarto-table-cell-role="th">DIST_H-A</th>
+<th data-quarto-table-cell-role="th">DIST_D-A</th>
+<th data-quarto-table-cell-role="th">DON_ANGLE</th>
+<th data-quarto-table-cell-role="th">PROTISDON</th>
+<th data-quarto-table-cell-role="th">DONORIDX</th>
+<th data-quarto-table-cell-role="th">DONORTYPE</th>
+<th data-quarto-table-cell-role="th">ACCEPTORIDX</th>
+<th data-quarto-table-cell-role="th">ACCEPTORTYPE</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>216</td>
+<td>ASP</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>True</td>
+<td>1.93</td>
+<td>2.79</td>
+<td>151.50</td>
+<td>True</td>
+<td>1735</td>
+<td>O3</td>
+<td>6486</td>
+<td>N3</td>
+<td>(54.587, 105.396, 33.251)</td>
+<td>(52.968, 107.442, 32.264)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>156</td>
+<td>MET</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>False</td>
+<td>2.06</td>
+<td>3.02</td>
+<td>164.44</td>
+<td>True</td>
+<td>1257</td>
+<td>Nam</td>
+<td>6491</td>
+<td>Nar</td>
+<td>(50.166, 98.291, 25.262)</td>
+<td>(50.555, 97.125, 22.5)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>216</td>
+<td>ASP</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>True</td>
+<td>1.77</td>
+<td>2.79</td>
+<td>176.51</td>
+<td>False</td>
+<td>6486</td>
+<td>N3</td>
+<td>1735</td>
+<td>O3</td>
+<td>(54.587, 105.396, 33.251)</td>
+<td>(52.968, 107.442, 32.264)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>216</td>
+<td>ASP</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>True</td>
+<td>2.21</td>
+<td>3.05</td>
+<td>148.67</td>
+<td>True</td>
+<td>4993</td>
+<td>O3</td>
+<td>6504</td>
+<td>N3</td>
+<td>(-3.983, 132.778, 25.359)</td>
+<td>(-1.67, 130.789, 25.321)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>156</td>
+<td>MET</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>False</td>
+<td>2.04</td>
+<td>3.00</td>
+<td>164.94</td>
+<td>True</td>
+<td>4515</td>
+<td>Nam</td>
+<td>6509</td>
+<td>Nar</td>
+<td>(0.582, 136.368, 15.369)</td>
+<td>(0.281, 136.308, 12.382)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>216</td>
+<td>ASP</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>True</td>
+<td>2.12</td>
+<td>3.05</td>
+<td>150.82</td>
+<td>False</td>
+<td>6504</td>
+<td>N3</td>
+<td>4993</td>
+<td>O3</td>
+<td>(-3.983, 132.778, 25.359)</td>
+<td>(-1.67, 130.789, 25.321)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hydrophobic interaction</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'hydrophobic'</span>])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">DIST</th>
+<th data-quarto-table-cell-role="th">LIGCARBONIDX</th>
+<th data-quarto-table-cell-role="th">PROTCARBONIDX</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>82</td>
+<td>ILE</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>3.75</td>
+<td>6493</td>
+<td>638</td>
+<td>(51.021, 98.246, 27.478)</td>
+<td>(48.842, 95.36, 28.477)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>90</td>
+<td>VAL</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>3.58</td>
+<td>6483</td>
+<td>693</td>
+<td>(50.995, 102.439, 31.452)</td>
+<td>(47.964, 100.548, 31.649)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>205</td>
+<td>LEU</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>3.73</td>
+<td>6493</td>
+<td>1652</td>
+<td>(51.021, 98.246, 27.478)</td>
+<td>(54.524, 98.63, 26.253)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>215</td>
+<td>ALA</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>3.84</td>
+<td>6479</td>
+<td>1728</td>
+<td>(52.867, 103.017, 29.912)</td>
+<td>(53.479, 103.985, 26.244)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>368</td>
+<td>PHE</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>3.88</td>
+<td>6493</td>
+<td>2938</td>
+<td>(51.021, 98.246, 27.478)</td>
+<td>(53.352, 95.236, 28.215)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>216</td>
+<td>ASP</td>
+<td>A</td>
+<td>416</td>
+<td>Y27</td>
+<td>A</td>
+<td>3.88</td>
+<td>6480</td>
+<td>1733</td>
+<td>(53.739, 103.422, 31.104)</td>
+<td>(52.782, 106.993, 29.932)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>82</td>
+<td>ILE</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>3.75</td>
+<td>6507</td>
+<td>3892</td>
+<td>(-0.477, 137.181, 17.334)</td>
+<td>(1.381, 140.433, 17.271)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>90</td>
+<td>VAL</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>3.41</td>
+<td>6501</td>
+<td>3947</td>
+<td>(-0.298, 134.71, 22.639)</td>
+<td>(2.197, 137.037, 22.508)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>205</td>
+<td>LEU</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>3.78</td>
+<td>6507</td>
+<td>4910</td>
+<td>(-0.477, 137.181, 17.334)</td>
+<td>(-3.852, 135.97, 16.149)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>216</td>
+<td>ASP</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>3.85</td>
+<td>6499</td>
+<td>4991</td>
+<td>(-2.261, 133.818, 23.957)</td>
+<td>(-1.496, 130.157, 23.029)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>368</td>
+<td>PHE</td>
+<td>B</td>
+<td>416</td>
+<td>Y27</td>
+<td>B</td>
+<td>3.88</td>
+<td>6507</td>
+<td>6200</td>
+<td>(-0.477, 137.181, 17.334)</td>
+<td>(-3.148, 139.929, 16.696)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="protein-peptide-protein-protein-interaction" class="level1">
+<h1>Protein-peptide/ Protein-Protein interaction</h1>
+<p>In this section we will calculate the protein (NR-13) and peptide (BAD) interactions from the PDB 6FBX.</p>
+<p>The same method can also be used for calculating the protein-protein interaction by specifing the chain id.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Peptide chain</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>peptides <span class="op">=</span> <span class="st">'B'</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> peptides:</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    config.PEPTIDES <span class="op">=</span> peptides</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>interaction_types <span class="op">=</span> {<span class="st">'hbond'</span>: [], <span class="st">'hydrophobic'</span>: [], <span class="st">'pication'</span>: [], <span class="st">'pistacking'</span>: [], <span class="st">'saltbridge'</span>: [],</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                         <span class="st">'halogen'</span>: [], <span class="st">'metal'</span>: [], <span class="st">'waterbridge'</span>: []}</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>config.NOFIXFILE <span class="op">=</span> <span class="va">True</span>  <span class="co"># Do not write pdb fix file</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>protonate <span class="op">=</span> <span class="dv">1</span> <span class="co">#Perform protonation by PLIP</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> protonate: <span class="co"># Perform protonation by PLIP which uses openbabel</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: <span class="co"># Do not protonate by PLIP if input pdb is already protonated</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the PLIP class</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>pdbfile <span class="op">=</span> PDBComplex()</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>pdbfile.load_pdb(<span class="st">'data/6fbx.pdb'</span>)  <span class="co"># Load PDB file</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse and get the ligands</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>ligands <span class="op">=</span> []</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lig <span class="kw">in</span> pdbfile.ligands:</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    ligands.append(lig)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    pdbfile.characterize_complex(lig)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, site <span class="kw">in</span> pdbfile.interaction_sets.items():</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    report <span class="op">=</span> BindingSiteReport(site)</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> interaction <span class="kw">in</span> interaction_types.keys():</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> interaction_data <span class="kw">in</span> <span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_info'</span>):</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>            interaction_types[interaction].append(<span class="bu">dict</span>(<span class="bu">zip</span>(<span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_features'</span>), interaction_data)))</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>interaction_types.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>dict_keys(['hbond', 'hydrophobic', 'pication', 'pistacking', 'saltbridge', 'halogen', 'metal', 'waterbridge'])</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># H-bond interaction</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'hbond'</span>])</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">SIDECHAIN</th>
+<th data-quarto-table-cell-role="th">DIST_H-A</th>
+<th data-quarto-table-cell-role="th">DIST_D-A</th>
+<th data-quarto-table-cell-role="th">DON_ANGLE</th>
+<th data-quarto-table-cell-role="th">PROTISDON</th>
+<th data-quarto-table-cell-role="th">DONORIDX</th>
+<th data-quarto-table-cell-role="th">DONORTYPE</th>
+<th data-quarto-table-cell-role="th">ACCEPTORIDX</th>
+<th data-quarto-table-cell-role="th">ACCEPTORTYPE</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>53</td>
+<td>LYS</td>
+<td>A</td>
+<td>15</td>
+<td>ARG</td>
+<td>B</td>
+<td>True</td>
+<td>3.34</td>
+<td>4.04</td>
+<td>137.58</td>
+<td>True</td>
+<td>821</td>
+<td>N3+</td>
+<td>2525</td>
+<td>Ng+</td>
+<td>(14.024, 66.582, 17.524)</td>
+<td>(16.235, 65.645, 14.269)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>82</td>
+<td>GLY</td>
+<td>A</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>3.13</td>
+<td>3.62</td>
+<td>118.24</td>
+<td>True</td>
+<td>1267</td>
+<td>Nam</td>
+<td>2501</td>
+<td>Ng+</td>
+<td>(8.7, 75.748, 13.819)</td>
+<td>(7.074, 77.599, 11.165)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>83</td>
+<td>ASP</td>
+<td>A</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>3.27</td>
+<td>3.76</td>
+<td>118.46</td>
+<td>True</td>
+<td>1274</td>
+<td>Nam</td>
+<td>2501</td>
+<td>Ng+</td>
+<td>(8.7, 75.748, 13.819)</td>
+<td>(7.646, 79.313, 13.263)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>89</td>
+<td>GLY</td>
+<td>A</td>
+<td>21</td>
+<td>ASP</td>
+<td>B</td>
+<td>False</td>
+<td>3.56</td>
+<td>3.99</td>
+<td>114.21</td>
+<td>True</td>
+<td>1370</td>
+<td>Nam</td>
+<td>2620</td>
+<td>O.co2</td>
+<td>(21.54, 77.535, 8.091)</td>
+<td>(18.934, 77.756, 5.079)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>87</td>
+<td>ASN</td>
+<td>A</td>
+<td>21</td>
+<td>ASP</td>
+<td>B</td>
+<td>True</td>
+<td>3.38</td>
+<td>3.67</td>
+<td>103.48</td>
+<td>True</td>
+<td>1339</td>
+<td>Nam</td>
+<td>2621</td>
+<td>O.co2</td>
+<td>(20.232, 78.011, 9.788)</td>
+<td>(17.1, 79.87, 9.314)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>64</td>
+<td>THR</td>
+<td>A</td>
+<td>9</td>
+<td>TYR</td>
+<td>B</td>
+<td>True</td>
+<td>2.35</td>
+<td>3.16</td>
+<td>163.90</td>
+<td>False</td>
+<td>2421</td>
+<td>O2</td>
+<td>1008</td>
+<td>O3</td>
+<td>(5.023, 60.974, 10.735)</td>
+<td>(2.446, 60.242, 9.053)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>60</td>
+<td>GLU</td>
+<td>A</td>
+<td>8</td>
+<td>LYS</td>
+<td>B</td>
+<td>True</td>
+<td>2.38</td>
+<td>3.01</td>
+<td>127.43</td>
+<td>False</td>
+<td>2396</td>
+<td>N3</td>
+<td>945</td>
+<td>O3</td>
+<td>(7.917, 60.468, 15.608)</td>
+<td>(7.831, 58.294, 13.533)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>79</td>
+<td>GLU</td>
+<td>A</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>1.94</td>
+<td>2.65</td>
+<td>139.07</td>
+<td>False</td>
+<td>2501</td>
+<td>Ng+</td>
+<td>1220</td>
+<td>O2</td>
+<td>(8.7, 75.748, 13.819)</td>
+<td>(7.329, 74.648, 11.832)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>79</td>
+<td>GLU</td>
+<td>A</td>
+<td>7</td>
+<td>LYS</td>
+<td>B</td>
+<td>True</td>
+<td>2.45</td>
+<td>3.07</td>
+<td>127.39</td>
+<td>False</td>
+<td>2374</td>
+<td>N3</td>
+<td>1224</td>
+<td>O3</td>
+<td>(3.995, 73.777, 16.673)</td>
+<td>(4.292, 73.495, 13.628)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>80</td>
+<td>LEU</td>
+<td>A</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>2.23</td>
+<td>2.96</td>
+<td>141.79</td>
+<td>False</td>
+<td>2498</td>
+<td>Ng+</td>
+<td>1235</td>
+<td>O2</td>
+<td>(10.98, 75.465, 13.709)</td>
+<td>(10.178, 75.88, 10.893)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>93</td>
+<td>SER</td>
+<td>A</td>
+<td>17</td>
+<td>SER</td>
+<td>B</td>
+<td>True</td>
+<td>1.72</td>
+<td>2.43</td>
+<td>140.94</td>
+<td>False</td>
+<td>2561</td>
+<td>O3</td>
+<td>1440</td>
+<td>O3</td>
+<td>(16.395, 73.147, 8.317)</td>
+<td>(16.993, 71.621, 6.525)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>146</td>
+<td>PHE</td>
+<td>A</td>
+<td>24</td>
+<td>GLN</td>
+<td>B</td>
+<td>False</td>
+<td>3.26</td>
+<td>3.64</td>
+<td>109.03</td>
+<td>False</td>
+<td>2663</td>
+<td>Nam</td>
+<td>2249</td>
+<td>O2</td>
+<td>(27.305, 80.455, 4.746)</td>
+<td>(26.752, 82.091, 1.545)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hydrophobic interaction</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'hydrophobic'</span>])</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">DIST</th>
+<th data-quarto-table-cell-role="th">LIGCARBONIDX</th>
+<th data-quarto-table-cell-role="th">PROTCARBONIDX</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>42</td>
+<td>LEU</td>
+<td>A</td>
+<td>20</td>
+<td>PHE</td>
+<td>B</td>
+<td>3.86</td>
+<td>2604</td>
+<td>633</td>
+<td>(23.955, 72.753, 3.959)</td>
+<td>(25.519, 74.093, 0.698)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>54</td>
+<td>PHE</td>
+<td>A</td>
+<td>13</td>
+<td>LEU</td>
+<td>B</td>
+<td>3.56</td>
+<td>2479</td>
+<td>843</td>
+<td>(13.42, 67.834, 7.501)</td>
+<td>(15.931, 66.014, 5.746)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>57</td>
+<td>LEU</td>
+<td>A</td>
+<td>12</td>
+<td>GLN</td>
+<td>B</td>
+<td>3.97</td>
+<td>2459</td>
+<td>896</td>
+<td>(12.378, 66.333, 13.006)</td>
+<td>(13.004, 63.978, 9.878)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>57</td>
+<td>LEU</td>
+<td>A</td>
+<td>9</td>
+<td>TYR</td>
+<td>B</td>
+<td>3.86</td>
+<td>2416</td>
+<td>897</td>
+<td>(7.394, 63.709, 11.22)</td>
+<td>(11.142, 62.813, 11.073)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>76</td>
+<td>VAL</td>
+<td>A</td>
+<td>13</td>
+<td>LEU</td>
+<td>B</td>
+<td>3.65</td>
+<td>2478</td>
+<td>1165</td>
+<td>(11.142, 68.829, 7.217)</td>
+<td>(7.491, 68.894, 7.235)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>147</td>
+<td>PHE</td>
+<td>A</td>
+<td>24</td>
+<td>GLN</td>
+<td>B</td>
+<td>3.72</td>
+<td>2660</td>
+<td>2275</td>
+<td>(26.587, 78.443, 5.884)</td>
+<td>(24.204, 77.653, 3.133)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>46</td>
+<td>MET</td>
+<td>A</td>
+<td>20</td>
+<td>PHE</td>
+<td>B</td>
+<td>3.86</td>
+<td>2600</td>
+<td>696</td>
+<td>(23.59, 71.657, 6.054)</td>
+<td>(21.394, 68.894, 4.493)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Salt bridge interaction</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'saltbridge'</span>])</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">PROT_IDX_LIST</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">DIST</th>
+<th data-quarto-table-cell-role="th">PROTISPOS</th>
+<th data-quarto-table-cell-role="th">LIG_GROUP</th>
+<th data-quarto-table-cell-role="th">LIG_IDX_LIST</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>50</td>
+<td>HIS</td>
+<td>A</td>
+<td>764,767</td>
+<td>19</td>
+<td>GLU</td>
+<td>B</td>
+<td>4.74</td>
+<td>True</td>
+<td>Carboxylate</td>
+<td>2586,2587</td>
+<td>(21.935499999999998, 68.5595, 14.6765)</td>
+<td>(21.761499999999998, 66.88, 10.2525)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>90</td>
+<td>ARG</td>
+<td>A</td>
+<td>1384,1386,1387</td>
+<td>18</td>
+<td>ASP</td>
+<td>B</td>
+<td>5.40</td>
+<td>True</td>
+<td>Carboxylate</td>
+<td>2573,2574</td>
+<td>(17.4, 76.054, 14.0495)</td>
+<td>(13.357, 78.39466666666665, 11.333666666666666)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>83</td>
+<td>ASP</td>
+<td>A</td>
+<td>1280,1281</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>4.11</td>
+<td>False</td>
+<td>Guanidine</td>
+<td>2498,2500,2501</td>
+<td>(9.893, 75.802, 14.395)</td>
+<td>(10.9865, 79.66, 13.477)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="intra-protein-interaction" class="level1">
+<h1>Intra Protein interaction</h1>
+<p>In this section we will calculate the intra peptide (BAD) interactions from the PDB 6FBX.</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>intra <span class="op">=</span> <span class="st">'B'</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>config.PEPTIDES <span class="op">=</span> []</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Intra chain</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> intra:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    config.INTRA <span class="op">=</span> intra</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>interaction_types <span class="op">=</span> {<span class="st">'hbond'</span>: [], <span class="st">'hydrophobic'</span>: [], <span class="st">'pication'</span>: [], <span class="st">'pistacking'</span>: [], <span class="st">'saltbridge'</span>: [],</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>                         <span class="st">'halogen'</span>: [], <span class="st">'metal'</span>: [], <span class="st">'waterbridge'</span>: []}</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>config.NOFIXFILE <span class="op">=</span> <span class="va">True</span>  <span class="co"># Do not write pdb fix file</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>protonate <span class="op">=</span> <span class="dv">1</span> <span class="co">#Perform protonation by PLIP</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> protonate: <span class="co"># Perform protonation by PLIP which uses openbabel</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: <span class="co"># Do not protonate by PLIP if input pdb is already protonated</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the PLIP class</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>pdbfile <span class="op">=</span> PDBComplex()</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>pdbfile.load_pdb(<span class="st">'data/6fbx.pdb'</span>)  <span class="co"># Load PDB file</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse and get the ligands</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>ligands <span class="op">=</span> []</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lig <span class="kw">in</span> pdbfile.ligands:</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    ligands.append(lig)</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    pdbfile.characterize_complex(lig)</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, site <span class="kw">in</span> pdbfile.interaction_sets.items():</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    report <span class="op">=</span> BindingSiteReport(site)</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> interaction <span class="kw">in</span> interaction_types.keys():</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> interaction_data <span class="kw">in</span> <span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_info'</span>):</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>            interaction_types[interaction].append(<span class="bu">dict</span>(<span class="bu">zip</span>(<span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_features'</span>), interaction_data)))</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>interaction_types.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>dict_keys(['hbond', 'hydrophobic', 'pication', 'pistacking', 'saltbridge', 'halogen', 'metal', 'waterbridge'])</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># H-bond interaction</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'hbond'</span>])</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">SIDECHAIN</th>
+<th data-quarto-table-cell-role="th">DIST_H-A</th>
+<th data-quarto-table-cell-role="th">DIST_D-A</th>
+<th data-quarto-table-cell-role="th">DON_ANGLE</th>
+<th data-quarto-table-cell-role="th">PROTISDON</th>
+<th data-quarto-table-cell-role="th">DONORIDX</th>
+<th data-quarto-table-cell-role="th">DONORTYPE</th>
+<th data-quarto-table-cell-role="th">ACCEPTORIDX</th>
+<th data-quarto-table-cell-role="th">ACCEPTORTYPE</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>7</td>
+<td>LYS</td>
+<td>B</td>
+<td>4</td>
+<td>TRP</td>
+<td>B</td>
+<td>False</td>
+<td>3.14</td>
+<td>3.84</td>
+<td>140.37</td>
+<td>True</td>
+<td>2366</td>
+<td>Nam</td>
+<td>2330</td>
+<td>Npl</td>
+<td>(-0.08, 69.546, 13.561)</td>
+<td>(3.643, 68.764, 13.009)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>8</td>
+<td>LYS</td>
+<td>B</td>
+<td>4</td>
+<td>TRP</td>
+<td>B</td>
+<td>False</td>
+<td>2.04</td>
+<td>2.88</td>
+<td>164.73</td>
+<td>True</td>
+<td>2388</td>
+<td>Nam</td>
+<td>2325</td>
+<td>O2</td>
+<td>(2.966, 66.396, 14.999)</td>
+<td>(5.598, 67.488, 14.576)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>9</td>
+<td>TYR</td>
+<td>B</td>
+<td>5</td>
+<td>ALA</td>
+<td>B</td>
+<td>False</td>
+<td>2.01</td>
+<td>2.84</td>
+<td>163.31</td>
+<td>True</td>
+<td>2410</td>
+<td>Nam</td>
+<td>2349</td>
+<td>O2</td>
+<td>(4.628, 65.784, 12.352)</td>
+<td>(7.369, 66.518, 12.532)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>10</td>
+<td>GLY</td>
+<td>B</td>
+<td>6</td>
+<td>ALA</td>
+<td>B</td>
+<td>False</td>
+<td>2.08</td>
+<td>2.92</td>
+<td>165.10</td>
+<td>True</td>
+<td>2431</td>
+<td>Nam</td>
+<td>2359</td>
+<td>O2</td>
+<td>(5.161, 68.844, 11.348)</td>
+<td>(8.074, 68.934, 11.276)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>11</td>
+<td>GLN</td>
+<td>B</td>
+<td>7</td>
+<td>LYS</td>
+<td>B</td>
+<td>False</td>
+<td>2.11</td>
+<td>2.96</td>
+<td>166.77</td>
+<td>True</td>
+<td>2438</td>
+<td>Nam</td>
+<td>2369</td>
+<td>O2</td>
+<td>(6.824, 69.365, 14.378)</td>
+<td>(9.443, 70.292, 13.364)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>12</td>
+<td>GLN</td>
+<td>B</td>
+<td>8</td>
+<td>LYS</td>
+<td>B</td>
+<td>False</td>
+<td>2.21</td>
+<td>3.04</td>
+<td>163.76</td>
+<td>True</td>
+<td>2455</td>
+<td>Nam</td>
+<td>2391</td>
+<td>O2</td>
+<td>(8.983, 67.02, 14.017)</td>
+<td>(11.605, 68.535, 13.741)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>13</td>
+<td>LEU</td>
+<td>B</td>
+<td>9</td>
+<td>TYR</td>
+<td>B</td>
+<td>False</td>
+<td>2.13</td>
+<td>2.97</td>
+<td>165.13</td>
+<td>True</td>
+<td>2472</td>
+<td>Nam</td>
+<td>2413</td>
+<td>O2</td>
+<td>(10.091, 68.017, 10.883)</td>
+<td>(12.92, 68.842, 11.238)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>10</td>
+<td>GLY</td>
+<td>B</td>
+<td>False</td>
+<td>2.06</td>
+<td>2.86</td>
+<td>153.77</td>
+<td>True</td>
+<td>2491</td>
+<td>Nam</td>
+<td>2434</td>
+<td>O2</td>
+<td>(10.685, 71.232, 11.739)</td>
+<td>(13.511, 71.553, 11.479)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>15</td>
+<td>ARG</td>
+<td>B</td>
+<td>11</td>
+<td>GLN</td>
+<td>B</td>
+<td>False</td>
+<td>2.17</td>
+<td>2.99</td>
+<td>159.98</td>
+<td>True</td>
+<td>2515</td>
+<td>Nam</td>
+<td>2441</td>
+<td>O2</td>
+<td>(12.823, 70.331, 14.342)</td>
+<td>(15.419, 71.612, 13.581)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>16</td>
+<td>MET</td>
+<td>B</td>
+<td>12</td>
+<td>GLN</td>
+<td>B</td>
+<td>False</td>
+<td>2.36</td>
+<td>3.18</td>
+<td>161.27</td>
+<td>True</td>
+<td>2539</td>
+<td>Nam</td>
+<td>2458</td>
+<td>O2</td>
+<td>(14.82, 68.541, 12.403)</td>
+<td>(17.534, 70.203, 12.393)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>17</td>
+<td>SER</td>
+<td>B</td>
+<td>13</td>
+<td>LEU</td>
+<td>B</td>
+<td>False</td>
+<td>2.06</td>
+<td>2.87</td>
+<td>156.82</td>
+<td>True</td>
+<td>2556</td>
+<td>Nam</td>
+<td>2475</td>
+<td>O2</td>
+<td>(15.315, 71.209, 10.183)</td>
+<td>(18.093, 71.942, 10.285)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>18</td>
+<td>ASP</td>
+<td>B</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>2.12</td>
+<td>2.93</td>
+<td>156.76</td>
+<td>True</td>
+<td>2567</td>
+<td>Nam</td>
+<td>2494</td>
+<td>O2</td>
+<td>(16.326, 73.347, 12.473)</td>
+<td>(19.045, 74.154, 11.738)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>19</td>
+<td>GLU</td>
+<td>B</td>
+<td>15</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>2.30</td>
+<td>3.12</td>
+<td>158.83</td>
+<td>True</td>
+<td>2579</td>
+<td>Nam</td>
+<td>2518</td>
+<td>O2</td>
+<td>(18.936, 71.449, 13.634)</td>
+<td>(21.433, 73.101, 12.768)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>20</td>
+<td>PHE</td>
+<td>B</td>
+<td>16</td>
+<td>MET</td>
+<td>B</td>
+<td>False</td>
+<td>2.18</td>
+<td>3.00</td>
+<td>158.04</td>
+<td>True</td>
+<td>2594</td>
+<td>Nam</td>
+<td>2542</td>
+<td>O2</td>
+<td>(20.206, 71.166, 10.284)</td>
+<td>(22.775, 72.712, 10.333)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>21</td>
+<td>ASP</td>
+<td>B</td>
+<td>17</td>
+<td>SER</td>
+<td>B</td>
+<td>False</td>
+<td>2.21</td>
+<td>2.97</td>
+<td>147.24</td>
+<td>True</td>
+<td>2614</td>
+<td>Nam</td>
+<td>2559</td>
+<td>O2</td>
+<td>(20.332, 74.628, 9.95)</td>
+<td>(23.189, 75.37, 9.657)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>22</td>
+<td>LYS</td>
+<td>B</td>
+<td>18</td>
+<td>ASP</td>
+<td>B</td>
+<td>False</td>
+<td>2.34</td>
+<td>3.09</td>
+<td>146.46</td>
+<td>True</td>
+<td>2626</td>
+<td>Nam</td>
+<td>2570</td>
+<td>O2</td>
+<td>(22.252, 75.196, 12.722)</td>
+<td>(25.004, 76.087, 11.636)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>23</td>
+<td>GLY</td>
+<td>B</td>
+<td>19</td>
+<td>GLU</td>
+<td>B</td>
+<td>False</td>
+<td>2.49</td>
+<td>3.25</td>
+<td>146.81</td>
+<td>True</td>
+<td>2648</td>
+<td>Nam</td>
+<td>2582</td>
+<td>O2</td>
+<td>(24.691, 73.086, 11.457)</td>
+<td>(27.321, 74.851, 10.745)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>24</td>
+<td>GLN</td>
+<td>B</td>
+<td>20</td>
+<td>PHE</td>
+<td>B</td>
+<td>False</td>
+<td>1.58</td>
+<td>2.39</td>
+<td>155.09</td>
+<td>True</td>
+<td>2655</td>
+<td>Nam</td>
+<td>2597</td>
+<td>O2</td>
+<td>(24.919, 74.728, 8.368)</td>
+<td>(27.188, 75.369, 7.994)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>4</td>
+<td>TRP</td>
+<td>B</td>
+<td>7</td>
+<td>LYS</td>
+<td>B</td>
+<td>False</td>
+<td>2.70</td>
+<td>3.17</td>
+<td>115.24</td>
+<td>False</td>
+<td>2366</td>
+<td>Nam</td>
+<td>2325</td>
+<td>O2</td>
+<td>(3.643, 68.764, 13.009)</td>
+<td>(2.966, 66.396, 14.999)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>4</td>
+<td>TRP</td>
+<td>B</td>
+<td>8</td>
+<td>LYS</td>
+<td>B</td>
+<td>False</td>
+<td>2.04</td>
+<td>2.88</td>
+<td>164.73</td>
+<td>False</td>
+<td>2388</td>
+<td>Nam</td>
+<td>2325</td>
+<td>O2</td>
+<td>(5.598, 67.488, 14.576)</td>
+<td>(2.966, 66.396, 14.999)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">20</td>
+<td>5</td>
+<td>ALA</td>
+<td>B</td>
+<td>9</td>
+<td>TYR</td>
+<td>B</td>
+<td>False</td>
+<td>2.01</td>
+<td>2.84</td>
+<td>163.31</td>
+<td>False</td>
+<td>2410</td>
+<td>Nam</td>
+<td>2349</td>
+<td>O2</td>
+<td>(7.369, 66.518, 12.532)</td>
+<td>(4.628, 65.784, 12.352)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">21</td>
+<td>6</td>
+<td>ALA</td>
+<td>B</td>
+<td>10</td>
+<td>GLY</td>
+<td>B</td>
+<td>False</td>
+<td>2.08</td>
+<td>2.92</td>
+<td>165.10</td>
+<td>False</td>
+<td>2431</td>
+<td>Nam</td>
+<td>2359</td>
+<td>O2</td>
+<td>(8.074, 68.934, 11.276)</td>
+<td>(5.161, 68.844, 11.348)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">22</td>
+<td>7</td>
+<td>LYS</td>
+<td>B</td>
+<td>11</td>
+<td>GLN</td>
+<td>B</td>
+<td>False</td>
+<td>2.11</td>
+<td>2.96</td>
+<td>166.77</td>
+<td>False</td>
+<td>2438</td>
+<td>Nam</td>
+<td>2369</td>
+<td>O2</td>
+<td>(9.443, 70.292, 13.364)</td>
+<td>(6.824, 69.365, 14.378)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">23</td>
+<td>8</td>
+<td>LYS</td>
+<td>B</td>
+<td>12</td>
+<td>GLN</td>
+<td>B</td>
+<td>False</td>
+<td>2.21</td>
+<td>3.04</td>
+<td>163.76</td>
+<td>False</td>
+<td>2455</td>
+<td>Nam</td>
+<td>2391</td>
+<td>O2</td>
+<td>(11.605, 68.535, 13.741)</td>
+<td>(8.983, 67.02, 14.017)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">24</td>
+<td>9</td>
+<td>TYR</td>
+<td>B</td>
+<td>13</td>
+<td>LEU</td>
+<td>B</td>
+<td>False</td>
+<td>2.13</td>
+<td>2.97</td>
+<td>165.13</td>
+<td>False</td>
+<td>2472</td>
+<td>Nam</td>
+<td>2413</td>
+<td>O2</td>
+<td>(12.92, 68.842, 11.238)</td>
+<td>(10.091, 68.017, 10.883)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>10</td>
+<td>GLY</td>
+<td>B</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>2.06</td>
+<td>2.86</td>
+<td>153.77</td>
+<td>False</td>
+<td>2491</td>
+<td>Nam</td>
+<td>2434</td>
+<td>O2</td>
+<td>(13.511, 71.553, 11.479)</td>
+<td>(10.685, 71.232, 11.739)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">26</td>
+<td>11</td>
+<td>GLN</td>
+<td>B</td>
+<td>15</td>
+<td>ARG</td>
+<td>B</td>
+<td>False</td>
+<td>2.17</td>
+<td>2.99</td>
+<td>159.98</td>
+<td>False</td>
+<td>2515</td>
+<td>Nam</td>
+<td>2441</td>
+<td>O2</td>
+<td>(15.419, 71.612, 13.581)</td>
+<td>(12.823, 70.331, 14.342)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">27</td>
+<td>12</td>
+<td>GLN</td>
+<td>B</td>
+<td>16</td>
+<td>MET</td>
+<td>B</td>
+<td>False</td>
+<td>2.36</td>
+<td>3.18</td>
+<td>161.27</td>
+<td>False</td>
+<td>2539</td>
+<td>Nam</td>
+<td>2458</td>
+<td>O2</td>
+<td>(17.534, 70.203, 12.393)</td>
+<td>(14.82, 68.541, 12.403)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">28</td>
+<td>13</td>
+<td>LEU</td>
+<td>B</td>
+<td>17</td>
+<td>SER</td>
+<td>B</td>
+<td>False</td>
+<td>2.06</td>
+<td>2.87</td>
+<td>156.82</td>
+<td>False</td>
+<td>2556</td>
+<td>Nam</td>
+<td>2475</td>
+<td>O2</td>
+<td>(18.093, 71.942, 10.285)</td>
+<td>(15.315, 71.209, 10.183)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">29</td>
+<td>14</td>
+<td>ARG</td>
+<td>B</td>
+<td>18</td>
+<td>ASP</td>
+<td>B</td>
+<td>False</td>
+<td>2.12</td>
+<td>2.93</td>
+<td>156.76</td>
+<td>False</td>
+<td>2567</td>
+<td>Nam</td>
+<td>2494</td>
+<td>O2</td>
+<td>(19.045, 74.154, 11.738)</td>
+<td>(16.326, 73.347, 12.473)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">30</td>
+<td>15</td>
+<td>ARG</td>
+<td>B</td>
+<td>19</td>
+<td>GLU</td>
+<td>B</td>
+<td>False</td>
+<td>2.30</td>
+<td>3.12</td>
+<td>158.83</td>
+<td>False</td>
+<td>2579</td>
+<td>Nam</td>
+<td>2518</td>
+<td>O2</td>
+<td>(21.433, 73.101, 12.768)</td>
+<td>(18.936, 71.449, 13.634)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">31</td>
+<td>16</td>
+<td>MET</td>
+<td>B</td>
+<td>20</td>
+<td>PHE</td>
+<td>B</td>
+<td>False</td>
+<td>2.18</td>
+<td>3.00</td>
+<td>158.04</td>
+<td>False</td>
+<td>2594</td>
+<td>Nam</td>
+<td>2542</td>
+<td>O2</td>
+<td>(22.775, 72.712, 10.333)</td>
+<td>(20.206, 71.166, 10.284)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">32</td>
+<td>17</td>
+<td>SER</td>
+<td>B</td>
+<td>21</td>
+<td>ASP</td>
+<td>B</td>
+<td>False</td>
+<td>2.21</td>
+<td>2.97</td>
+<td>147.24</td>
+<td>False</td>
+<td>2614</td>
+<td>Nam</td>
+<td>2559</td>
+<td>O2</td>
+<td>(23.189, 75.37, 9.657)</td>
+<td>(20.332, 74.628, 9.95)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">33</td>
+<td>18</td>
+<td>ASP</td>
+<td>B</td>
+<td>22</td>
+<td>LYS</td>
+<td>B</td>
+<td>False</td>
+<td>2.34</td>
+<td>3.09</td>
+<td>146.46</td>
+<td>False</td>
+<td>2626</td>
+<td>Nam</td>
+<td>2570</td>
+<td>O2</td>
+<td>(25.004, 76.087, 11.636)</td>
+<td>(22.252, 75.196, 12.722)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">34</td>
+<td>19</td>
+<td>GLU</td>
+<td>B</td>
+<td>23</td>
+<td>GLY</td>
+<td>B</td>
+<td>False</td>
+<td>2.49</td>
+<td>3.25</td>
+<td>146.81</td>
+<td>False</td>
+<td>2648</td>
+<td>Nam</td>
+<td>2582</td>
+<td>O2</td>
+<td>(27.321, 74.851, 10.745)</td>
+<td>(24.691, 73.086, 11.457)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">35</td>
+<td>20</td>
+<td>PHE</td>
+<td>B</td>
+<td>24</td>
+<td>GLN</td>
+<td>B</td>
+<td>False</td>
+<td>1.58</td>
+<td>2.39</td>
+<td>155.09</td>
+<td>False</td>
+<td>2655</td>
+<td>Nam</td>
+<td>2597</td>
+<td>O2</td>
+<td>(27.188, 75.369, 7.994)</td>
+<td>(24.919, 74.728, 8.368)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="dnarna-interaction" class="level1">
+<h1>DNA/RNA interaction</h1>
+<p>In this section we will calculate the protein (EGR1) and DNA interactions from the PDB 4X9J.</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DNA chain</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>interaction_types <span class="op">=</span> {<span class="st">'hbond'</span>: [], <span class="st">'hydrophobic'</span>: [], <span class="st">'pication'</span>: [], <span class="st">'pistacking'</span>: [], <span class="st">'saltbridge'</span>: [],</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                         <span class="st">'halogen'</span>: [], <span class="st">'metal'</span>: [], <span class="st">'waterbridge'</span>: []}</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>config.NOFIXFILE <span class="op">=</span> <span class="va">True</span>  <span class="co"># Do not write pdb fix file</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>protonate <span class="op">=</span> <span class="dv">1</span> <span class="co">#Perform protonation by PLIP</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>config.INTRA <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> protonate: <span class="co"># Perform protonation by PLIP which uses openbabel</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: <span class="co"># Do not protonate by PLIP if input pdb is already protonated</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    config.NOHYDRO <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the PLIP class</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>pdbfile <span class="op">=</span> PDBComplex()</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>pdbfile.load_pdb(<span class="st">'data/4x9j.pdb'</span>)  <span class="co"># Load PDB file</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse and get the ligands</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>ligands <span class="op">=</span> []</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lig <span class="kw">in</span> pdbfile.ligands:</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    ligands.append(lig)</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    pdbfile.characterize_complex(lig)</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, site <span class="kw">in</span> pdbfile.interaction_sets.items():</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>    report <span class="op">=</span> BindingSiteReport(site)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> interaction <span class="kw">in</span> interaction_types.keys():</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> interaction_data <span class="kw">in</span> <span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_info'</span>):</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>            interaction_types[interaction].append(<span class="bu">dict</span>(<span class="bu">zip</span>(<span class="bu">getattr</span>(report,interaction<span class="op">+</span><span class="st">'_features'</span>), interaction_data)))</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>interaction_types.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>dict_keys(['hbond', 'hydrophobic', 'pication', 'pistacking', 'saltbridge', 'halogen', 'metal', 'waterbridge'])</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># H-bond interaction</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'hbond'</span>])</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">SIDECHAIN</th>
+<th data-quarto-table-cell-role="th">DIST_H-A</th>
+<th data-quarto-table-cell-role="th">DIST_D-A</th>
+<th data-quarto-table-cell-role="th">DON_ANGLE</th>
+<th data-quarto-table-cell-role="th">PROTISDON</th>
+<th data-quarto-table-cell-role="th">DONORIDX</th>
+<th data-quarto-table-cell-role="th">DONORTYPE</th>
+<th data-quarto-table-cell-role="th">ACCEPTORIDX</th>
+<th data-quarto-table-cell-role="th">ACCEPTORTYPE</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>180</td>
+<td>ARG</td>
+<td>A</td>
+<td>2</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.06</td>
+<td>2.91</td>
+<td>166.76</td>
+<td>True</td>
+<td>1281</td>
+<td>Ng+</td>
+<td>1475</td>
+<td>O2</td>
+<td>(-11.001, -23.069, -17.68)</td>
+<td>(-8.974, -24.039, -19.524)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>180</td>
+<td>ARG</td>
+<td>A</td>
+<td>2</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.04</td>
+<td>2.88</td>
+<td>165.54</td>
+<td>True</td>
+<td>1282</td>
+<td>Ng+</td>
+<td>1472</td>
+<td>N2</td>
+<td>(-12.161, -22.025, -20.324)</td>
+<td>(-10.09, -23.648, -21.489)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>174</td>
+<td>ARG</td>
+<td>A</td>
+<td>4</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.10</td>
+<td>2.90</td>
+<td>155.28</td>
+<td>True</td>
+<td>1174</td>
+<td>Ng+</td>
+<td>1541</td>
+<td>O2</td>
+<td>(-7.303, -17.795, -16.424)</td>
+<td>(-7.246, -17.135, -19.251)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>174</td>
+<td>ARG</td>
+<td>A</td>
+<td>4</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.07</td>
+<td>2.92</td>
+<td>168.25</td>
+<td>True</td>
+<td>1173</td>
+<td>Ng+</td>
+<td>1538</td>
+<td>N2</td>
+<td>(-9.54, -15.731, -16.56)</td>
+<td>(-8.799, -15.476, -19.369)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>145</td>
+<td>SER</td>
+<td>A</td>
+<td>6</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>3.24</td>
+<td>4.03</td>
+<td>157.70</td>
+<td>True</td>
+<td>720</td>
+<td>O3</td>
+<td>1591</td>
+<td>O3</td>
+<td>(-6.279, -9.161, -8.312)</td>
+<td>(-6.646, -6.593, -11.399)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>149</td>
+<td>HIS</td>
+<td>A</td>
+<td>6</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>1.87</td>
+<td>2.71</td>
+<td>162.35</td>
+<td>True</td>
+<td>782</td>
+<td>Nar</td>
+<td>1603</td>
+<td>N2</td>
+<td>(-3.351, -11.966, -13.471)</td>
+<td>(-4.624, -10.555, -15.396)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>124</td>
+<td>ARG</td>
+<td>A</td>
+<td>8</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.00</td>
+<td>2.85</td>
+<td>166.96</td>
+<td>True</td>
+<td>356</td>
+<td>Ng+</td>
+<td>1669</td>
+<td>N2</td>
+<td>(4.285, -9.676, -14.094)</td>
+<td>(2.5, -8.361, -12.305)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>146</td>
+<td>ARG</td>
+<td>A</td>
+<td>7</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.21</td>
+<td>3.07</td>
+<td>175.51</td>
+<td>True</td>
+<td>735</td>
+<td>Ng+</td>
+<td>1636</td>
+<td>N2</td>
+<td>(1.036, -11.51, -13.566)</td>
+<td>(-1.109, -9.313, -13.646)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>146</td>
+<td>ARG</td>
+<td>A</td>
+<td>7</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.03</td>
+<td>2.84</td>
+<td>158.45</td>
+<td>True</td>
+<td>736</td>
+<td>Ng+</td>
+<td>1639</td>
+<td>O2</td>
+<td>(0.561, -11.417, -16.582)</td>
+<td>(-1.1, -9.201, -15.933)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>124</td>
+<td>ARG</td>
+<td>A</td>
+<td>8</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.22</td>
+<td>3.05</td>
+<td>162.69</td>
+<td>True</td>
+<td>355</td>
+<td>Ng+</td>
+<td>1672</td>
+<td>O2</td>
+<td>(2.546, -8.743, -16.407)</td>
+<td>(1.584, -7.132, -13.997)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>118</td>
+<td>ARG</td>
+<td>A</td>
+<td>10</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.08</td>
+<td>2.93</td>
+<td>173.41</td>
+<td>True</td>
+<td>260</td>
+<td>Ng+</td>
+<td>1735</td>
+<td>N2</td>
+<td>(9.195, -5.464, -18.941)</td>
+<td>(9.879, -5.062, -16.116)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>118</td>
+<td>ARG</td>
+<td>A</td>
+<td>10</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>2.03</td>
+<td>2.87</td>
+<td>164.56</td>
+<td>True</td>
+<td>261</td>
+<td>Ng+</td>
+<td>1738</td>
+<td>O2</td>
+<td>(6.669, -3.913, -18.195)</td>
+<td>(8.014, -3.798, -15.663)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>121</td>
+<td>GLU</td>
+<td>A</td>
+<td>8</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>3.16</td>
+<td>4.07</td>
+<td>156.99</td>
+<td>False</td>
+<td>1658</td>
+<td>O3</td>
+<td>306</td>
+<td>O3</td>
+<td>(6.632, -13.24, -8.427)</td>
+<td>(5.336, -9.705, -9.98)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>145</td>
+<td>SER</td>
+<td>A</td>
+<td>6</td>
+<td>DG</td>
+<td>B</td>
+<td>True</td>
+<td>3.51</td>
+<td>4.03</td>
+<td>116.25</td>
+<td>False</td>
+<td>1591</td>
+<td>O3</td>
+<td>720</td>
+<td>O3</td>
+<td>(-6.279, -9.161, -8.312)</td>
+<td>(-6.646, -6.593, -11.399)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>124</td>
+<td>ARG</td>
+<td>A</td>
+<td>54</td>
+<td>DG</td>
+<td>C</td>
+<td>True</td>
+<td>3.47</td>
+<td>3.77</td>
+<td>103.77</td>
+<td>True</td>
+<td>355</td>
+<td>Ng+</td>
+<td>1900</td>
+<td>O2</td>
+<td>(2.532, -5.439, -17.231)</td>
+<td>(1.584, -7.132, -13.997)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>146</td>
+<td>ARG</td>
+<td>A</td>
+<td>55</td>
+<td>DC</td>
+<td>C</td>
+<td>True</td>
+<td>3.01</td>
+<td>3.44</td>
+<td>112.94</td>
+<td>True</td>
+<td>736</td>
+<td>Ng+</td>
+<td>1949</td>
+<td>N3</td>
+<td>(0.763, -8.584, -18.758)</td>
+<td>(-1.1, -9.201, -15.933)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>174</td>
+<td>ARG</td>
+<td>A</td>
+<td>58</td>
+<td>DA</td>
+<td>C</td>
+<td>True</td>
+<td>3.23</td>
+<td>3.51</td>
+<td>101.46</td>
+<td>True</td>
+<td>1174</td>
+<td>Ng+</td>
+<td>2083</td>
+<td>N3</td>
+<td>(-4.103, -16.894, -17.711)</td>
+<td>(-7.246, -17.135, -19.251)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>120</td>
+<td>ASP</td>
+<td>A</td>
+<td>52</td>
+<td>DA</td>
+<td>C</td>
+<td>True</td>
+<td>3.14</td>
+<td>3.84</td>
+<td>140.95</td>
+<td>False</td>
+<td>1835</td>
+<td>N3</td>
+<td>293</td>
+<td>O2</td>
+<td>(7.192, -0.742, -16.975)</td>
+<td>(6.4, -2.598, -13.703)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>176</td>
+<td>ASP</td>
+<td>A</td>
+<td>58</td>
+<td>DA</td>
+<td>C</td>
+<td>True</td>
+<td>2.69</td>
+<td>3.38</td>
+<td>138.61</td>
+<td>False</td>
+<td>2083</td>
+<td>N3</td>
+<td>1206</td>
+<td>O3</td>
+<td>(-4.103, -16.894, -17.711)</td>
+<td>(-5.082, -18.594, -20.468)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># H-bond interaction</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(interaction_types[<span class="st">'saltbridge'</span>])</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RESNR</th>
+<th data-quarto-table-cell-role="th">RESTYPE</th>
+<th data-quarto-table-cell-role="th">RESCHAIN</th>
+<th data-quarto-table-cell-role="th">PROT_IDX_LIST</th>
+<th data-quarto-table-cell-role="th">RESNR_LIG</th>
+<th data-quarto-table-cell-role="th">RESTYPE_LIG</th>
+<th data-quarto-table-cell-role="th">RESCHAIN_LIG</th>
+<th data-quarto-table-cell-role="th">DIST</th>
+<th data-quarto-table-cell-role="th">PROTISPOS</th>
+<th data-quarto-table-cell-role="th">LIG_GROUP</th>
+<th data-quarto-table-cell-role="th">LIG_IDX_LIST</th>
+<th data-quarto-table-cell-role="th">LIGCOO</th>
+<th data-quarto-table-cell-role="th">PROTCOO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>103</td>
+<td>ARG</td>
+<td>A</td>
+<td>22,24,25</td>
+<td>8</td>
+<td>DG</td>
+<td>B</td>
+<td>4.87</td>
+<td>True</td>
+<td>Phosphate</td>
+<td>1656,1656,1657,1658,1659,1631</td>
+<td>(6.751, -14.324, -9.43)</td>
+<td>(9.572333333333333, -13.421, -5.562666666666668)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>114</td>
+<td>ARG</td>
+<td>A</td>
+<td>179,181,182</td>
+<td>7</td>
+<td>DG</td>
+<td>B</td>
+<td>4.27</td>
+<td>True</td>
+<td>Phosphate</td>
+<td>1623,1623,1625,1626,1598,1624</td>
+<td>(1.013, -12.685, -7.638)</td>
+<td>(3.4233333333333333, -12.407666666666666, -4.1...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>133</td>
+<td>LYS</td>
+<td>A</td>
+<td>512</td>
+<td>5</td>
+<td>DT</td>
+<td>B</td>
+<td>5.08</td>
+<td>True</td>
+<td>Phosphate</td>
+<td>1558,1558,1561,1533,1559,1560</td>
+<td>(-11.472, -10.521, -11.328)</td>
+<td>(-12.603, -6.803, -8.063)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>142</td>
+<td>ARG</td>
+<td>A</td>
+<td>664,666,667</td>
+<td>5</td>
+<td>DT</td>
+<td>B</td>
+<td>4.82</td>
+<td>True</td>
+<td>Phosphate</td>
+<td>1558,1558,1561,1533,1559,1560</td>
+<td>(-11.472, -10.521, -11.328)</td>
+<td>(-16.022000000000002, -10.019, -12.83733333333...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>153</td>
+<td>HIS</td>
+<td>A</td>
+<td>843,846</td>
+<td>4</td>
+<td>DG</td>
+<td>B</td>
+<td>4.92</td>
+<td>True</td>
+<td>Phosphate</td>
+<td>1525,1525,1506,1526,1527,1528</td>
+<td>(-13.357, -12.387, -17.568)</td>
+<td>(-15.801000000000002, -8.328, -18.886)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>127</td>
+<td>ARG</td>
+<td>A</td>
+<td>413,415,416</td>
+<td>52</td>
+<td>DA</td>
+<td>C</td>
+<td>5.15</td>
+<td>True</td>
+<td>Phosphate</td>
+<td>1819,1819,1794,1820,1821,1822</td>
+<td>(1.209, 2.821, -13.342)</td>
+<td>(-2.3363333333333336, 0.26133333333333336, -10...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>179</td>
+<td>LYS</td>
+<td>A</td>
+<td>1258</td>
+<td>57</td>
+<td>DC</td>
+<td>C</td>
+<td>3.33</td>
+<td>True</td>
+<td>Phosphate</td>
+<td>2037,2037,2038,2039,2040</td>
+<td>(4.86, -18.43, -23.48)</td>
+<td>(2.436, -20.689, -23.165)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>With the interaction calculated and stored as dictionary it can be extended and used further for analysis.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

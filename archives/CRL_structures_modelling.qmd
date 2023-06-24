@@ -1,0 +1,21 @@
+---
+title: "CRL structures"
+subtitle: "Articles related to CRL complex structures and modelling"
+toc: false
+categories:
+- PROTAC
+---
+
+* [2023 Systemwide disassembly and assembly of SCF ubiquitin ligase complexes](https://doi.org/10.1016/j.cell.2023.02.035){target="_blank"}
+* [2023 Structural Insights Into the Initiation and Elongation of Ubiquitination by Ubr1](https://doi.org/10.1101/2021.04.12.439291){target="_blank"}
+* [2022 Structure of CRL7FBXW8 reveals coupling with CUL1–RBX1/ROC1 for multi-cullin-RING E3-catalyzed ubiquitin ligation](https://doi.org/10.1038/s41594-022-00815-6){target="_blank"}
+* [2022 Modeling the CRL4A ligase complex to predict target protein ubiquitination induced by cereblon-recruiting PROTACs](https://doi.org/10.1016/j.jbc.2022.101653){target="_blank"}
+* [2022 Functional conservation and divergence of the helix-turn-helix motif of E2 ubiquitin-conjugating enzymes](https://doi.org/10.15252/embj.2021108823){target="_blank"}
+* [2022 Cryo-EM structure of CUL5-ARIH2 E3-E3 ligase complex reveals novel allosteric NEDD8 mechanism](https://mediatum.ub.tum.de/1638749){target="_blank"}
+* [2021 Ubiquitin ligation to F-box protein targets by SCF–RBR E3–E3 super-assembly](https://doi.org/10.1038/s41586-021-03197-9){target="_blank"}
+* [2021 CUL5-ARIH2 E3-E3 ubiquitin ligase structure reveals cullin-specific NEDD8 activation](https://doi.org/10.1038/s41589-021-00858-8){target="_blank"}
+* [2019 Structural basis of Cullin 2 RING E3 ligase regulation by the COP9 signalosome](https://doi.org/10.1038/s41467-019-11772-y){target="_blank"}
+
+
+
+

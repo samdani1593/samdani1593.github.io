@@ -1,0 +1,80 @@
+[
+  {
+    "listing": "/archives.html",
+    "items": [
+      "/archives/CRL_reviews.html",
+      "/archives/CRL_structures_modelling.html",
+      "/archives/Cheminformatics.html",
+      "/archives/Computational_Electrophysiology.html",
+      "/archives/Covalent_kinase_inhibitors.html",
+      "/archives/Enhanced_samplng.html",
+      "/archives/Fast_Molecule_generation.html",
+      "/archives/Fragment_Based_Drug_Design.html",
+      "/archives/Free_Energy_Perturbation.html",
+      "/archives/Kinase_hinge_binders.html",
+      "/archives/Induced_Fit_Docking.html",
+      "/archives/Interesting_articles.html",
+      "/archives/Kinase_ligand_interaction.html",
+      "/archives/Kinase_off_target.html",
+      "/archives/Ligand_pKa.html",
+      "/archives/Ligand_preparation_for_VS.html",
+      "/archives/Solubility.html",
+      "/archives/MD_simulation_workflows.html",
+      "/archives/Molecular_Docking.html",
+      "/archives/PDB_Structure_Quality.html",
+      "/archives/PROTAC_modelling.html",
+      "/archives/PROTAC_Permeability.html",
+      "/archives/PROTAC_Review.html",
+      "/archives/PROTAC_Applicability.html",
+      "/archives/Positional_Analogue_Scanning.html",
+      "/archives/Protein_pKa.html",
+      "/archives/DeepLearning_Binding_Affinity_predictions.html",
+      "/archives/Protein-Peptide-Docking.html",
+      "/archives/QM_MM_simulation.html",
+      "/archives/Quantum_Mechanics.html",
+      "/archives/Supervised_Molecular_Dynamics_Simulation.html",
+      "/archives/Ultra_Large_Virtual_screening.html",
+      "/archives/Video_lectures.html"
+    ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/2023-04-23-RDkit-cheatsheet.html",
+      "/posts/2023-05-21-PLIP-cheatsheet.html",
+      "/posts/2023-05-21-PROTAC_enumeration.html",
+      "/posts/2023-04-24-Prody-cheatsheet.html"
+    ]
+  },
+  {
+    "listing": "/toolbox.html",
+    "items": [
+      "/toolbox/Cheminformatics.html",
+      "/toolbox/Cheminformatics_blogs.html",
+      "/toolbox/Free_energy_Pertrurbation.html",
+      "/toolbox/Molecular_Docking.html",
+      "/toolbox/Molecular_Dynamics_Simulation.html",
+      "/toolbox/Molecular_Modelling.html",
+      "/toolbox/PROTAC_modelling.html",
+      "/toolbox/Protein_pKa.html",
+      "/toolbox/QM_MM_Simulation.html",
+      "/toolbox/Quantum_Mechanics.html"
+    ]
+  },
+  {
+    "listing": "/archives/DeepLearning_Binding_Affinity_predictions.html",
+    "items": [
+      "/archives/Enhanced_samplng.html",
+      "/archives/Fast_Molecule_generation.html",
+      "/archives/Fragment_Based_Drug_Design.html",
+      "/archives/Ligand_pKa.html",
+      "/archives/Ligand_preparation_for_VS.html",
+      "/archives/Solubility.html",
+      "/archives/PROTAC.html",
+      "/archives/PROTAC_Permeability.html",
+      "/archives/Positional_Analogue_Scanning.html",
+      "/archives/Quantum_Mechanics.html",
+      "/archives/Ultra_Large_Virtual_screening.html"
+    ]
+  }
+]

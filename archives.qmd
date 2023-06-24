@@ -1,0 +1,16 @@
+---
+title: "Archives"
+listing:
+  contents: archives
+  #sort: "date desc"
+  type: table
+  max-description-length: 175
+  date-format: medium
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: true
+---
+
+

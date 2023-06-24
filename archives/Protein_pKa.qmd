@@ -1,0 +1,21 @@
+---
+title: "Protein pKa calculation"
+subtitle: "Articles about pKa calculation for the proteins"
+toc: false
+categories:
+- Protonation
+---
+
+* [2023 Basis for Accurate Protein pKa Prediction with Machine Learning](https://doi.org/10.1021/acs.jcim.3c00254){target="_blank"}
+* [2023 Benchmarking In Silico Tools for Cysteine pKa Prediction](https://doi.org/10.1021/acs.jcim.3c00004){target="_blank"}
+* [2022 A Fast and Interpretable Deep Learning Approach for Accurate Electrostatics-Driven pKa Predictions in Proteins](https://doi.org/10.1021/acs.jctc.2c00308){target="_blank"}
+* [2022 Protein pKa Prediction by Tree-Based Machine Learning](https://doi.org/10.1021/acs.jctc.1c01257){target="_blank"}
+* [2022 Prediction of protein pKa with representation learning](https://doi.org/10.1039/D1SC05610G){target="_blank"}
+* [2021 MolGpka: A Web Server for Small Molecule pKa Prediction Using a Graph-Convolutional Neural Network](https://doi.org/10.1021/acs.jcim.1c00075){target="_blank"}
+* [2021 Protein pKa Prediction with Machine Learning](https://doi.org/10.1021/acsomega.1c05440){target="_blank"}
+* [2021 Computer Prediction of pKa Values in Small Molecules and Proteins](https://doi.org/10.1021/acsmedchemlett.1c00435){target="_blank"}
+* [2020 PypKa: A Flexible Python Module for Poisson–Boltzmann-Based pKa Calculations](https://doi.org/10.1021/acs.jcim.0c00718){target="_blank"}
+* [2014 Protoss: a holistic approach to predict tautomers and protonation states in protein-ligand complexes](https://doi.org/10.1186/1758-2946-6-12){target="_blank"}
+* [2011 PROPKA3: Consistent Treatment of Internal and Surface Residues in Empirical pKa Predictions](https://doi.org/10.1021/ct100578z){target="_blank"}
+
+

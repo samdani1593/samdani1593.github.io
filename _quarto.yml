@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Sam"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - Softwares.qmd
+      - Publications.qmd
+      - posts.qmd
+      - archives.qmd
+      - toolbox.qmd
+
+
+
+
+
+
+format:
+  html:
+    theme: 
+      dark: darkly
+      light: flatly
+    css: styles.css
+    toc: true
+
+
+
+

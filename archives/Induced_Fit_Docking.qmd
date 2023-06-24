@@ -1,0 +1,10 @@
+---
+title: "Induced Fit Docking"
+subtitle: "Articles about Induced Fit Docking methods"
+toc: false
+categories:
+- Docking
+---
+
+* [2023 tinyIFD: A High-Throughput Binding Pose Refinement Workflow Through Induced-Fit Ligand Docking](https://doi.org/10.1021/acs.jcim.2c01530){target="_blank"}
+

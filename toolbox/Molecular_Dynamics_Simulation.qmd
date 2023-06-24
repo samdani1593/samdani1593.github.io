@@ -1,0 +1,51 @@
+
+---
+title: "Molecular Dynamics Simulation Sofwares"
+subtitle: "Collection of Molecular Dynamics Simulation Softwares and plugins"
+---
+
+Open-source licensed:
+
+* Gromacs
+
+* Desmond
+
+
+* OpenMM
+
+* NAMD
+
+* Genesis
+
+* LAMMP
+
+* TINKER
+
+* Martini
+
+* PLUMED
+
+
+
+
+Commercial licensed:
+
+* AMBER
+
+
+* CHARMM
+
+
+Framework for biomolecular simulation:
+
+* [Openbiosim](https://biosimspace.openbiosim.org/)
+
+MD simulation data repo:
+
+* [MDverse](https://github.com/MDverse)
+
+
+
+
+
+

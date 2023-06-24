@@ -1,0 +1,19 @@
+---
+title: "Supervised Molecular Dynamics Simulation(SuMD)"
+subtitle: "Articles about different SuMD methods"
+toc: false
+categories:
+- MD simulation
+---
+
+* [2023 Qualitative Estimation of Protein–Ligand Complex Stability through Thermal Titration Molecular Dynamics Simulations](https://doi.org/10.1021/acs.jcim.2c00995){target="_blank"}
+* [2022 Investigating RNA–protein recognition mechanisms through supervised molecular dynamics (SuMD) simulations](https://doi.org/10.1093/nargab/lqac088){target="_blank"}
+* [2022 The full activation mechanism of the adenosine A1 receptor revealed by GaMD and Su-GaMD simulations](https://doi.org/10.1073/pnas.2203702119){target="_blank"}
+* [2020 Exploring the RNA-Recognition Mechanism Using Supervised Molecular Dynamics (SuMD) Simulations: Toward a Rational Design for Ribonucleic-Targeting Molecules?](https://doi.org/10.3389/fchem.2020.00107){target="_blank"}
+* [2020 A Supervised Molecular Dynamics Approach to Unbiased Ligand–Protein Unbinding](https://doi.org/10.1021/acs.jcim.9b01094){target="_blank"}
+* [2019 Coupling Supervised Molecular Dynamics (SuMD) with Entropy Estimations To Shine Light on the Stability of Multiple Binding Sites](https://doi.org/10.1021/acsmedchemlett.8b00490){target="_blank"}
+* [2020 HT-SuMD: making molecular dynamics simulations suitable for fragment-based screening. A comparative study with NMR](https://doi.org/10.1080/14756366.2020.1838499){target="_blank"}
+* [2017 Exploring Protein-Peptide Recognition Pathways Using a Supervised Molecular Dynamics Approach](http://dx.doi.org/10.1016/j.str.2017.02.009){target="_blank"}
+* [2016 Deciphering the Complexity of Ligand–Protein Recognition Pathways Using Supervised Molecular Dynamics (SuMD) Simulations](https://doi.org/10.1021/acs.jcim.5b00702){target="_blank"}
+* [2014 Supervised Molecular Dynamics (SuMD) as a Helpful Tool To Depict GPCR–Ligand Recognition Pathway in a Nanosecond Time Scale](https://doi.org/10.1021/ci400766b){target="_blank"}
+

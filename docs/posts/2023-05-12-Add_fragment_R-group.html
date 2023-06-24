@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.319">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Sam - Add fragment to R-group</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Sam</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Softwares.html" rel="" target="">
+ <span class="menu-text">Softwares</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Publications.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../posts.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../archives.html" rel="" target="">
+ <span class="menu-text">Archives</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../toolbox.html" rel="" target="">
+ <span class="menu-text">ToolBox</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#peter-schmidtke-blog" id="toc-peter-schmidtke-blog" class="nav-link active" data-scroll-target="#peter-schmidtke-blog">Peter Schmidtke blog</a></li>
+  <li><a href="#david-huang" id="toc-david-huang" class="nav-link" data-scroll-target="#david-huang">David Huang</a></li>
+  <li><a href="#r-group-decomposition" id="toc-r-group-decomposition" class="nav-link" data-scroll-target="#r-group-decomposition">R-group Decomposition</a>
+  <ul class="collapse">
+  <li><a href="#herongyang-blogpost" id="toc-herongyang-blogpost" class="nav-link" data-scroll-target="#herongyang-blogpost">herongyang blogpost</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Add fragment to R-group</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>’’’ Add fragment library to the existing 3D co-ordinate https://pschmidtke.github.io/blog/rdkit/3d-editor/2021/01/23/grafting-fragments.html</p>
+<p>https://iwatobipen.wordpress.com/2020/10/16/easy-way-to-connect-fragments-rdkit-tips-memo/comment-page-1/</p>
+<p>rdkit.Chem.rdmolops.CombineMols((Mol)mol1, (Mol)mol2[, (Point3D)offset=&lt;rdkit.Geometry.rdGeometry.Point3D object at 0x7f8ee4fd8840&gt;]) → Mol : Combine the atoms from two molecules to produce a third</p>
+<p>C++ signature : RDKit::ROMol* CombineMols(RDKit::ROMol,RDKit::ROMol [,RDGeom::Point3D=&lt;rdkit.Geometry.rdGeometry.Point3D object at 0x7f8ee4fd8840&gt;])</p>
+<p>https://asteeves.github.io/blog/2015/01/14/editing-in-rdkit/</p>
+<p>https://iwatobipen.wordpress.com/2021/06/06/generate-all-combinations-of-rgroups-from-molecules-rdkit-chemoinformatics/</p>
+<p>https://iwatobipen.wordpress.com/2020/01/29/scaffold-growing-with-rnn-rdkit-pytorch-chemoinformatics/</p>
+<p>https://oloren.ai/blog/add_rgroup.html</p>
+<p>https://github.com/Gumgo91/CombineMols</p>
+<p>https://git.durrantlab.pitt.edu/jdurrant/deepfrag/-/blob/main/leadopt/util.py</p>
+<p>https://www.rdkit.org/docs/source/rdkit.Chem.rdmolops.html#rdkit.Chem.rdmolops.CombineMols</p>
+<p>Input can be smiles or 3D sdf</p>
+<p>Print the molecules with atom idx and select the idx for adding the fragment from library</p>
+<p>’’’</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Draw</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>hydrocarbon_smiles <span class="op">=</span> <span class="st">'CCCC'</span>  <span class="co"># Example hydrocarbon SMILES representation</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>hydrocarbon <span class="op">=</span> Chem.MolFromSmiles(hydrocarbon_smiles)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>methyl_smiles <span class="op">=</span> <span class="st">'C'</span>  <span class="co"># SMILES representation of methyl group</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>methyl <span class="op">=</span> Chem.MolFromSmiles(methyl_smiles)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>carbon_index <span class="op">=</span> <span class="dv">2</span>  <span class="co"># Index of the carbon atom to attach the methyl group (zero-based indexing)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>modified_molecule <span class="op">=</span> Chem.CombineMols(hydrocarbon, methyl)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Chem.SanitizeMol(modified_molecule)  <span class="co"># Perform sanitization to ensure molecule validity</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>modified_molecule <span class="op">=</span> Chem.RenumberAtoms(modified_molecule, <span class="bu">list</span>(<span class="bu">range</span>(modified_molecule.GetNumAtoms())))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the coordinates of the added methyl group</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>modified_molecule.GetAtomWithIdx(hydrocarbon.GetNumAtoms() <span class="op">+</span> carbon_index).SetChiralTag(Chem.CHI_TETRAHEDRAL_CCW)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>modified_smiles <span class="op">=</span> Chem.MolToSmiles(modified_molecule)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Modified SMILES:"</span>, modified_smiles)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Draw.MolToImage(modified_molecule).show()  <span class="co"># Display the molecule</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>[16:28:36] 
+
+****
+Range Error
+idx
+Violation occurred on line 213 in file C:\rdkit\build\temp.win-amd64-cpython-38\Release\rdkit\Code\GraphMol\ROMol.cpp
+Failed Expression: 6 &lt; 5
+****
+</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>RuntimeError: Range Error
+    idx
+    Violation occurred on line 213 in file Code\GraphMol\ROMol.cpp
+    Failed Expression: 6 &lt; 5
+    RDKIT: 2022.09.5
+    BOOST: 1_78</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>hydrocarbon.GetNumAtoms()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>4</code></pre>
+</div>
+</div>
+<section id="peter-schmidtke-blog" class="level2">
+<h2 class="anchored" data-anchor-id="peter-schmidtke-blog">Peter Schmidtke blog</h2>
+<p>https://pschmidtke.github.io/blog/rdkit/3d-editor/2021/01/23/grafting-fragments.html</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://sourceforge.net/p/rdkit/mailman/message/34922663/ procedure extracted from this support request</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rdkit</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem.Draw <span class="im">import</span> IPythonConsole</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Draw</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>IPythonConsole.ipython_useSVG<span class="op">=</span><span class="va">True</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> py3Dmol</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> AllChem</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> copy</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem.rdMolAlign <span class="im">import</span> AlignMol</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>suppl <span class="op">=</span> Chem.SDMolSupplier(<span class="st">'input/ligand.sdf'</span>,removeHs<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> mol <span class="kw">in</span> suppl:</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    mblock <span class="op">=</span> Chem.MolToMolBlock(mol)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>viewer <span class="op">=</span> py3Dmol.view(width<span class="op">=</span><span class="dv">300</span>, height<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>viewer.addModel(mblock, <span class="st">'mol'</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>viewer.setStyle({<span class="st">"stick"</span>:{}})</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>viewer.zoomTo()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="3dmolviewer_16792549010688303" style="position: relative; width: 300px; height: 300px">
+        <p id="3dmolwarning_16792549010688303" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+        <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js');
+}
+
+var viewer_16792549010688303 = null;
+var warn = document.getElementById("3dmolwarning_16792549010688303");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_16792549010688303 = $3Dmol.createViewer(document.getElementById("3dmolviewer_16792549010688303"),{backgroundColor:"white"});
+viewer_16792549010688303.zoomTo();
+    viewer_16792549010688303.addModel("BRD4, Ligand 1\n     RDKit          3D\n\n 26 28  0  0  0  0  0  0  0  0999 V2000\n    2.7960   -3.1170   11.5320 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5010   -4.1570    9.3850 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1660   -3.4780   12.7880 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1910   -5.2940   11.4140 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4400   -1.8530   11.0440 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1160   -1.7280    9.7460 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8220   -4.2440   10.7070 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1730   -2.9820    8.9350 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8140   -2.8670    7.4750 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3840   -4.7830   12.6560 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4000   -0.6670   11.9180 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0530    0.5050   11.5340 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0160    1.6280   12.3610 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3260    1.5790   13.5730 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6740    0.4080   13.9570 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7100   -0.7140   13.1300 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8440   -0.8220    9.3340 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8940   -3.8280    7.0110 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4830   -2.1830    6.9960 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8100   -2.5080    7.3820 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6820   -5.3710   13.4500 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5640    0.5410   10.6380 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4990    2.4950   12.0770 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2980    2.4090   14.1850 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1650    0.3720   14.8540 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2260   -1.5800   13.4140 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  1  5  1  0\n  1  7  1  0\n  2  7  1  0\n  2  8  2  0\n  3 10  2  0\n  4  7  2  0\n  4 10  1  0\n  5  6  2  0\n  5 11  1  0\n  6  8  1  0\n  6 17  1  0\n  8  9  1  0\n  9 18  1  0\n  9 19  1  0\n  9 20  1  0\n 10 21  1  0\n 11 12  2  0\n 11 16  1  0\n 12 13  1  0\n 12 22  1  0\n 13 14  2  0\n 13 23  1  0\n 14 15  1  0\n 14 24  1  0\n 15 16  2  0\n 15 25  1  0\n 16 26  1  0\nM  END\n","mol");
+    viewer_16792549010688303.setStyle({"stick": {}});
+    viewer_16792549010688303.zoomTo();
+viewer_16792549010688303.render();
+});
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<pre><code>&lt;py3Dmol.view at 0x2ed1070e520&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> atom <span class="kw">in</span> mol.GetAtoms():</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>        atom.SetAtomMapNum(atom.GetIdx())</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>mol2d<span class="op">=</span>copy.deepcopy(mol)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>AllChem.Compute2DCoords(mol2d)    <span class="co">#do this on a copy here</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>Draw.MolToImage(mol2d, includeAtomNumbers<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="36">
+<p><img src="2023-05-12-Add_fragment_R-group_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> getAttachmentVector(mol):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" for a fragment to add, search for the position of the attachment point and extract the atom id's of the attachment point and the connected atom (currently only single bond supported)</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">    mol: fragment passed as rdkit molecule</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">    return: tuple (atom indices)</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    rindex<span class="op">=-</span><span class="dv">1</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    rindexNeighbor<span class="op">=-</span><span class="dv">1</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> atom <span class="kw">in</span> mol.GetAtoms():</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(atom.GetAtomicNum()<span class="op">==</span><span class="dv">0</span>):</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>            rindex<span class="op">=</span>atom.GetIdx()</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>            neighbours<span class="op">=</span>atom.GetNeighbors()</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(<span class="bu">len</span>(neighbours)<span class="op">==</span><span class="dv">1</span>):</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>                rindexNeighbor<span class="op">=</span>neighbours[<span class="dv">0</span>].GetIdx()</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>: </span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="st">"two attachment points not supported yet"</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>((rindex,rindexNeighbor))</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>fragment<span class="op">=</span>Chem.MolFromMolFile(<span class="st">'input/methyl.mol'</span>,removeHs<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>ret<span class="op">=</span>getAttachmentVector(fragment)</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> atom <span class="kw">in</span> mol.GetAtoms():</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>        atom.SetAtomMapNum(atom.GetIdx())</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(ret):</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    fragIndex1,fragIndex2<span class="op">=</span>ret</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fragIndex1, fragIndex2)</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>mblock <span class="op">=</span> Chem.MolToMolBlock(fragment)</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>viewer <span class="op">=</span> py3Dmol.view(width<span class="op">=</span><span class="dv">300</span>, height<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>viewer.addModel(mblock, <span class="st">'mol'</span>)</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>viewer.setStyle({<span class="st">"stick"</span>:{}})</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>viewer.zoomTo()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4 1</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div id="3dmolviewer_16792549284550335" style="position: relative; width: 300px; height: 300px">
+        <p id="3dmolwarning_16792549284550335" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+        <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js');
+}
+
+var viewer_16792549284550335 = null;
+var warn = document.getElementById("3dmolwarning_16792549284550335");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_16792549284550335 = $3Dmol.createViewer(document.getElementById("3dmolviewer_16792549284550335"),{backgroundColor:"white"});
+viewer_16792549284550335.zoomTo();
+    viewer_16792549284550335.addModel("\n     RDKit          3D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.5288    0.1610    0.9360 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2051    0.8240   -0.6786 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3346   -0.9314   -0.4496 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0685   -0.0537    0.1922 R   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  2  4  1  0\n  2  5  1  0\nV    5 *\nM  END\n","mol");
+    viewer_16792549284550335.setStyle({"stick": {}});
+    viewer_16792549284550335.zoomTo();
+viewer_16792549284550335.render();
+});
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+<pre><code>&lt;py3Dmol.view at 0x2ed10798310&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>queryAtomIndex<span class="op">=</span><span class="dv">20</span> <span class="co">#defined by clicking on an atom in the sketcher -&gt; needs to be a proton right now for grafting</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>atom<span class="op">=</span>mol.GetAtomWithIdx(queryAtomIndex)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>neighbours<span class="op">=</span>atom.GetNeighbors()</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="bu">len</span>(neighbours)<span class="op">==</span><span class="dv">1</span>):</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    rindexNeighbor<span class="op">=</span>neighbours[<span class="dv">0</span>].GetIdx()</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: </span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"two attachment points not supported yet"</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>molIndex1<span class="op">=</span>queryAtomIndex</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>molIndex2<span class="op">=</span>rindexNeighbor</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(molIndex1,molIndex2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>20 9</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>AlignMol(fragment,mol,atomMap<span class="op">=</span>((fragIndex2,molIndex1),(fragIndex1,molIndex2))) <span class="co">#important to specify the atomMap here, this aligns only the bonds</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="40">
+<pre><code>0.02749767976054038</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#the rest is just to display things here</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>mblock <span class="op">=</span> Chem.MolToMolBlock(mol)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>fragblock <span class="op">=</span> Chem.MolToMolBlock(fragment)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>viewer <span class="op">=</span> py3Dmol.view(width<span class="op">=</span><span class="dv">500</span>, height<span class="op">=</span><span class="dv">500</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>viewer.addModel(mblock, <span class="st">'mol'</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>viewer.addModel(fragblock, <span class="st">'mol'</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>viewer.setStyle({<span class="st">"stick"</span>:{}})</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>viewer.zoomTo()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="3dmolviewer_1679254938272862" style="position: relative; width: 500px; height: 500px">
+        <p id="3dmolwarning_1679254938272862" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+        <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js');
+}
+
+var viewer_1679254938272862 = null;
+var warn = document.getElementById("3dmolwarning_1679254938272862");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_1679254938272862 = $3Dmol.createViewer(document.getElementById("3dmolviewer_1679254938272862"),{backgroundColor:"white"});
+viewer_1679254938272862.zoomTo();
+    viewer_1679254938272862.addModel("BRD4, Ligand 1\n     RDKit          3D\n\n 26 28  0  0  0  0  0  0  0  0999 V2000\n    2.7960   -3.1170   11.5320 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5010   -4.1570    9.3850 N   0  0  0  0  0  0  0  0  0  1  0  0\n    3.1660   -3.4780   12.7880 N   0  0  0  0  0  0  0  0  0  2  0  0\n    3.1910   -5.2940   11.4140 N   0  0  0  0  0  0  0  0  0  3  0  0\n    2.4400   -1.8530   11.0440 C   0  0  0  0  0  0  0  0  0  4  0  0\n    2.1160   -1.7280    9.7460 C   0  0  0  0  0  0  0  0  0  5  0  0\n    2.8220   -4.2440   10.7070 C   0  0  0  0  0  0  0  0  0  6  0  0\n    2.1730   -2.9820    8.9350 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.8140   -2.8670    7.4750 C   0  0  0  0  0  0  0  0  0  8  0  0\n    3.3840   -4.7830   12.6560 C   0  0  0  0  0  0  0  0  0  9  0  0\n    2.4000   -0.6670   11.9180 C   0  0  0  0  0  0  0  0  0 10  0  0\n    3.0530    0.5050   11.5340 C   0  0  0  0  0  0  0  0  0 11  0  0\n    3.0160    1.6280   12.3610 C   0  0  0  0  0  0  0  0  0 12  0  0\n    2.3260    1.5790   13.5730 C   0  0  0  0  0  0  0  0  0 13  0  0\n    1.6740    0.4080   13.9570 C   0  0  0  0  0  0  0  0  0 14  0  0\n    1.7100   -0.7140   13.1300 C   0  0  0  0  0  0  0  0  0 15  0  0\n    1.8440   -0.8220    9.3340 H   0  0  0  0  0  0  0  0  0 16  0  0\n    1.8940   -3.8280    7.0110 H   0  0  0  0  0  0  0  0  0 17  0  0\n    2.4830   -2.1830    6.9960 H   0  0  0  0  0  0  0  0  0 18  0  0\n    0.8100   -2.5080    7.3820 H   0  0  0  0  0  0  0  0  0 19  0  0\n    3.6820   -5.3710   13.4500 H   0  0  0  0  0  0  0  0  0 20  0  0\n    3.5640    0.5410   10.6380 H   0  0  0  0  0  0  0  0  0 21  0  0\n    3.4990    2.4950   12.0770 H   0  0  0  0  0  0  0  0  0 22  0  0\n    2.2980    2.4090   14.1850 H   0  0  0  0  0  0  0  0  0 23  0  0\n    1.1650    0.3720   14.8540 H   0  0  0  0  0  0  0  0  0 24  0  0\n    1.2260   -1.5800   13.4140 H   0  0  0  0  0  0  0  0  0 25  0  0\n  1  3  1  0\n  1  5  1  0\n  1  7  1  0\n  2  7  1  0\n  2  8  2  0\n  3 10  2  0\n  4  7  2  0\n  4 10  1  0\n  5  6  2  0\n  5 11  1  0\n  6  8  1  0\n  6 17  1  0\n  8  9  1  0\n  9 18  1  0\n  9 19  1  0\n  9 20  1  0\n 10 21  1  0\n 11 12  2  0\n 11 16  1  0\n 12 13  1  0\n 12 22  1  0\n 13 14  2  0\n 13 23  1  0\n 14 15  1  0\n 14 24  1  0\n 15 16  2  0\n 15 25  1  0\n 16 26  1  0\nM  END\n","mol");
+    viewer_1679254938272862.addModel("\n     RDKit          3D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    4.6999   -5.7482   13.2952 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6899   -5.3867   13.4712 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0141   -6.2323   13.5694 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6697   -4.7987   14.3852 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3761   -4.7673   12.6348 R   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  2  4  1  0\n  2  5  1  0\nV    5 *\nM  END\n","mol");
+    viewer_1679254938272862.setStyle({"stick": {}});
+    viewer_1679254938272862.zoomTo();
+viewer_1679254938272862.render();
+});
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="42">
+<pre><code>&lt;py3Dmol.view at 0x2ed10752ee0&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> connectMols(mol1, mol2, atom1, atom2):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""function copied from here https://github.com/molecularsets/moses/blob/master/moses/baselines/combinatorial.py"""</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        combined <span class="op">=</span> Chem.CombineMols(mol1, mol2)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        emol <span class="op">=</span> Chem.EditableMol(combined)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        neighbor1_idx <span class="op">=</span> atom1.GetNeighbors()[<span class="dv">0</span>].GetIdx()</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>        neighbor2_idx <span class="op">=</span> atom2.GetNeighbors()[<span class="dv">0</span>].GetIdx()</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        atom1_idx <span class="op">=</span> atom1.GetIdx()</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>        atom2_idx <span class="op">=</span> atom2.GetIdx()</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>        bond_order <span class="op">=</span> atom2.GetBonds()[<span class="dv">0</span>].GetBondType()</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        emol.AddBond(neighbor1_idx,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>                     neighbor2_idx <span class="op">+</span> mol1.GetNumAtoms(),</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>                     order<span class="op">=</span>bond_order)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>        emol.RemoveAtom(atom2_idx <span class="op">+</span> mol1.GetNumAtoms())</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>        emol.RemoveAtom(atom1_idx)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>        mol <span class="op">=</span> emol.GetMol()</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> mol </span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>finalMol<span class="op">=</span>connectMols(mol,fragment,mol.GetAtomWithIdx(molIndex1),fragment.GetAtomWithIdx(fragIndex1))</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>Chem.SanitizeMol(finalMol)</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>finalMolBlock <span class="op">=</span> Chem.MolToMolBlock(finalMol)</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>viewer <span class="op">=</span> py3Dmol.view(width<span class="op">=</span><span class="dv">500</span>, height<span class="op">=</span><span class="dv">500</span>)</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>viewer.addModel(finalMolBlock, <span class="st">'mol'</span>)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>viewer.setStyle({<span class="st">"stick"</span>:{}})</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>viewer.zoomTo()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="3dmolviewer_16792549437858095" style="position: relative; width: 500px; height: 500px">
+        <p id="3dmolwarning_16792549437858095" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+        <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js');
+}
+
+var viewer_16792549437858095 = null;
+var warn = document.getElementById("3dmolwarning_16792549437858095");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_16792549437858095 = $3Dmol.createViewer(document.getElementById("3dmolviewer_16792549437858095"),{backgroundColor:"white"});
+viewer_16792549437858095.zoomTo();
+    viewer_16792549437858095.addModel("BRD4, Ligand 1\n     RDKit          3D\n\n 29 31  0  0  0  0  0  0  0  0999 V2000\n    2.7960   -3.1170   11.5320 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5010   -4.1570    9.3850 N   0  0  0  0  0  0  0  0  0  1  0  0\n    3.1660   -3.4780   12.7880 N   0  0  0  0  0  0  0  0  0  2  0  0\n    3.1910   -5.2940   11.4140 N   0  0  0  0  0  0  0  0  0  3  0  0\n    2.4400   -1.8530   11.0440 C   0  0  0  0  0  0  0  0  0  4  0  0\n    2.1160   -1.7280    9.7460 C   0  0  0  0  0  0  0  0  0  5  0  0\n    2.8220   -4.2440   10.7070 C   0  0  0  0  0  0  0  0  0  6  0  0\n    2.1730   -2.9820    8.9350 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.8140   -2.8670    7.4750 C   0  0  0  0  0  0  0  0  0  8  0  0\n    3.3840   -4.7830   12.6560 C   0  0  0  0  0  0  0  0  0  9  0  0\n    2.4000   -0.6670   11.9180 C   0  0  0  0  0  0  0  0  0 10  0  0\n    3.0530    0.5050   11.5340 C   0  0  0  0  0  0  0  0  0 11  0  0\n    3.0160    1.6280   12.3610 C   0  0  0  0  0  0  0  0  0 12  0  0\n    2.3260    1.5790   13.5730 C   0  0  0  0  0  0  0  0  0 13  0  0\n    1.6740    0.4080   13.9570 C   0  0  0  0  0  0  0  0  0 14  0  0\n    1.7100   -0.7140   13.1300 C   0  0  0  0  0  0  0  0  0 15  0  0\n    1.8440   -0.8220    9.3340 H   0  0  0  0  0  0  0  0  0 16  0  0\n    1.8940   -3.8280    7.0110 H   0  0  0  0  0  0  0  0  0 17  0  0\n    2.4830   -2.1830    6.9960 H   0  0  0  0  0  0  0  0  0 18  0  0\n    0.8100   -2.5080    7.3820 H   0  0  0  0  0  0  0  0  0 19  0  0\n    3.5640    0.5410   10.6380 H   0  0  0  0  0  0  0  0  0 21  0  0\n    3.4990    2.4950   12.0770 H   0  0  0  0  0  0  0  0  0 22  0  0\n    2.2980    2.4090   14.1850 H   0  0  0  0  0  0  0  0  0 23  0  0\n    1.1650    0.3720   14.8540 H   0  0  0  0  0  0  0  0  0 24  0  0\n    1.2260   -1.5800   13.4140 H   0  0  0  0  0  0  0  0  0 25  0  0\n    4.6999   -5.7482   13.2952 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6899   -5.3867   13.4712 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0141   -6.2323   13.5694 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6697   -4.7987   14.3852 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  1  5  1  0\n  1  7  1  0\n  2  7  1  0\n  2  8  2  0\n  3 10  2  0\n  4  7  2  0\n  4 10  1  0\n  5  6  2  0\n  5 11  1  0\n  6  8  1  0\n  6 17  1  0\n  8  9  1  0\n  9 18  1  0\n  9 19  1  0\n  9 20  1  0\n 11 12  2  0\n 11 16  1  0\n 12 13  1  0\n 12 21  1  0\n 13 14  2  0\n 13 22  1  0\n 14 15  1  0\n 14 23  1  0\n 15 16  2  0\n 15 24  1  0\n 16 25  1  0\n 26 27  1  0\n 27 28  1  0\n 27 29  1  0\n 10 27  1  0\nM  END\n","mol");
+    viewer_16792549437858095.setStyle({"stick": {}});
+    viewer_16792549437858095.zoomTo();
+viewer_16792549437858095.render();
+});
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<pre><code>&lt;py3Dmol.view at 0x2ed11a79f70&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="david-huang" class="level2">
+<h2 class="anchored" data-anchor-id="david-huang">David Huang</h2>
+<p>https://oloren.ai/blog/add_rgroup.html</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span>  rdkit <span class="im">import</span> Chem, DataStructs</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> Chem.MolFromSmiles(<span class="st">"[*:1]C1=C([*:2]=C(C2=CC=C(OCC3=CC=CC=C3)C=C2)N4)C4=NC=N1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem, DataStructs</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_groups(m, mapping):</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Written by David Huang, Oloren AI</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Loop over atoms until there are no wildcard atoms</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Find wildcard atom if available, otherwise exit</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> a_ <span class="kw">in</span> m.GetAtoms():</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> a_.GetAtomicNum() <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>                a <span class="op">=</span> a_</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> a <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Get appropriate group to substitute in from mapping</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>        group <span class="op">=</span> mapping[a.GetAtomMapNum()]</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> group.GetNumAtoms() <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Directly substitute atom in, if single atom group</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>            a.SetAtomicNum(group.GetAtomWithIdx(<span class="dv">0</span>).GetAtomicNum())</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>            a.SetAtomMapNum(<span class="dv">0</span>)</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Set wildcard atoms to having AtomMapNum 1000 for tracking</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>            a.SetAtomMapNum(<span class="dv">1000</span>)</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> a_ <span class="kw">in</span> group.GetAtoms():</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> a_.GetAtomicNum() <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>                    a_.SetAtomMapNum(<span class="dv">1000</span>)</span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Put group and base molecule together and make it editable</span></span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>            m <span class="op">=</span> Chem.CombineMols(m, group)</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>            m <span class="op">=</span> Chem.RWMol(m)</span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Find using tracking number the atoms to merge in new molecule</span></span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>            a1 <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>            a2 <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a>            bonds <span class="op">=</span> []</span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> a <span class="kw">in</span> m.GetAtoms():</span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> a.GetAtomMapNum() <span class="op">==</span> <span class="dv">1000</span>:</span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> a1 <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a>                        a1 <span class="op">=</span> a</span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
+<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a>                        a2 <span class="op">=</span> a</span>
+<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Find atoms to bind together based on atoms to merge</span></span>
+<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a>            b1 <span class="op">=</span> a1.GetBonds()[<span class="dv">0</span>]</span>
+<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>            start <span class="op">=</span> (b1.GetBeginAtomIdx() <span class="cf">if</span> b1.GetEndAtomIdx() <span class="op">==</span> a1.GetIdx()</span>
+<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span> b1.GetEndAtomIdx())</span>
+<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>            b2 <span class="op">=</span> a2.GetBonds()[<span class="dv">0</span>]</span>
+<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a>            end <span class="op">=</span> (b2.GetBeginAtomIdx() <span class="cf">if</span> b2.GetEndAtomIdx() <span class="op">==</span> a2.GetIdx()</span>
+<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span> b2.GetEndAtomIdx())</span>
+<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Add the connection and remove original wildcard atoms</span></span>
+<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a>            m.AddBond(start, end, order<span class="op">=</span>Chem.rdchem.BondType.SINGLE)</span>
+<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a>            m.RemoveAtom(a1.GetIdx())</span>
+<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a>            m.RemoveAtom(a2.GetIdx())</span>
+<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>DATA_DICT <span class="op">=</span> {<span class="st">'ID'</span>: <span class="dv">18</span>, <span class="st">'R'</span>:<span class="st">'N'</span> , <span class="st">'X'</span>:<span class="st">'C'</span> , <span class="st">'IC50-m'</span>:<span class="fl">83.9</span>, <span class="st">'IC50-Stdev'</span>: <span class="fl">19.9</span> }</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>asd <span class="op">=</span> pd.DataFrame.from_dict(DATA_DICT)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>asd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>ValueError: If using all scalar values, you must pass an index</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"mol"</span>] <span class="op">=</span> [add_groups(Chem.MolFromSmiles(<span class="st">"[*:1]C1=C([*:2]=C(C2=CC=C(OCC3=CC=CC=C3)C=C2)N4)C4=NC=N1"</span>),</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    {<span class="dv">1</span>: Chem.MolFromSmiles(r[<span class="st">"R"</span>]),</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>: Chem.MolFromSmiles(r[<span class="st">"X"</span>])}) <span class="cf">for</span> i, r <span class="kw">in</span> df.iterrows()]</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"smi"</span>] <span class="op">=</span> [Chem.MolToSmiles(m) <span class="cf">for</span> m <span class="kw">in</span> df[<span class="st">"mol"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Draw</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(df[<span class="st">"mol"</span>], molsPerRow<span class="op">=</span><span class="dv">4</span>, useSVG<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="r-group-decomposition" class="level1">
+<h1>R-group Decomposition</h1>
+<p>RgroupDecomposition https://www.herongyang.com/Cheminformatics/RDKit-R-Group-Decomposition.html</p>
+<p>https://greglandrum.github.io/rdkit-blog/posts/2022-03-14-rgd-and-molzip.html</p>
+<p>https://iwatobipen.wordpress.com/2019/10/01/make-rgroup-decompose-table-with-old-ver-rdkit-rdkit-chemoinformatics/</p>
+<p>RDkit function:</p>
+<p>https://www.rdkit.org/docs/source/rdkit.Chem.rdRGroupDecomposition.html</p>
+<section id="herongyang-blogpost" class="level2">
+<h2 class="anchored" data-anchor-id="herongyang-blogpost">herongyang blogpost</h2>
+<p>https://www.herongyang.com/Cheminformatics/RDKit-R-Group-Decomposition.html</p>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> rdRGroupDecomposition</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rdkit</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mols2grid</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> Chem.MolFromSmarts(<span class="st">'*Nc1ccc(*)cc1'</span>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<!--?xml version='1.0' encoding='iso-8859-1'?-->
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" xmlns:rdkit="http://www.rdkit.org/xml" xlink="http://www.w3.org/1999/xlink" space="preserve" width="450px" height="150px" viewbox="0 0 450 150">
+<!-- END OF HEADER -->
+<rect style="opacity:1.0;fill:#FFFFFF;stroke:none" width="450.0" height="150.0" x="0.0" y="0.0"> </rect>
+<path class="bond-0 atom-0 atom-1" d="M 58.1,40.0 L 75.3,61.7" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-0 atom-0 atom-1" d="M 79.6,58.3 L 96.7,80.0" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-0 atom-0 atom-1" d="M 71.0,65.1 L 88.1,86.8" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:1,1.33333"></path>
+<path class="bond-1 atom-1 atom-2" d="M 112.8,94.7 L 144.0,90.2" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-1 atom-1 atom-2" d="M 144.0,90.2 L 175.1,85.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-1 atom-1 atom-2" d="M 142.0,79.3 L 167.3,75.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:1,1.33333"></path>
+<path class="bond-2 atom-2 atom-3" d="M 175.1,85.6 L 188.7,51.5" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-2 atom-2 atom-3" d="M 188.7,51.5 L 202.3,17.4" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-2 atom-2 atom-3" d="M 198.9,55.6 L 210.1,27.4" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:2,2"></path>
+<path class="bond-3 atom-3 atom-4" d="M 202.3,17.4 L 238.6,12.1" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-3 atom-3 atom-4" d="M 238.6,12.1 L 274.9,6.8" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-3 atom-3 atom-4" d="M 240.1,23.0 L 270.2,18.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:2,2"></path>
+<path class="bond-4 atom-4 atom-5" d="M 274.9,6.8 L 297.6,35.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-4 atom-4 atom-5" d="M 297.6,35.6 L 320.3,64.4" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-4 atom-4 atom-5" d="M 289.0,42.4 L 307.8,66.2" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:2,2"></path>
+<path class="bond-5 atom-5 atom-6" d="M 320.3,64.4 L 353.0,59.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-5 atom-5 atom-6" d="M 352.2,65.3 L 386.4,60.3" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-5 atom-5 atom-6" d="M 350.6,54.4 L 384.8,49.4" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:2,2"></path>
+<path class="bond-6 atom-5 atom-7" d="M 320.3,64.4 L 306.8,98.5" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-6 atom-5 atom-7" d="M 306.8,98.5 L 293.2,132.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-6 atom-5 atom-7" d="M 296.6,94.4 L 285.4,122.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:2,2"></path>
+<path class="bond-7 atom-7 atom-8" d="M 293.2,132.6 L 256.9,137.9" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-7 atom-7 atom-8" d="M 256.9,137.9 L 220.6,143.2" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-7 atom-7 atom-8" d="M 255.3,127.0 L 225.3,131.4" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:2,2"></path>
+<path class="bond-8 atom-8 atom-2" d="M 220.6,143.2 L 197.9,114.4" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-8 atom-8 atom-2" d="M 197.9,114.4 L 175.1,85.6" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+<path class="bond-8 atom-8 atom-2" d="M 206.5,107.6 L 187.7,83.8" style="fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:2,2"></path>
+<path d="M 201.6,19.1 L 202.3,17.4 L 204.1,17.2" style="fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"></path>
+<path d="M 273.0,7.1 L 274.9,6.8 L 276.0,8.3" style="fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"></path>
+<path d="M 293.9,130.9 L 293.2,132.6 L 291.4,132.8" style="fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"></path>
+<path d="M 222.4,142.9 L 220.6,143.2 L 219.5,141.7" style="fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"></path>
+<path class="atom-0" d="M 53.1 36.3
+L 56.2 33.2
+L 52.1 32.4
+L 52.7 30.3
+L 56.5 32.2
+L 55.9 28.1
+L 58.1 28.1
+L 57.5 32.2
+L 61.3 30.4
+L 62.0 32.4
+L 57.9 33.2
+L 60.8 36.3
+L 59.0 37.6
+L 57.0 33.7
+L 54.9 37.6
+L 53.1 36.3
+" fill="#191919"></path>
+<path class="atom-1" d="M 97.9 85.8
+L 104.8 96.8
+Q 105.4 97.9, 106.5 99.9
+Q 107.6 101.9, 107.7 102.0
+L 107.7 85.8
+L 110.4 85.8
+L 110.4 106.6
+L 107.6 106.6
+L 100.3 94.6
+Q 99.4 93.2, 98.5 91.6
+Q 97.6 89.9, 97.4 89.4
+L 97.4 106.6
+L 94.7 106.6
+L 94.7 85.8
+L 97.9 85.8
+" fill="#0000FF"></path>
+<path class="atom-6" d="M 389.0 51.5
+L 392.1 48.4
+L 388.0 47.5
+L 388.7 45.4
+L 392.4 47.3
+L 391.9 43.2
+L 394.1 43.2
+L 393.4 47.3
+L 397.2 45.5
+L 397.9 47.5
+L 393.8 48.3
+L 396.7 51.4
+L 394.9 52.7
+L 392.9 48.9
+L 390.8 52.7
+L 389.0 51.5
+" fill="#191919"></path>
+</svg>
+</div>
+</div>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>ms <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(Chem.MolFromSmiles, [<span class="st">'CC(=O)Nc1ccc(O)cc1'</span>,<span class="st">'CCNc1ccc(OC)cc1'</span>]))</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>mols2grid.display(ms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"96171831bb664f16a441b76788f34e88","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<iframe class="mols2grid-iframe" frameborder="0" width="100%" height="200" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-modals" srcdoc="<html>
+  <meta charset=&quot;utf-8&quot;>
+  <head>
+    <style>
+    #mols2grid.gridcontainer {
+    display: block;
+    padding-left: 1em;
+    max-width: 820px;
+    width: 820px;
+}
+#mols2grid .cell {
+    border: 1px solid #cccccc;
+    text-align: center;
+    vertical-align: top;
+    max-width: 160px;
+    width: 160px;
+    font-family: 'DejaVu', sans-serif;
+    font-size: 12pt;
+    padding: 0;
+    margin: 0px;
+    float: left;
+}
+#mols2grid .cell:hover {
+    background-color: #e7e7e7 !important;
+}
+#mols2grid .cell .data-img {
+    padding: 0;
+    margin: 0;
+}
+#mols2grid .cell img, #mols2grid .cell svg {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+}
+#mols2grid .data {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+#mols2grid .arrow-asc:after {
+    content: '↑';
+    text-align: right;
+    float:right;
+}
+#mols2grid .arrow-desc:after {
+    content: '↓';
+    text-align: right;
+    float:right;
+}
+    /* custom CSS */
+    
+    </style>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js&quot;></script>
+<script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot; integrity=&quot;sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=&quot; crossorigin=&quot;anonymous&quot;></script>
+<script>
+    function fit_height(obj) {
+        obj.style.height = 0;
+        var height = obj.contentDocument.body.scrollHeight + 18 + 'px';
+        obj.style.height = height;
+    }
+</script>
+<link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css&quot; integrity=&quot;sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l&quot; crossorigin=&quot;anonymous&quot;>
+<script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns&quot; crossorigin=&quot;anonymous&quot;></script>
+<script src=&quot;https://unpkg.com/@rdkit/rdkit@2022.3.1/Code/MinimalLib/dist/RDKit_minimal.js&quot;></script>
+    <!-- custom header -->
+    
+  </head>
+  <body>
+    <div id=&quot;mols2grid&quot; class=&quot;gridcontainer grid-default&quot;>
+      <div class=&quot;row mb-3&quot;>
+        <div class=&quot;list&quot;><div class=&quot;cell&quot; data-mols2grid-id=&quot;0&quot;><input type=&quot;checkbox&quot; class=&quot;position-relative float-left cached_checkbox&quot;><div class=&quot;data data-mols2grid-id-copy&quot;></div><a tabindex=&quot;0&quot; class=&quot;data data-img mols2grid-tooltip&quot; data-toggle=&quot;popover&quot; data-content=&quot;.&quot;></a><div class=&quot;data data-SMILES&quot; style=&quot;display: none;&quot;></div></div></div>
+      </div>
+      <div class=&quot;d-inline&quot;>
+        <ul class=&quot;pagination float-left&quot;></ul>
+        <div id=&quot;controls&quot; class=&quot;d-flex flex-row float-right&quot;>
+          
+          <div id=&quot;chkbox-dropdown&quot; class=&quot;dropdown&quot;>
+    <button class=&quot;btn btn-light dropdown-toggle&quot; type=&quot;button&quot; id=&quot;chkboxDropdown&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;>☑</button>
+    <div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;checkboxDropdownMenu&quot;>
+        <button id=&quot;btn-chkbox-all&quot; class=&quot;dropdown-item&quot; type=&quot;button&quot;>Check all</button>
+        <button id=&quot;btn-chkbox-match&quot; class=&quot;dropdown-item&quot; type=&quot;button&quot;>Check matching</button>
+        <button id=&quot;btn-chkbox-none&quot; class=&quot;dropdown-item&quot; type=&quot;button&quot;>Uncheck all</button>
+        <button id=&quot;btn-chkbox-invert&quot; class=&quot;dropdown-item&quot; type=&quot;button&quot;>Invert</button>
+        <div class=&quot;dropdown-divider&quot;></div>
+        <button id=&quot;btn-chkbox-copy&quot; class=&quot;dropdown-item&quot; type=&quot;button&quot;>Copy to clipboard</button>
+        <button id=&quot;btn-chkbox-dlsmi&quot; class=&quot;dropdown-item&quot; type=&quot;button&quot;>Save SMILES</button>
+        <button id=&quot;btn-chkbox-dlcsv&quot; class=&quot;dropdown-item&quot; type=&quot;button&quot;>Save CSV</button>
+    </div>
+</div>
+          
+          <div id=&quot;sort-dropdown&quot; class=&quot;dropdown pl-2&quot;>
+            <button class=&quot;btn btn-light dropdown-toggle&quot; type=&quot;button&quot; id=&quot;sortDropdown&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;>
+              Sort by
+            </button>
+            <div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;sortDropdownMenu&quot;>
+              
+              
+              
+              
+              
+              <button class=&quot;dropdown-item sort-btn arrow-asc active&quot; type=&quot;button&quot; data-name=&quot;mols2grid-id&quot;>Index</button>
+              
+              
+              
+              
+              
+              <button class=&quot;dropdown-item sort-btn arrow-asc active&quot; type=&quot;button&quot; data-name=&quot;data-mols2grid-id&quot;>mols2grid-id</button>
+              
+              
+              
+              
+              
+              <button class=&quot;dropdown-item sort-btn &quot; type=&quot;button&quot; data-name=&quot;data-SMILES&quot;>SMILES</button>
+              
+              
+              
+              <button class=&quot;dropdown-item sort-btn&quot; type=&quot;button&quot; data-name=&quot;checkbox&quot;>Selected</button>
+              
+            </div>
+          </div>
+          <div class=&quot;input-group row pl-4&quot;>
+            <input type=&quot;text&quot; id=&quot;searchbar&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot; aria-describedby=&quot;basic-addon1&quot;>
+            <div class=&quot;input-group-append&quot;>
+              <button id=&quot;searchBtn&quot; class=&quot;btn btn-light dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;>🔎</button>
+              <div class=&quot;dropdown-menu dropdown-menu-right&quot;>
+                <button id=&quot;txtSearch&quot; class=&quot;search-btn dropdown-item active&quot;>Text</button>
+                <button id=&quot;smartsSearch&quot; class=&quot;search-btn dropdown-item&quot;>SMARTS</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    // list.js
+var listObj = new List('mols2grid', {
+    valueNames: [{data: ['mols2grid-id']}, 'data-SMILES', 'data-mols2grid-id', 'data-img', 'data-mols2grid-id-copy', {attr: 'data-content', name: 'mols2grid-tooltip'}],
+    item: '<div class=&quot;cell&quot; data-mols2grid-id=&quot;0&quot;><input type=&quot;checkbox&quot; class=&quot;position-relative float-left cached_checkbox&quot;><div class=&quot;data data-mols2grid-id-copy&quot;></div><a tabindex=&quot;0&quot; class=&quot;data data-img mols2grid-tooltip&quot; data-toggle=&quot;popover&quot; data-content=&quot;.&quot;></a><div class=&quot;data data-SMILES&quot; style=&quot;display: none;&quot;></div></div>',
+    page: 15,
+    pagination: {
+        name: &quot;pagination&quot;,
+        item: '<li class=&quot;page-item&quot;><a class=&quot;page page-link&quot; href=&quot;#&quot; onclick=&quot;event.preventDefault()&quot;></a></li>',
+        innerWindow: 1,
+        outerWindow: 1,
+    },
+});
+listObj.remove(&quot;mols2grid-id&quot;, &quot;0&quot;);
+listObj.add([{&quot;data-SMILES&quot;: &quot;CC(=O)Nc1ccc(O)cc1&quot;, &quot;mols2grid-id&quot;: 0, &quot;data-img&quot;: null, &quot;data-mols2grid-id-copy&quot;: 0, &quot;mols2grid-tooltip&quot;: &quot;<strong>SMILES</strong>: CC(=O)Nc1ccc(O)cc1&quot;}, {&quot;data-SMILES&quot;: &quot;CCNc1ccc(OC)cc1&quot;, &quot;mols2grid-id&quot;: 1, &quot;data-img&quot;: null, &quot;data-mols2grid-id-copy&quot;: 1, &quot;mols2grid-tooltip&quot;: &quot;<strong>SMILES</strong>: CCNc1ccc(OC)cc1&quot;}]);
+// filter
+if (window.parent.mols2grid_lists === undefined) {
+    window.parent.mols2grid_lists = {};
+}
+window.parent.mols2grid_lists[&quot;default&quot;] = listObj;
+
+
+// selection
+class MolStorage extends Map {
+    multi_set(_id, _smiles) {
+        for (let i=0; i < _id.length; i++) {
+            this.set(_id[i], _smiles[i]);
+        }
+    }
+    multi_del(_id) {
+        for (let i=0; i < _id.length; i++) {
+            this.delete(_id[i]);
+        };
+    }
+    to_dict() {
+        var content = &quot;{&quot;;
+        for (let [key, value] of this) {
+            content += key + &quot;:&quot; + JSON.stringify(value) + &quot;,&quot;;
+        }
+        content = content.length > 1 ? content.slice(0, -1) : content;
+        content += &quot;}&quot;;
+        return content
+    }
+    download_smi(fileName) {
+        var content = &quot;&quot;;
+        for (let [key, value] of this) {
+            content += value + &quot; &quot; + key + &quot;\n&quot;;
+        }
+        var a = document.createElement(&quot;a&quot;);
+        var file = new Blob([content], {type: &quot;text/plain&quot;});
+        a.href = URL.createObjectURL(file);
+        a.download = fileName;
+        a.click();
+        a.remove();
+    }
+}
+var SELECTION = new MolStorage();
+
+
+
+// kernel
+function add_selection(grid_id, _id, smiles) {
+    SELECTION.multi_set(_id, smiles);
+    let model = window.parent[&quot;_MOLS2GRID_&quot; + grid_id];
+    if (model) {
+        model.set(&quot;selection&quot;, SELECTION.to_dict());
+        model.save_changes();
+    }
+}
+function del_selection(grid_id, _id) {
+    SELECTION.multi_del(_id);
+    let model = window.parent[&quot;_MOLS2GRID_&quot; + grid_id];
+    if (model) {
+        model.set(&quot;selection&quot;, SELECTION.to_dict());
+        model.save_changes();
+    }
+}
+if (window.parent.IPython !== undefined) {
+    // Jupyter notebook
+    var kernel_env = &quot;jupyter&quot;;
+} else if (window.parent.google !== undefined) {
+    // Google colab
+    var kernel_env = &quot;colab&quot;;
+} else {
+    var kernel_env = null;
+}
+
+
+
+
+// sort
+var sort_field = &quot;mols2grid-id&quot;;
+var sort_order = &quot;asc&quot;;
+function mols2gridSortFunction(itemA, itemB, options) {
+    var x = itemA.values()[options.valueName];
+    var y = itemB.values()[options.valueName];
+    if (typeof x === &quot;number&quot;) {
+        if (isFinite(x - y)) {
+            return x - y; 
+        } else {
+            return isFinite(x) ? -1 : 1;
+        }
+    } else {
+        x = x.toLowerCase();
+        y = y.toLowerCase();
+        return (x < y) ? -1: (x > y) ? 1: 0;
+    }
+}
+function checkboxSort(itemA, itemB, options) {
+    if (itemA.elm !== undefined) {
+        var checkedA = itemA.elm.firstChild.checked;
+        if (itemB.elm !== undefined) {
+            var checkedB = itemB.elm.firstChild.checked;
+            if (checkedA &amp;&amp; !checkedB) {
+                return -1;
+            } else if (!checkedA &amp;&amp; checkedB) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            return -1;
+        }
+    } else if (itemB.elm !== undefined) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+$('#mols2grid button.sort-btn').click(function(e) {
+    var _field = $(this).attr(&quot;data-name&quot;);
+    if (_field == sort_field) {
+        $(this).removeClass(&quot;arrow-&quot; + sort_order)
+        sort_order = (sort_order === &quot;desc&quot;) ? &quot;asc&quot; : &quot;desc&quot;;
+    } else {
+        $('#mols2grid button.sort-btn.active').removeClass(&quot;active arrow-&quot; + sort_order);
+        sort_order = &quot;asc&quot;;
+        sort_field = _field;
+        $(this).addClass(&quot;active&quot;);
+    }
+    $(this).addClass(&quot;arrow-&quot; + sort_order)
+    if (sort_field == &quot;checkbox&quot;) {
+        listObj.sort(&quot;mols2grid-id&quot;, {order: sort_order, sortFunction: checkboxSort});
+    } else {
+        listObj.sort(_field, {order: sort_order, sortFunction: mols2gridSortFunction});
+    }
+});
+
+
+
+
+// tooltips
+$.fn.tooltip.Constructor.Default.whiteList.span = ['style']
+listObj.on(&quot;updated&quot;, function (list) {
+    $(function () {
+        // hide previous popovers
+        $('#mols2grid a.page-link').click(function(e) {
+            $('.mols2grid-tooltip[data-toggle=&quot;popover&quot;]').popover('hide')
+        });
+        // create new popover
+        $('.mols2grid-tooltip[data-toggle=&quot;popover&quot;]').popover({
+            placement: 'bottom',
+            trigger: 'click hover',
+            html: true,
+            sanitize: false,
+        });
+    })
+});
+
+
+
+// selection modifyers and export options
+// check all
+$('#btn-chkbox-all').click(function (e) {
+    var _id = [];
+    var _smiles = [];
+    listObj.items.forEach(function (item) {
+        if (item.elm) {
+            item.elm.getElementsByTagName(&quot;input&quot;)[0].checked = true;
+        } else {
+            item.show()
+            item.elm.getElementsByTagName(&quot;input&quot;)[0].checked = true;
+            item.hide()
+        }
+        _id.push(item.values()[&quot;mols2grid-id&quot;]);
+        _smiles.push(item.values()[&quot;data-SMILES&quot;]);
+    });
+    add_selection(&quot;default&quot;, _id, _smiles);
+});
+// check matching
+$('#btn-chkbox-match').click(function (e) {
+    var _id = [];
+    var _smiles = [];
+    listObj.matchingItems.forEach(function (item) {
+        if (item.elm) {
+            item.elm.getElementsByTagName(&quot;input&quot;)[0].checked = true;
+        } else {
+            item.show()
+            item.elm.getElementsByTagName(&quot;input&quot;)[0].checked = true;
+            item.hide()
+        }
+        _id.push(item.values()[&quot;mols2grid-id&quot;]);
+        _smiles.push(item.values()[&quot;data-SMILES&quot;]);
+    });
+    add_selection(&quot;default&quot;, _id, _smiles);
+});
+// uncheck all
+$('#btn-chkbox-none').click(function (e) {
+    var _id = [];
+    listObj.items.forEach(function (item) {
+        if (item.elm) {
+            item.elm.getElementsByTagName(&quot;input&quot;)[0].checked = false;
+        } else {
+            item.show()
+            item.elm.getElementsByTagName(&quot;input&quot;)[0].checked = false;
+            item.hide()
+        }
+        _id.push(item.values()[&quot;mols2grid-id&quot;]);
+    });
+    del_selection(&quot;default&quot;, _id);
+});
+// invert
+$('#btn-chkbox-invert').click(function (e) {
+    var _id_add = [];
+    var _id_del = [];
+    var _smiles = [];
+    listObj.items.forEach(function (item) {
+        if (item.elm) {
+            var chkbox = item.elm.getElementsByTagName(&quot;input&quot;)[0]
+            chkbox.checked = !chkbox.checked;
+        } else {
+            item.show()
+            var chkbox = item.elm.getElementsByTagName(&quot;input&quot;)[0]
+            chkbox.checked = !chkbox.checked;
+            item.hide()
+        }
+        if (chkbox.checked) {
+            _id_add.push(item.values()[&quot;mols2grid-id&quot;]);
+            _smiles.push(item.values()[&quot;data-SMILES&quot;]);
+        } else {
+            _id_del.push(item.values()[&quot;mols2grid-id&quot;]);
+        }
+    });
+    del_selection(&quot;default&quot;, _id_del);
+    add_selection(&quot;default&quot;, _id_add, _smiles);
+});
+// copy to clipboard
+$(&quot;#btn-chkbox-copy&quot;).click(function(e) {
+    navigator.clipboard.writeText(SELECTION.to_dict());
+});
+// export smiles
+$(&quot;#btn-chkbox-dlsmi&quot;).click(function(e) {
+    SELECTION.download_smi(&quot;selection.smi&quot;);
+});
+// export CSV
+$(&quot;#btn-chkbox-dlcsv&quot;).click(function(e) {
+    var sep = &quot;\t&quot;
+    // same order as subset + tooltip
+    var columns = Array.from(listObj.items[0].elm.querySelectorAll(&quot;div.data&quot;))
+                       .map(elm => elm.classList[1]);
+    // remove 'data-'
+    var header = columns.map(name => name.slice(5));
+    // csv content
+    header = [&quot;index&quot;].concat(header).join(sep);
+    var content = header + &quot;\n&quot;;
+    for (let [index, smiles] of SELECTION.entries()) {
+        var data = listObj.items[index].values();
+        content += index;
+        columns.forEach((key) => {
+            content += sep + data[key];
+        })
+        content += &quot;\n&quot;;
+    }
+    var a = document.createElement(&quot;a&quot;);
+    var file = new Blob([content], {type: &quot;text/csv&quot;});
+    a.href = URL.createObjectURL(file);
+    a.download = &quot;selection.csv&quot;;
+    a.click();
+    a.remove();
+});
+// update selection on checkbox click
+listObj.on(&quot;updated&quot;, function (list) {
+    $(&quot;input:checkbox&quot;).change(function() {
+        var _id = parseInt($(this).closest(&quot;.cell&quot;).attr(&quot;data-mols2grid-id&quot;));
+        if (this.checked) {
+            var _smiles = $($(this).siblings(&quot;.data-SMILES&quot;)[0]).text();
+            add_selection(&quot;default&quot;, [_id], [_smiles]);
+        } else {
+            del_selection(&quot;default&quot;, [_id]);
+        }
+    }); 
+});
+
+
+
+
+
+// generate images for the currently displayed molecules
+var draw_opts = {&quot;width&quot;: 160, &quot;height&quot;: 120};
+var json_draw_opts = JSON.stringify(draw_opts);
+
+var smarts_matches = {};
+
+// Load RDKit
+window
+.initRDKitModule()
+.then(function(RDKit) {
+    console.log('RDKit version: ', RDKit.version());
+    window.RDKit = RDKit;
+    window.RDKitModule = RDKit;
+
+    // search bar
+    function SmartsSearch(query, columns) {
+    var smiles_col = columns[0];
+    smarts_matches = {};
+    var query = $('#mols2grid #searchbar').val();
+    var qmol = RDKit.get_qmol(query);
+    if (qmol.is_valid()) {
+        listObj.items.forEach(function (item) {
+            var smiles = item.values()[smiles_col]
+            var mol = RDKit.get_mol(smiles, '{&quot;removeHs&quot;: false }');
+            if (mol.is_valid()) {
+                var results = mol.get_substruct_matches(qmol);
+                if (results === &quot;\{\}&quot;) {
+                    item.found = false;
+                } else {
+                    item.found = true;
+                    
+                    results = JSON.parse(results);
+                    
+                    var highlights = {&quot;atoms&quot;: [], &quot;bonds&quot;: []};
+                    results.forEach(function (match) {
+                        highlights[&quot;atoms&quot;].push(...match.atoms)
+                        highlights[&quot;bonds&quot;].push(...match.bonds)
+                    });
+                    
+                    var index = item.values()[&quot;mols2grid-id&quot;];
+                    smarts_matches[index] = highlights;
+                    
+                }
+            } else {
+                item.found = false;
+            }
+            mol.delete();
+        });
+    }
+    qmol.delete();
+}
+var search_type = &quot;Text&quot;;
+// Temporary fix for regex characters being escaped by list.js
+// This extends String.replace to ignore the regex pattern used by list.js and returns
+// the string unmodified. Other calls should not be affected, unless they use the exact
+// same pattern and replacement value.
+// TODO: remove once the issue is fixed in list.js and released
+String.prototype.replace = (function(_super) {
+    return function() {
+        if (
+            (arguments[0].toString() === '/[-[\\]{}()*+?.,\\\\^$|#]/g')
+            &amp;&amp; (arguments[1] === '\\$&amp;')
+        ) {
+            if (this.length === 0) {
+                return ''
+            }
+            return this
+        }
+        return _super.apply(this, arguments);
+    };         
+})(String.prototype.replace);
+// Switch search type (Text or SMARTS)
+$('#mols2grid .search-btn').click(function() {
+    search_type = $(this).text();
+    $('#mols2grid button.search-btn.active').removeClass(&quot;active&quot;);
+    $(this).addClass(&quot;active&quot;);
+});
+// Searchbar update event handler
+$('#mols2grid #searchbar').on(&quot;keyup&quot;, function(e) {
+    var query = e.target.value;
+    if (search_type === &quot;Text&quot;) {
+        smarts_matches = {};
+        listObj.search(query, ['data-mols2grid-id', 'data-SMILES']);
+    } else {
+        listObj.search(query, [&quot;data-SMILES&quot;], SmartsSearch);
+    }
+});
+
+    
+    // generate images for the currently displayed molecules
+RDKit.prefer_coordgen(true);
+function draw_mol(smiles, index, template_mol) {
+    var mol = RDKit.get_mol(smiles, '{&quot;removeHs&quot;: false }');
+    var svg = &quot;&quot;;
+    if (mol.is_valid()) {
+        var highlights = smarts_matches[index];
+        if (highlights) {
+            var details = Object.assign({}, draw_opts, highlights);
+            details = JSON.stringify(details);
+            mol.generate_aligned_coords(template_mol, true);
+        } else {
+            var details = json_draw_opts;
+        }
+        svg = mol.get_svg_with_highlights(details);
+    }
+    mol.delete();
+    if (svg == &quot;&quot;) {
+        return '<svg width=&quot;160&quot; height=&quot;120&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 160 120&quot;></svg>';
+    }
+    return svg;
+}
+listObj.on(&quot;updated&quot;, function (list) {
+    var query = $('#mols2grid #searchbar').val();
+    var template_mol;
+    if (query === &quot;&quot;) {
+        smarts_matches = {};
+        template_mol = null;
+    } else {
+        template_mol = RDKit.get_qmol(query);
+        template_mol.set_new_coords(true);
+    }
+    $('#mols2grid .cell').each(function() {
+        var $t = $(this);
+        var smiles = $t.children(&quot;.data-SMILES&quot;).first().text();
+        var index = parseInt(this.getAttribute(&quot;data-mols2grid-id&quot;));
+        var svg = draw_mol(smiles, index, template_mol);
+        $t.children(&quot;.data-img&quot;).html(svg);
+    });
+    if (template_mol) {
+        template_mol.delete();
+    }
+});
+    
+
+    // trigger update to activate tooltips, draw images, setup callbacks...
+    listObj.update();
+    // resize iframe to fit content
+    if (window.frameElement) {
+        fit_height(window.frameElement);
+    }
+});
+    </script>
+  </body>
+</html>">
+</iframe>
+</div>
+</div>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>gs, _ <span class="op">=</span> rdRGroupDecomposition.RGroupDecompose([s], ms)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>gs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>[{'Core': &lt;rdkit.Chem.rdchem.Mol at 0x2ed10722740&gt;,
+  'R1': &lt;rdkit.Chem.rdchem.Mol at 0x2ed10722d60&gt;,
+  'R2': &lt;rdkit.Chem.rdchem.Mol at 0x2ed107222e0&gt;},
+ {'Core': &lt;rdkit.Chem.rdchem.Mol at 0x2ed106e4120&gt;,
+  'R1': &lt;rdkit.Chem.rdchem.Mol at 0x2ed106e4200&gt;,
+  'R2': &lt;rdkit.Chem.rdchem.Mol at 0x2ed106e4270&gt;}]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="bu">list</span>(gs[<span class="dv">0</span>].values()) <span class="op">+</span> [ms[<span class="dv">0</span>]] <span class="op">+</span> <span class="bu">list</span>(gs[<span class="dv">1</span>].values()) <span class="op">+</span> [ms[<span class="dv">1</span>]]</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>display(rdkit.Chem.Draw.MolsToGridImage(l, subImgSize<span class="op">=</span>(<span class="dv">180</span>,<span class="dv">180</span>),</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  molsPerRow<span class="op">=</span><span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-05-12-Add_fragment_R-group_files/figure-html/cell-23-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

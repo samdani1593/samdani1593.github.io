@@ -1,0 +1,12 @@
+---
+title: "Covalent Kinase inhibitors"
+subtitle: "Articles about covalent inhbitors on kinases"
+categories:
+- Kinome
+toc: false
+---
+* [2023 Systematic Exploration of Privileged Warheads for Covalent Kinase Drug Discovery](https://doi.org/10.3390/ph15111322){target="_blank"}
+* [2021 Advance in Reversible Covalent Kinase Inhibitors](https://doi.org/10.48550/arXiv.2106.11698){target="_blank"}
+
+
+

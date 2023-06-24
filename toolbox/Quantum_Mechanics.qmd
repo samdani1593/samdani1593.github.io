@@ -1,0 +1,65 @@
+
+---
+title: "Quantum Mechanics Sofwares"
+subtitle: "Collection of Quantum Mechanics and SemiEmprical Softwares"
+---
+
+# Commercial:
+
+* [Gaussian](https://gaussian.com/)
+
+* [MolPro](https://www.molpro.net/)
+
+* [Turbomole](https://www.turbomole.org/)
+
+* [Q-Chem](https://www.q-chem.com/)
+
+* [TeraChem](http://www.petachem.com/products.html)
+
+* [VASP](https://www.vasp.at/)
+
+# Open source:
+
+* [veloxchem](https://veloxchem.org/docs/intro.html)
+
+* [CP2K](https://www.cp2k.org/)
+
+* [eChem: A Notebook Exploration of Quantum Chemistry](https://doi.org/10.30746/978-91-988114-0-7)
+
+* [Gamess](https://www.msg.chem.iastate.edu/gamess/)
+
+* [Orca](https://orcaforum.kofo.mpg.de/index.php)
+
+* [NWChem](https://www.nwchem-sw.org/)
+
+* [DFDT3](https://dftd3.readthedocs.io/en/latest/)
+
+* [PQS](https://www.pqs-chem.com/software.php)
+
+* [PSIcode](https://psicode.org/)
+
+* [Quantum Expresso](https://www.quantum-espresso.org/)
+
+* [autochem](https://github.com/tommason14/autochem)
+
+* [qmcpack](https://qmcpack.readthedocs.io/en/v3.11.0/index.html)
+
+
+# Semi emprical QM
+
+* [MNDO](https://mndo.kofo.mpg.de/)
+
+* [MOPAC](https://openmopac.github.io/)
+
+* [DFTB+](https://dftbplus.org/)
+
+* [xTB](https://xtb-docs.readthedocs.io/en/latest/contents.html)
+
+* [Cuby Computational chemistry framework](http://cuby4.molecular.cz/)
+
+
+
+
+
+
+

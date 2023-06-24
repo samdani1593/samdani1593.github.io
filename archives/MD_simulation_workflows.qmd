@@ -1,0 +1,16 @@
+---
+title: "MD simulations workflows"
+subtitle: "Articles on different workflows using MD simulation"
+categories:
+- MD simulation
+toc: false
+---
+
+* [2023 MDverse: Shedding Light on the Dark Matter of Molecular Dynamics Simulations](https://doi.org/10.1101/2023.05.02.538537){target="_blank"}
+* [2023 MoSDeF-GOMC: Python Software for the Creation of Scientific Workflows for the Monte Carlo Simulation Engine GOMC](https://doi.org/10.1021/acs.jcim.2c01498){target="_blank"}
+* [2022 Open Binding Pose Metadynamics: An Effective Approach for the Ranking of Protein–Ligand Binding Poses](https://doi.org/10.1021/acs.jcim.2c01142){target="_blank"}
+* [2022 An open-source molecular builder and free energy preparation workflow](https://doi.org/10.1038/s42004-022-00754-9){target="_blank"}
+* [2022 py-MCMD: Python Software for Performing Hybrid Monte Carlo/Molecular Dynamics Simulations with GOMC and NAMD](https://doi.org/10.1021/acs.jctc.1c00911){target="_blank"}
+* [2021 MoSDeF Cassandra: A complete Python interface for the Cassandra Monte Carlo software](https://doi.org/10.1002/jcc.26544){target="_blank"}
+* [2020 BRIDGE: An Open Platform for Reproducible High-Throughput Free Energy Simulations](https://doi.org/10.1021/acs.jcim.0c00206){target="_blank"}
+* [2019 BioSimSpace: An interoperable Python framework for biomolecular simulation](https://doi.org/10.21105/joss.01831){target="_blank"}

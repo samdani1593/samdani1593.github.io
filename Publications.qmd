@@ -1,0 +1,102 @@
+---
+title: "Publications"
+subtitle: "A collection of all my publications"
+---
+
+# 2023
+***Structural analysis and molecular dynamics simulation studies of HIV-1 antisense protein predict its potential role in HIV replication and pathogenesis***\
+Balakumaran Sathiyamani, Evangeline Ann Daniel, **Samdani Ansar**, Bennett Henzeler Esakialraj, Sameer Hassan, Prasanna D Revanasiddappa, Amrutha Keshavamurthy, Sujata Roy, Umashankar Vetrivel, Luke Elizabeth Hanna\
+*Frontiers in Microbiology*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.3389/fmicb.2023.1152206){target="_blank"}\
+
+
+# 2022
+***Chemoprofiling and insilico prioritization of bioactive compounds from Laetiporus versisporus (Lloyd) Imazeki reveals potential Bcl-2 inhibitor***\
+Shoba G, **Samdani Ansar**, Umashankar Vetrivel & Usha Raja Nanthini\
+*Journal of Biomolecular Structure & Dynamics*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1080/07391102.2022.2110155){target="_blank"}\
+
+___
+
+***Deciphering the conformational transitions of LIMK2 active and inactive states to ponder specific druggable states through microsecond scale molecular dynamics simulation***\
+Hemavathy Nagarajan, **Samdani Ansar**, Vetrivel Umashankar, Jeyaraman Jeyakanthan\
+*Journal of Computer-Aided Molecular Design*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1007/s10822-022-00459-0){target="_blank"}\
+{{< fa brands github >}} : [Code link](https://github.com/Hemarydha/LIMK-conformational-sampling.git){target="_blank"}\
+
+___
+
+***Elucidating the Therapeutic Potential of Cell-Penetrating Peptides in Human Tenon Fibroblast Cells***\
+Amit Chatterjee, **Samdani Ansar**, Divya Gopal, Umashankar Vetrivel, Ronnie George, Janakiraman Narayanan\
+*ACS omega*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1021/acsomega.2c00701){target="_blank"}\
+
+___
+
+# 2021
+
+***Structure-based design of small molecule and peptide inhibitors for selective targeting of ROCK1: an integrative computational approach***\
+**Samdani Ansar** & Umashankar Vetrivel\
+*Journal of Biomolecular Structure and Dynamics*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1080/07391102.2021.1898470){target="_blank"}\
+
+___
+
+# 2020
+
+***KinomeRun: An interactive utility for kinome target screening and interaction fingerprint analysis towards holistic visualization on kinome tree***\
+**Samdani Ansar** & Umashankar Vetrivel\
+*Chemical Biology & Drug Design*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1111/cbdd.13705){target="_blank"}\
+{{< fa brands github >}} : [Code link](https://github.com/samdani1593/KinomeRun){target="_blank"}\
+
+___
+# 2019
+
+***PepVis: An integrated peptide virtual screening pipeline for ensemble and flexible docking protocols***\
+**Samdani Ansar** & Umashankar Vetrivel\
+*Chemical Biology & Drug Design*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1111/cbdd.13607){target="_blank"}\
+{{< fa brands github >}} : [Code link](https://github.com/samdani1593/PepVis){target="_blank"}\
+
+___
+
+***PocketPipe: A computational pipeline for integrated Pocketome prediction and comparison***\
+**Samdani Ansar** Anupriya Sadhasivam, & Umashankar Vetrivel\
+*Bioinformation*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.6026%2F97320630015295){target="_blank"}\
+{{< fa brands github >}} : [Code link](https://github.com/samdani1593/PocketPipe){target="_blank"}\
+
+___
+
+# 2018
+***Analysis of candidate genes ZEB1 and LOXHD1 in late-onset Fuchs’ endothelial corneal dystrophy in an Indian cohort***\
+Bhavna S Rao, **Samdani Ansar**, Tharigopala Arokiasamy, Rachapalli R Sudhir, Vetrivel Umashankar, Rama Rajagopal, Nagasamy Soumittra\
+*Ophthalmic Genetics*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1080/13816810.2018.1474367){target="_blank"}\
+
+___
+
+***POAP: A GNU parallel based multithreaded pipeline of open babel and AutoDock suite for boosted high throughput virtual screening***\
+**Samdani Ansar** & Umashankar Vetrivel\
+*Computational biology and chemistry*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1016/j.compbiolchem.2018.02.012){target="_blank"}\
+{{< fa brands github >}} : [Code link](https://github.com/samdani1593/POAP){target="_blank"}\
+
+___
+
+# 2016
+
+***In Silico Structure Prediction of Human Fatty Acid Synthase–Dehydratase: A Plausible Model for Understanding Active Site Interactions***\
+Arun John, Vetrivel Umashankar, **Samdani Ansar**, Manoharan Sangeetha, Subramanian Krishnakumar, Perinkulam Ravi Deepa\
+*Bioinformatics and Biology insights*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.4137/BBI.S38317){target="_blank"}\
+
+___
+
+***A comparison of aquaporin function in mediating stomatal aperture gating among drought-tolerant and sensitive varieties of rice (Oryza sativa L.)***\
+Rajesh Vinnakota, Anantha Maharasi Ramakrishnan, **Samdani Ansar**, M Anjali Venugopal, B Ram, S Navaneetha Krishnan, Dhandapani Murugesan, Kavitha Sankaranarayanan\
+*Protoplasma*\
+{{< fa paperclip >}} : [Journal link](https://doi.org/10.1007/s00709-015-0916-0){target="_blank"}\
+
+___

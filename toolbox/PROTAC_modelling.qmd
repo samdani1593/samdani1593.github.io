@@ -1,0 +1,36 @@
+---
+title: "Computational PROTAC modelling Sofwares"
+subtitle: "Collection of Softwares for PROTAC modelling"
+---
+
+## Commercial:
+
+* [MOE PROTAC modelling](https://www.chemcomp.com/Products.htm)
+
+## Open-Source:
+
+* [PRosettaC](https://github.com/LondonLab/PRosettaC)
+
+* [Delinker](https://github.com/oxpig/DeLinker)
+
+* [PROTAC-Model](https://github.com/gaoqiweng/PROTAC-Model)
+
+* [PROTAC_ternary](https://github.com/karanicolaslab/PROTAC_ternary)
+
+* [PROTACModeling](https://github.com/JL2021MD/PROTACModeling.git)
+
+* [DeepPROTAC](https://github.com/fenglei104/DeepPROTACs)
+    
+* [PROTAC-RL](https://github.com/biomed-AI/PROTAC-RL)
+
+* [Protac-Design](https://github.com/divnori/Protac-Design)
+
+* [DRlinker](https://github.com/biomed-AI/DRlinker)
+
+* [AIMLinker](https://github.com/AnHorn/AIMLinker)
+
+* [ShapeLinker](https://github.com/aivant/ShapeLinker)
+
+
+
+

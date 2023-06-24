@@ -1,0 +1,69 @@
+---
+title: "Samdani Ansar"
+
+image: images/sam6.jpg
+#https://i.pinimg.com/236x/83/86/8d/83868d85ef3e3b8f2aae33a0f785ead0--smileys-smiley-faces.jpg
+page-layout: full
+toc: false
+about: 
+  template: trestles
+  image-shape: rounded
+  image-width: 20em
+  links:
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in/samdani-a-31048199/
+    - icon: github
+      text: GitHub
+      href: https://github.com/samdani1593
+    - icon: envelope
+      text: Email
+      href: samdani1593@gmail.com
+---
+### Welcome!
+
+I am Samdani Ansar and I am a PostDoctoral Fellow student in the [Strucural Bioinformatics & Cheinformatics](https://www.icoa.fr/fr/bonnet) group of [Prof. Dr. Pascal Bonnet](https://www.icoa.fr/fr/bonnet/equipe) at the [Institut de Chimie Organique et Analytique](https://www.icoa.fr/) (ICOA). I work under the supervision of [Samia ACI-SÈCHE](https://www.icoa.fr/fr/content/samia-aci-s%C3%A8che) on Computational PROTAC modelling.
+
+I did my Ph.D. in Bioinformatics from SASTRA Deemed to be University, India under [DBT-JRF fellowship](https://www.dbtjrf.gov.in/). I have also qualified and ranked 8th in the [DBT-BINC](https://dbtindia.gov.in/schemes-programmes/building-capacities/national-fellowships/bioinformatics-national-certification) exam.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+### Education
+
+<div class="topbr">
+<p class="custom-subtitle">{{< fa graduation-cap title="A graduation cap" >}} **Ph.D in Bioinformatics, 2021**</p>  
+<p class="custom-subtitle2">SASTRA Deemed to be University, Thanjavur, India</p>
+
+<p class="custom-subtitle">{{< fa graduation-cap title="A graduation cap" >}} **B.Tech in BioTechnology, 2015**</p>  
+<p class="custom-subtitle2">Rajalakshmi Engineering College, Chennai, India</p>
+</div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+### Experience
+
+<div class="topbr">
+<p class="custom-subtitle">{{< fa computer >}} **Post-Doctoral Fellow, May 2022 - present**</p>   
+<p class="custom-subtitle2">Institut de Chimie Organique et Analytique, France</p>  
+
+<p class="custom-subtitle">{{< fa computer >}} **Research Associate, Sep 2021 - Apr 2022**</p>    
+<p class="custom-subtitle2">Vision Research Foundation, India</p>
+</div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+### Achievements
+
+<div class="topbr">
+<p class="custom-subtitle">{{< fa medal >}} **Bioinformatics National Certification Exam (DBT‑BINC), 2018**</p>   
+<p class="custom-subtitle2">All India ranking - 8<sup>th<sup></p>  
+
+<p class="custom-subtitle">{{< fa medal >}} **DBT - JRF Fellowship, 2015**</p>    
+<p class="custom-subtitle2">Category - I</p>
+
+<p class="custom-subtitle">{{< fa medal >}} **Graduate Aptitude Test in Engineering (GATE), 2015**</p>    
+<p class="custom-subtitle2">All India ranking - 1571</p>
+
+<p class="custom-subtitle">{{< fa medal >}} **Anna University Rank holder, 2018**</p>   
+<p class="custom-subtitle2">University 8<sup>th<sup></p>  
+</div>
