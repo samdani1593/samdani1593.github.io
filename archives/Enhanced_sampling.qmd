@@ -2,7 +2,7 @@
 title: "Enhanced sampling MD"
 subtitle: "Different enhanced sampling techniques available in MD simulation"
 categories:
-- MD Simulation
+- MD simulation
 ---
 
 (KBbox)[https://kbbox.h-its.org/toolbox/methods/molecular-simulation/]

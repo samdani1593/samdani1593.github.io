@@ -2,7 +2,7 @@
 title: "QM/MM MD simulation"
 subtitle: "Articles on QM/MM MD simulation"
 categories:
-- Molecular Dynamics simulation
+- MD simulation
 toc: false
 ---
 

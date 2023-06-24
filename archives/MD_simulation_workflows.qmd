@@ -1,5 +1,5 @@
 ---
-title: "MD simulations workflows"
+title: "MD simulation workflows"
 subtitle: "Articles on different workflows using MD simulation"
 categories:
 - MD simulation
