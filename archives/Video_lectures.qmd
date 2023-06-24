@@ -2,7 +2,7 @@
 title: "Video lectures on MD"
 subtitle: "Collection of video lectures"
 categories:
-- Molecular Dynamics simulation
+- MD simulation
 toc: false
 ---
 
