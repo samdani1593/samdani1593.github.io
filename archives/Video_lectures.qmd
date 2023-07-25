@@ -8,6 +8,7 @@ toc: false
 
 ## Free Energy Perturbation
 
+* [2023 BioExcel Webinar #71 GROMACS PMX for accurate estimation of free energy differences](https://youtu.be/ZqWdo_2YZdg){target="_blank"}
 * [2023 Teaching free energy calculations to learn by J. Chodera](https://youtu.be/NiQYxnKx7kw){target="_blank"}
 * [2023 Active Learning for Absolute Binding Free Energy Calculations in Drug Discovery; Steven Jerome](https://youtu.be/boQ5VDYvMKM){target="_blank"}
 * [2022 BioExcel Webinar #64: BioExcel HPC Workflows: predictive power and its applications in pharmacology](https://youtu.be/cQVihLZSzfI){target="_blank"}

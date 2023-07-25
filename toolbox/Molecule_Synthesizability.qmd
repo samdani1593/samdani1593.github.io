@@ -1,0 +1,30 @@
+
+---
+title: "Molecule Synthesizability Sofwares"
+subtitle: "Collection of Molecule Synthesizability Softwares"
+---
+
+* [RDkit SA-score]()
+* [AiZynthfinder](https://github.com/MolecularAI/aizynthfinder)
+* [RetroGNN](https://github.com/pchliu/RetroGNN)
+* [GASA](https://github.com/cadd-synthetic/GASA)
+* [ASAP](https://github.com/grzsko/ASAP)
+* [rxn_cluster_token_prompt](https://github.com/rxn4chemistry/rxn_cluster_token_prompt)
+* [rxn4chemistry](https://github.com/rxn4chemistry/rxn4chemistry)
+* [RXNMapper](https://github.com/rxn4chemistry/rxnmapper)
+* [Synthesizability_MPNN](https://github.com/pchliu/Synthesizability)
+* [LillyMol](https://github.com/EliLillyCo/LillyMol)
+* [ochem_predict_nn](https://github.com/connorcoley/ochem_predict_nn)
+* [G2GT](https://github.com/Anonnoname/G2GT_2)
+* [Graph2SMILES](https://github.com/coleygroup/Graph2SMILES)
+* [RetroComposer](https://github.com/uta-smile/RetroComposer)
+* [GLN](https://github.com/Hanjun-Dai/GLN)
+* [Openretro](https://github.com/coleygroup/openretro)
+* [PaRoutes](https://github.com/MolecularAI/PaRoutes)
+* [RAscore](https://github.com/reymond-group/RAscore)
+
+
+
+
+
+

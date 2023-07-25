@@ -6,4 +6,6 @@ categories:
 - Docking
 ---
 
+
+* [2023 PepFlow: direct conformational sampling from peptide energy landscapes through hypernetwork-conditioned diffusion](https://doi.org/10.1101/2023.06.25.546443){target="_blank"}
 * [2023 Predicting Protein–Peptide Interactions: Benchmarking Deep Learning Techniques and a Comparison with Focused Docking](https://doi.org/10.1021/acs.jcim.3c00602){target="_blank"}

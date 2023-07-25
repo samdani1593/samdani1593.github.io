@@ -9,3 +9,4 @@ categories:
 * [2023 Reactive Docking: a computational method for high-throughput virtual screenings of reactive species](https://doi.org/10.26434/chemrxiv-2023-19v1v){target="_blank"}
 * [2023 Vina-GPU 2.0: Further Accelerating AutoDock Vina and Its Derivatives with Graphics Processing Units](https://doi.org/10.1021/acs.jcim.2c01504){target="_blank"}
 * [2023 DOCK 6: Incorporating hierarchical traversal through precomputed ligand conformations to enable large-scale docking](https://doi.org/10.26434/chemrxiv-2023-vkw87){target="_blank"}
+* [2021 GNINA 1.0: molecular docking with deep learning](https://doi.org/10.1186/s13321-021-00522-2){target="_blank"}

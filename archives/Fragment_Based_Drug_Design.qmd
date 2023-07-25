@@ -11,4 +11,6 @@ toc: false
 * [2022 SAMPL7 protein-ligand challenge: A community-wide evaluation of computational methods against fragment screening and pose-prediction(https://doi.org/10.1007/s10822-022-00452-7){target="_blank"}
 * [2022 FastGrow: on-the-fly growing and its application to DYRK1A](https://doi.org/10.1007/s10822-022-00469-y){target="_blank"}
 * [2022 Magnet for the Needle in Haystack: “Crystal Structure First” Fragment Hits Unlock Active Chemical Matter Using Targeted Exploration of Vast Chemical Spaces](https://doi.org/10.1021/acs.jmedchem.2c00813){target="_blank"}
+* [2022 Iterative computational design and crystallographic screening identifies potent inhibitors targeting the Nsp3 macrodomain of SARS-CoV-2](https://doi.org/10.1073/pnas.2212931120){target="_blank"}
+* [2022 Systemic evolutionary chemical space exploration for drug discovery](https://doi.org/10.1186/s13321-022-00598-4){target="_blank"}
 * [2021 Frag4Lead: growing crystallographic fragment hits by catalog using fragment-guided template docking](https://doi.org/10.1107/S2059798321008196){target="_blank"}

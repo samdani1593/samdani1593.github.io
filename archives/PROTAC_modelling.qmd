@@ -1,14 +1,15 @@
 ---
-title: "PROTAC"
+title: "PROTAC modelling"
 subtitle: "Computational PROTAC modelling articles"
 categories:
 - PROTAC
-toc: false
+toc: true
 ---
 
 ## PROTAC
 
 * [Ciulli Group Journal Club](https://lifesci.dundee.ac.uk/groups/alessio-ciulli/publications/journal-club){target="_blank"}
+* [2023 In Silico Tools in PROTACs design](https://doi.org/10.48550/arXiv.2307.01320){target="_blank"}
 * [2023 Fragment Linker Prediction Using Deep Encoder-Decoder Network for PROTAC Drug Design](https://doi.org/10.1021/acs.jcim.2c01287){target="_blank"}
 * [2023 Exploring PROTAC Cooperativity with Coarse-Grained Alchemical Methods](https://doi.org/10.1021/acs.jpcb.2c05795){target="_blank"}
 * [2023 High Accuracy Prediction of PROTAC Complex Structures](https://doi.org/10.1021/jacs.2c09387){target="_blank"}
@@ -36,7 +37,7 @@ toc: false
 
 
 
-# Molecular GLues
+## Molecular GLues
 * [2023 Protein–protein interfaces in molecular glue-induced ternary complexes: classification, characterization, and prediction](https://doi.org/10.1039/D2CB00207H){target="_blank"}
 
 

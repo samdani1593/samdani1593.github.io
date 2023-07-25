@@ -5,12 +5,12 @@ categories:
 - Deep Learning
 toc: false
 ---
+* [2023 From Static to Dynamic Structures: Improving Binding Affinity Prediction with a Graph-Based Deep Learning Model](https://doi.org/10.48550/arXiv.2208.10230){target="_blank"}
 * [2023 PLANET: A Multi-objective Graph Neural Network Model for Protein–Ligand Binding Affinity Prediction](https://doi.org/10.1021/acs.jcim.3c00253){target="_blank"}
 * [2023 A Simple Way to Incorporate Target Structural Information in Molecular Generative Models](https://doi.org/10.1021/acs.jcim.3c00293){target="_blank"}
 * [2023 Active learning guided drug design lead optimization based on relative binding free energy modeling](https://doi.org/10.26434/chemrxiv-2022-krs1t){target="_blank"}
 * [2023 Automated benchmarking of combined protein structure and ligand conformation prediction](https://doi.org/10.22541/au.168382988.85108031/v1){target="_blank"}
 * [2023 HAC-Net: A Hybrid Attention-Based Convolutional Neural Network for Highly Accurate Protein–Ligand Binding Affinity Prediction](https://doi.org/10.1021/acs.jcim.3c00251){target="_blank"}
-* [2023 Rapid Traversal of Ultralarge Chemical Space using Machine Learning Guided Docking Screens](https://doi.org/10.26434/chemrxiv-2023-w3x36){target="_blank"}
 * [2022 Multiphysical graph neural network (MP-GNN) for COVID-19 drug design](https://doi.org/10.1093/bib/bbac231){target="_blank"}
 * [2022 DLSSAffinity: protein–ligand binding affinity prediction via a deep learning model](https://doi.org/10.1039/D1CP05558E){target="_blank"}
 * [2021 A point cloud-based deep learning strategy for protein–ligand binding affinity prediction](https://doi.org/10.1093/bib/bbab474){target="_blank"}

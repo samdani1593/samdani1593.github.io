@@ -1,14 +1,14 @@
 ---
 title: "Samdani Ansar"
 
-image: images/sam6.jpg
+image: images/sam1.jpg
 #https://i.pinimg.com/236x/83/86/8d/83868d85ef3e3b8f2aae33a0f785ead0--smileys-smiley-faces.jpg
 page-layout: full
 toc: false
 about: 
   template: trestles
   image-shape: rounded
-  image-width: 20em
+  image-width: 15em
   links:
     - icon: linkedin
       text: Linkedin

@@ -1,0 +1,44 @@
+---
+title: "PMX"
+subtitle: "Articles on PMX"
+categories:
+- MD simulation
+toc: false
+---
+
+
+# RBFE
+
+## Mutation
+* [2021 One Plus One Makes Three: Triangular Coupling of Correlated Amino Acid Mutations](https://doi.org/10.1021/acs.jpclett.1c00380){target="_blank"}
+* [2020 Non-active site mutants of HIV-1 protease influence resistance and sensitisation towards protease inhibitors](https://doi.org/10.1186/s12977-020-00520-6){target="_blank"}
+* [2019 Predicting Kinase Inhibitor Resistance: Physics-Based and Data-Driven Approaches](https://doi.org/10.1021/acscentsci.9b00590){target="_blank"}
+* [2018 Accurate Calculation of Free Energy Changes upon Amino Acid Mutation](https://doi.org/10.1007/978-1-4939-8736-8_2){target="_blank"}
+* [2018 Consistent Prediction of Mutation Effect on Drug Binding in HIV-1 Protease Using Alchemical Calculations](https://doi.org/10.1021/acs.jctc.7b01109){target="_blank"}
+* [2016 Accurate and Rigorous Prediction of the Changes in Protein Free Energies in a Large-Scale Mutation Scan](https://doi.org/10.1002/anie.201510054){target="_blank"}
+* [2014 A Designed Conformational Shift To Control Protein Binding Specificity](https://doi.org/10.1002/ange.201403102){target="_blank"}
+* [2010 Protein Thermostability Calculations Using Alchemical Free Energy Simulations](https://doi.org/10.1016/j.bpj.2010.01.051){target="_blank"}
+
+## Ligand
+* [2023 Automated relative binding free energy calculations from SMILES to ΔΔG](https://doi.org/10.1038/s42004-023-00859-9){target="_blank"}
+* [2020 Large scale relative protein ligand binding affinities using non-equilibrium alchemy](https://doi.org/10.1039/C9SC03754C){target="_blank"}
+* [2018 Accurate Estimation of Ligand Binding Affinity Changes upon Protein Mutation](https://doi.org/10.1021/acscentsci.8b00717){target="_blank"}
+
+## DNA
+* [2017 Alchemical Free Energy Calculations for Nucleotide Mutations in Protein–DNA Complexes](https://doi.org/10.1021/acs.jctc.7b00849){target="_blank"}
+* [2011 Towards computional specificity screening of DNA-binding proteins](https://doi.org/10.1093/nar/gkr531){target="_blank"}
+##Others
+* [2023 Resolving coupled pH titrations using non-equilibrium free energy calculations](https://doi.org/10.26434/chemrxiv-2023-1c8rn-v2){target="_blank"}
+* [2023 Accurately predicting protein pKa values using non-equilibrium alchemy](https://doi.org/10.26434/chemrxiv-2023-pqjrf){target="_blank"}
+* [2021 Challenges Encountered Applying Equilibrium and Nonequilibrium Binding Free Energy Calculations](https://doi.org/10.1021/acs.jpcb.0c10263){target="_blank"}
+
+
+## tools
+* [2017 pmx Webserver: A User Friendly Interface for Alchemistry](https://doi.org/10.1021/acs.jcim.6b00498){target="_blank"}
+* [2015 pmx: Automated protein structure and topology generation for alchemical perturbations](https://doi.org/10.1002/jcc.23804){target="_blank"}
+
+
+
+# ABFE
+* [2021 Alchemical absolute protein–ligand binding free energies for drug design](https://doi.org/10.1039/D1SC03472C){target="_blank"}
+* [2021 Accurate absolute free energies for ligand–protein binding based on non-equilibrium approaches](https://doi.org/10.1038/s42004-021-00498-y){target="_blank"}

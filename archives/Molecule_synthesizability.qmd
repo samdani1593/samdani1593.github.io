@@ -1,0 +1,33 @@
+---
+title: "Molecule Synthesizability"
+subtitle: "Articles on Molecule synthesizability calculation"
+categories:
+- Cheminformatics
+toc: false
+---
+
+* [2023 Critical assessment of synthetic accessibility scores in computer-assisted synthesis planning](https://doi.org/10.1186/s13321-023-00678-z){target="_blank"}
+* [2023 G2GT: Retrosynthesis Prediction with Graph-to-Graph Attention Neural Network and Self-Training](https://doi.org/10.1021/acs.jcim.2c01302){target="_blank"}
+* [2022 Enhancing diversity in language based models for single-step retrosynthesis](https://doi.org/10.1039/D2DD00110A){target="_blank"}
+* [2022 Organic Compound Synthetic Accessibility Prediction Based on the Graph Attention Mechanism](https://doi.org/10.1021/acs.jcim.2c00038){target="_blank"}
+* [2022 RetroGNN: Fast Estimation of Synthesizability for Virtual Screening and De Novo Design by Learning from Slow Retrosynthesis Software](https://doi.org/10.1021/acs.jcim.1c01476){target="_blank"}
+* [2022 Defining Levels of Automated Chemical Design](https://doi.org/10.1021/acs.jmedchem.2c00334){target="_blank"}
+* [2022 Permutation Invariant Graph-to-Sequence Model for Template-Free Retrosynthesis and Reaction Prediction](https://doi.org/10.1021/acs.jcim.2c00321){target="_blank"}
+* [2022 RetroComposer: Composing Templates for Template-Based Retrosynthesis Prediction](https://doi.org/10.3390/biom12091325){target="_blank"}
+* [2022 PaRoutes: towards a framework for benchmarking retrosynthesis route predictions](https://doi.org/10.1039/D2DD00015F){target="_blank"}
+* [2022 An Improved Model for Predicting Compound Retrosynthesizability Using Machine Learning](https://doi.org/10.1109/BIBE55377.2022.00052){target="_blank"}
+* [2021 Retrosynthetic accessibility score (RAscore) – rapid machine learned synthesizability classification from AI driven retrosynthetic planning](https://doi.org/10.1039/D0SC05401A){target="_blank"}
+* [2021 Extraction of organic chemistry grammar from unsupervised learning of chemical reactions](https://doi.org/10.1126/sciadv.abe4166){target="_blank"}
+* [2021 RENATE: A Pseudo-retrosynthetic Tool for Synthetically Accessible de novo Design](https://doi.org/10.1002/minf.202100207){target="_blank"}
+* [2021 Deep Retrosynthetic Reaction Prediction using Local Reactivity and Global Attention](https://doi.org/10.1021/jacsau.1c00246){target="_blank"}
+* [2021 The Open Reaction Database](https://doi.org/10.1021/jacs.1c09820){target="_blank"}
+* [2020 The Synthesizability of Molecules Proposed by Generative Models](https://doi.org/10.1021/acs.jcim.0c00174){target="_blank"}
+* [2020 AiZynthFinder: a fast, robust and flexible open-source software for retrosynthetic planning](https://doi.org/10.1186/s13321-020-00472-1){target="_blank"}
+* [2020 Control of Synthetic Feasibility of Compounds Generated with CReM](https://doi.org/10.1021/acs.jcim.0c00792){target="_blank"}
+* [2019 Retrosynthesis prediction with conditional graph logic network](https://doi.org/10.48550/arXiv.2001.01408){target="_blank"}
+* [2019 A retrosynthetic analysis algorithm implementation](https://doi.org/10.1186/s13321-018-0323-6){target="_blank"}
+* [2017 Prediction of Organic Reaction Outcomes Using Machine Learning](https://doi.org/10.1021/acscentsci.7b00064){target="_blank"}
+* [2017 Neural-Symbolic Machine Learning for Retrosynthesis and Reaction Prediction](https://doi.org/10.1002/chem.201605499){target="_blank"}
+* [2009 Estimation of synthetic accessibilhttps://doi.org/10.1021/acs.jcim.2c00038ity score of drug-like molecules based on molecular complexity and fragment contributions](https://doi.org/10.1186/1758-2946-1-8){target="_blank"}
+
+

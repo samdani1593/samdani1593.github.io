@@ -17,4 +17,4 @@ categories:
 * [2021 Multitask machine learning models for predicting lipophilicity (logP) in the SAMPL7 challenge](https://doi.org/10.1007/s10822-021-00405-6){target="_blank"}
 * [2021 Precise force-field-based calculations of octanol-water partition coefficients for the SAMPL7 molecules](https://doi.org/10.1007/s10822-021-00407-4){target="_blank"}
 * [2021 SAMPL7 blind challenge: quantum–mechanical prediction of partition coefficients and acid dissociation constants for small drug-like molecules](https://doi.org/10.1007/s10822-021-00402-9){target="_blank"}
-
+* [2021 SolTranNet–A Machine Learning Tool for Fast Aqueous Solubility Prediction](https://doi.org/10.1021/acs.jcim.1c00331){target="_blank"}
