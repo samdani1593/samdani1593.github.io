@@ -1,0 +1,20 @@
+---
+title: "Ligand Parameterization"
+subtitle: "Collection of Ligand Parameterization tools"
+---
+
+* [AutoParams](https://github.com/arwalkerlab/AutoParams)
+* [openff-sage](https://github.com/openforcefield/openff-sage)
+* [ParaMol](https://github.com/JMorado/ParaMol)
+* [QUBEKit](https://github.com/cole-group/QUBEKit)
+* [HFC-FFO](https://github.com/dowlinglab/HFC-FFO)
+* [qforce](https://github.com/selimsami/qforce)
+* [poltype2](https://github.com/TinkerTools/poltype2)
+* [protocolGromacs](https://github.com/tubiana/protocolGromacs)
+
+
+
+
+
+
+

@@ -6,6 +6,7 @@ categories:
 - Others
 ---
 
+* [2023 Shielded Hydrogen Bonds as Structural Determinants of Binding Kinetics: Application in Drug Design](https://doi.org/10.1021/ja207494u){target="_blank"}
 * [2023 Structure property relationships of fluorinated carboxylic acid bioisosteres](https://doi.org/10.1016/j.bmcl.2023.129363){target="_blank"}
 * [2022 Observing Noncovalent Interactions in Experimental Electron Density for Macromolecular Systems: A Novel Perspective for Protein–Ligand Interaction Research](https://doi.org/10.1021/acs.jcim.1c01406){target="_blank"}
 * [2022 Analysis of protein structures containing HEPES and MES molecules](https://doi.org/10.1002/pro.4415){target="_blank"}

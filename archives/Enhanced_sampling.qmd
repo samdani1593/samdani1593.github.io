@@ -106,3 +106,5 @@ categories:
 
 * [2023 MDverse: Shedding Light on the Dark Matter of Molecular Dynamics SimulationsMDverse: Shedding Light on the Dark Matter of Molecular Dynamics Simulations ](https://doi.org/10.1101/2023.05.02.538537 ){target="_blank"}
 * [2023 Comprehensive Approach to Simulating Large Scale Conformational Changes in Biological Systems Utilizing a Path Collective Variable and New Barrier Restraint](https://doi.org/10.1021/acs.jpcb.3c02028){target="_blank"}
+
+* [2023 An interoperable implementation of collective-variable based enhanced sampling methods in extended phase space within the OpenMM package](https://doi.org/10.1002/jcc.27182){target="_blank"}

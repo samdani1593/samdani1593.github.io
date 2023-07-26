@@ -9,6 +9,8 @@ subtitle: "Collection of Softwares for PROTAC modelling"
 
 ## Open-Source:
 
+* [PROTACability](https://github.com/GilbertoPPereira/PROTACability)
+
 * [PRosettaC](https://github.com/LondonLab/PRosettaC)
 
 * [Delinker](https://github.com/oxpig/DeLinker)

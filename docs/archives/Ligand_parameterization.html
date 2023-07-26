@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sam - Enhanced sampling MD</title>
+<title>Sam - Ligand Parameterization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,38 +119,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#acceelrated-md" id="toc-acceelrated-md" class="nav-link active" data-scroll-target="#acceelrated-md">Acceelrated MD</a></li>
-  <li><a href="#gamd" id="toc-gamd" class="nav-link" data-scroll-target="#gamd">GAMD</a></li>
-  <li><a href="#adaptive-multilevel-splitting-ams" id="toc-adaptive-multilevel-splitting-ams" class="nav-link" data-scroll-target="#adaptive-multilevel-splitting-ams">Adaptive Multilevel Splitting (AMS)</a></li>
-  <li><a href="#adiabatic-bias-molecular-dynamics-abmd" id="toc-adiabatic-bias-molecular-dynamics-abmd" class="nav-link" data-scroll-target="#adiabatic-bias-molecular-dynamics-abmd">Adiabatic-bias Molecular Dynamics (ABMD)</a></li>
-  <li><a href="#bias-exchange-metadynamics-bemd" id="toc-bias-exchange-metadynamics-bemd" class="nav-link" data-scroll-target="#bias-exchange-metadynamics-bemd">Bias-exchange Metadynamics (BEMD)</a></li>
-  <li><a href="#markov-state-modeling" id="toc-markov-state-modeling" class="nav-link" data-scroll-target="#markov-state-modeling">Markov State Modeling</a></li>
-  <li><a href="#metadynamics" id="toc-metadynamics" class="nav-link" data-scroll-target="#metadynamics">Metadynamics</a></li>
-  <li><a href="#random-acceleration-molecular-dynamics-ramd" id="toc-random-acceleration-molecular-dynamics-ramd" class="nav-link" data-scroll-target="#random-acceleration-molecular-dynamics-ramd">Random Acceleration Molecular Dynamics (RAMD)</a></li>
-  <li><a href="#τ-random-acceleration-molecular-dynamics-τramd" id="toc-τ-random-acceleration-molecular-dynamics-τramd" class="nav-link" data-scroll-target="#τ-random-acceleration-molecular-dynamics-τramd">τ-Random Acceleration Molecular Dynamics (τRAMD)</a></li>
-  <li><a href="#replica-exchange-molecular-dynamics-remd" id="toc-replica-exchange-molecular-dynamics-remd" class="nav-link" data-scroll-target="#replica-exchange-molecular-dynamics-remd">Replica-Exchange Molecular Dynamics (REMD)</a></li>
-  <li><a href="#selectively-scaled-md" id="toc-selectively-scaled-md" class="nav-link" data-scroll-target="#selectively-scaled-md">Selectively Scaled MD</a></li>
-  <li><a href="#targeted-molecular-dynamics" id="toc-targeted-molecular-dynamics" class="nav-link" data-scroll-target="#targeted-molecular-dynamics">Targeted molecular dynamics</a></li>
-  <li><a href="#umbrella-sampling-us" id="toc-umbrella-sampling-us" class="nav-link" data-scroll-target="#umbrella-sampling-us">Umbrella Sampling (US)</a></li>
-  <li><a href="#weighted-ensemble-molecular-dynamics-wemd" id="toc-weighted-ensemble-molecular-dynamics-wemd" class="nav-link" data-scroll-target="#weighted-ensemble-molecular-dynamics-wemd">Weighted Ensemble Molecular Dynamics (WEMD)</a></li>
-  <li><a href="#dctmd-with-t-boosted-langevin-simulations" id="toc-dctmd-with-t-boosted-langevin-simulations" class="nav-link" data-scroll-target="#dctmd-with-t-boosted-langevin-simulations">dcTMD with T-boosted Langevin Simulations</a></li>
-  <li><a href="#adaptive-biasing-force-md" id="toc-adaptive-biasing-force-md" class="nav-link" data-scroll-target="#adaptive-biasing-force-md">Adaptive biasing force MD</a></li>
-  <li><a href="#accelerated-weighted-histogram-method" id="toc-accelerated-weighted-histogram-method" class="nav-link" data-scroll-target="#accelerated-weighted-histogram-method">Accelerated Weighted Histogram method</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Enhanced sampling MD</h1>
-<p class="subtitle lead">Different enhanced sampling techniques available in MD simulation</p>
+<h1 class="title">Ligand Parameterization</h1>
+<p class="subtitle lead">Articles on different ligand parameterization tools</p>
   <div class="quarto-categories">
     <div class="quarto-category">MD simulation</div>
   </div>
@@ -168,126 +144,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>(KBbox)[https://kbbox.h-its.org/toolbox/methods/molecular-simulation/]</p>
-<section id="acceelrated-md" class="level2">
-<h2 class="anchored" data-anchor-id="acceelrated-md">Acceelrated MD</h2>
 <ul>
-<li><p><a href="https://doi.org/10.1063/1.1755656" target="_blank">Accelerated molecular dynamics: A promising and efficient simulation method for biomolecules</a></p></li>
-<li><p><a href="https://doi.org/10.1016/j.bpj.2018.09.035" target="_blank">Mechanisms for Benzene Dissociation through the Excited State of T4 Lysozyme L99A Mutant.</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jcim.7b00640" target="_blank">Role of Molecular Interactions and Protein Rearrangement in the Dissociation Kinetics of p38α MAP Kinase Type-I/II/III Inhibitors.</a></p></li>
-</ul>
-</section>
-<section id="gamd" class="level2">
-<h2 class="anchored" data-anchor-id="gamd">GAMD</h2>
-<ul>
-<li><p><a href="https://doi.org/10.1021/acs.jctc.5b00436" target="_blank">Gaussian Accelerated Molecular Dynamics: Unconstrained Enhanced Sampling and Free Energy Calculation</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jctc.1c00974" target="_blank">Protein–Protein Interaction-Gaussian Accelerated Molecular Dynamics (PPI-GaMD): Characterization of Protein Binding Thermodynamics and Kinetics</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jctc.0c00395" target="_blank">Ligand Gaussian Accelerated Molecular Dynamics (LiGaMD): Characterization of Ligand Binding Thermodynamics and Kinetics.</a></p></li>
-<li><p><a href="https://doi.org/10.1063/5.0021399" target="_blank">Peptide Gaussian accelerated molecular dynamics (Pep-GaMD): Enhanced sampling and free energy and kinetics calculations of peptide binding.</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.biochem.7b01248" target="_blank">Ligand Binding Pathways and Conformational Transitions of the HIV Protease.</a></p></li>
-</ul>
-</section>
-<section id="adaptive-multilevel-splitting-ams" class="level2">
-<h2 class="anchored" data-anchor-id="adaptive-multilevel-splitting-ams">Adaptive Multilevel Splitting (AMS)</h2>
-<ul>
-<li><a href="https://doi.org/10.1021/acs.jctc.6b00277" target="_blank">Adaptive Multilevel Splitting Method for Molecular Dynamics Calculation of Benzamidine-Trypsin Dissociation Time.</a></li>
-</ul>
-</section>
-<section id="adiabatic-bias-molecular-dynamics-abmd" class="level2">
-<h2 class="anchored" data-anchor-id="adiabatic-bias-molecular-dynamics-abmd">Adiabatic-bias Molecular Dynamics (ABMD)</h2>
-<ul>
-<li><p><a href="https://doi.org/10.1021/acs.jctc.9b00104" target="_blank">Investigating Drug-Target Residence Time in Kinases through Enhanced Sampling Simulations.</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jcim.5b00440" target="_blank">Decoding the Role of Water Dynamics in Ligand-Protein Unbinding: CRF1R as a Test Case.</a></p></li>
-</ul>
-</section>
-<section id="bias-exchange-metadynamics-bemd" class="level2">
-<h2 class="anchored" data-anchor-id="bias-exchange-metadynamics-bemd">Bias-exchange Metadynamics (BEMD)</h2>
-<ul>
-<li><a href="https://doi.org/10.1021/ja903045y" target="_blank">Substrate binding mechanism of HIV-1 protease from explicit-solvent atomistic simulations.</a></li>
-</ul>
-</section>
-<section id="markov-state-modeling" class="level2">
-<h2 class="anchored" data-anchor-id="markov-state-modeling">Markov State Modeling</h2>
-<ul>
-<li><a href="https://kbbox.h-its.org/toolbox/methods/molecular-simulation/markov-state-modeling/" target="_blank">Link</a></li>
-</ul>
-</section>
-<section id="metadynamics" class="level2">
-<h2 class="anchored" data-anchor-id="metadynamics">Metadynamics</h2>
-<ul>
-<li><p><a href="https://kbbox.h-its.org/toolbox/methods/molecular-simulation/metadynamics/" target="_blank">LINK</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jcim.3c00208" target="_blank">2023 General Metadynamics Protocol To Simulate Activation/Deactivation of Class A GPCRs: Proof of Principle for the Serotonin Receptor</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jcim.3c00042" target="_blank">2023 Unbinding Kinetics of Muscarinic M3 Receptor Antagonists Explained by Metadynamics Simulations</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jcim.3c00069" target="_blank">2023 Structure–Kinetics Relationships of Opioids from Metadynamics and Machine Learning Analysis</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jpcb.9b01813" target="_blank">2019 Can One Trust Kinetic and Thermodynamic Observables from Biased Metadynamics Simulations?: Detailed Quantitative Benchmarks on Millimolar Drug Fragment Dissociation</a></p></li>
-<li><p><a href="https://doi.org/10.1021/jacs.6b12950" target="_blank">Unbinding Kinetics of a p38 MAP Kinase Type II Inhibitor from Metadynamics Simulations</a></p></li>
-</ul>
-<p>##PLUMED</p>
-<ul>
-<li><p><a href="https://www.nature.com/articles/s41592-019-0506-8" target="_blank">Promoting transparency and reproducibility in enhanced molecular simulations</a></p></li>
-<li><p><a href="https://doi.org/10.1002/wcms.1455" target="_blank">Ligand binding free energy and kinetics calculation in 2020</a></p></li>
-</ul>
-</section>
-<section id="random-acceleration-molecular-dynamics-ramd" class="level2">
-<h2 class="anchored" data-anchor-id="random-acceleration-molecular-dynamics-ramd">Random Acceleration Molecular Dynamics (RAMD)</h2>
-<p><a href="https://kbbox.h-its.org/toolbox/methods/molecular-simulation/random-acceleration-molecular-dynamics-ramd/">LINK</a></p>
-</section>
-<section id="τ-random-acceleration-molecular-dynamics-τramd" class="level2">
-<h2 class="anchored" data-anchor-id="τ-random-acceleration-molecular-dynamics-τramd">τ-Random Acceleration Molecular Dynamics (τRAMD)</h2>
-<p><a href="https://kbbox.h-its.org/toolbox/methods/molecular-simulation/-random-acceleration-molecular-dynamics-ramd/">LINK</a></p>
-</section>
-<section id="replica-exchange-molecular-dynamics-remd" class="level2">
-<h2 class="anchored" data-anchor-id="replica-exchange-molecular-dynamics-remd">Replica-Exchange Molecular Dynamics (REMD)</h2>
-<ul>
-<li><a href="https://doi.org/10.1021/acs.jcim.9b00416" target="_blank">De Novo Prediction of Binders and Nonbinders for T4 Lysozyme by gREST Simulations.</a></li>
-</ul>
-</section>
-<section id="selectively-scaled-md" class="level2">
-<h2 class="anchored" data-anchor-id="selectively-scaled-md">Selectively Scaled MD</h2>
-<ul>
-<li><p><a href="https://doi.org/10.1021/acs.jctc.9b00262" target="_blank">Accelerating Rare Dissociative Processes in Biomolecules Using Selectively Scaled MD Simulations.</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jctc.1c00453" target="_blank">Contact Map Fingerprints of Protein-Ligand Unbinding Trajectories Reveal Mechanisms Determining Residence Times Computed from Scaled Molecular Dynamics.</a></p></li>
-</ul>
-</section>
-<section id="targeted-molecular-dynamics" class="level2">
-<h2 class="anchored" data-anchor-id="targeted-molecular-dynamics">Targeted molecular dynamics</h2>
-<ul>
-<li><p><a href="https://www.ncbi.nlm.nih.gov/pubmed/7918256" target="_blank">Targeted molecular dynamics: a new approach for searching pathways of conformational transitions.</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jcim.9b00592" target="_blank">Estimation of Protein-Ligand Unbinding Kinetics Using Non-Equilibrium Targeted Molecular Dynamics Simulations.</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jctc.8b00835" target="_blank">Targeted Molecular Dynamics Calculations of Free Energy Profiles Using a Nonequilibrium Friction Correction.</a></p></li>
-</ul>
-</section>
-<section id="umbrella-sampling-us" class="level2">
-<h2 class="anchored" data-anchor-id="umbrella-sampling-us">Umbrella Sampling (US)</h2>
-<p><a href="https://kbbox.h-its.org/toolbox/methods/molecular-simulation/umbrella-sampling-us/">Link</a></p>
-</section>
-<section id="weighted-ensemble-molecular-dynamics-wemd" class="level2">
-<h2 class="anchored" data-anchor-id="weighted-ensemble-molecular-dynamics-wemd">Weighted Ensemble Molecular Dynamics (WEMD)</h2>
-<p><a href="https://kbbox.h-its.org/toolbox/methods/molecular-simulation/weighted-ensemble-molecular-dynamics-wemd/">LINK</a></p>
-</section>
-<section id="dctmd-with-t-boosted-langevin-simulations" class="level2">
-<h2 class="anchored" data-anchor-id="dctmd-with-t-boosted-langevin-simulations">dcTMD with T-boosted Langevin Simulations</h2>
-<ul>
-<li><a href="https://doi.org/10.1038/s41467-020-16655-1" target="_blank">Multisecond ligand dissociation dynamics from atomistic simulations.</a></li>
-</ul>
-</section>
-<section id="adaptive-biasing-force-md" class="level2">
-<h2 class="anchored" data-anchor-id="adaptive-biasing-force-md">Adaptive biasing force MD</h2>
-<ul>
-<li><a href="https://doi.org/10.1021/jp506633n" target="_blank">The Adaptive Biasing Force Method: Everything You Always Wanted To Know but Were Afraid To Ask</a></li>
-</ul>
-</section>
-<section id="accelerated-weighted-histogram-method" class="level2">
-<h2 class="anchored" data-anchor-id="accelerated-weighted-histogram-method">Accelerated Weighted Histogram method</h2>
-<ul>
-<li><p><a href="https://doi.org/10.1063/5.0044352" target="_blank">The accelerated weight histogram method for alchemical free energy calculations</a></p></li>
-<li><p><a href="https://doi.org/10.1101/2023.05.02.538537" target="_blank">2023 MDverse: Shedding Light on the Dark Matter of Molecular Dynamics SimulationsMDverse: Shedding Light on the Dark Matter of Molecular Dynamics Simulations</a></p></li>
-<li><p><a href="https://doi.org/10.1021/acs.jpcb.3c02028" target="_blank">2023 Comprehensive Approach to Simulating Large Scale Conformational Changes in Biological Systems Utilizing a Path Collective Variable and New Barrier Restraint</a></p></li>
-<li><p><a href="https://doi.org/10.1002/jcc.27182" target="_blank">2023 An interoperable implementation of collective-variable based enhanced sampling methods in extended phase space within the OpenMM package</a></p></li>
+<li><a href="https://doi-org/10.1021/acs.jctc.3c00039" target="_blank">2023 Development and Benchmarking of Open Force Field 2.0.0: The Sage Small Molecule Force Field</a></li>
+<li><a href="https://doi.org/10.26434/chemrxiv-2023-4cbwb-v2" target="_blank">2023 AutoParams: An Automated Web-Based Tool To Generate Parameters for Molecular Dynamics Simulations</a></li>
+<li><a href="https://doi-org/10.1021/acs.jctc.3c00338" target="_blank">2023 Machine Learning-Enabled Development of Accurate Force Fields for Refrigerants</a></li>
+<li><a href="https://doi-org/10.1021/acs.jcim.2c01153" target="_blank">2022 Open Force Field BespokeFit: Automating Bespoke Torsion Parametrization at Scale</a></li>
+<li><a href="https://doi.org/10.1002/jcc.26954" target="_blank">2022 Automation of AMOEBA polarizable force field for small molecules: Poltype 2</a></li>
+<li><a href="https://doi.org/10.1021/acs.jcim.0c01444" target="_blank">2021 ParaMol: A Package for Automatic Parameterization of Molecular Mechanics Force Fields</a></li>
+<li><a href="https://doi-org/10.1021/acs.jctc.1c00195" target="_blank">2021 Q-Force: Quantum Mechanically Augmented Molecular Force Fields</a></li>
+<li><a href="https://doi-org/10.1021/acs.jcim.8b00767" target="_blank">2019 QUBEKit: Automating the Derivation of Force Field Parameters from Quantum Mechanics</a></li>
 </ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,19 @@
+---
+title: "Ligand Parameterization"
+subtitle: "Articles on different ligand parameterization tools"
+toc: false
+categories:
+- MD simulation
+---
+
+* [2023 Development and Benchmarking of Open Force Field 2.0.0: The Sage Small Molecule Force Field](https://doi-org/10.1021/acs.jctc.3c00039){target="_blank"}
+* [2023 AutoParams: An Automated Web-Based Tool To Generate Parameters for Molecular Dynamics Simulations](https://doi.org/10.26434/chemrxiv-2023-4cbwb-v2){target="_blank"}
+* [2023 Machine Learning-Enabled Development of Accurate Force Fields for Refrigerants](https://doi-org/10.1021/acs.jctc.3c00338){target="_blank"}
+* [2022 Open Force Field BespokeFit: Automating Bespoke Torsion Parametrization at Scale](https://doi-org/10.1021/acs.jcim.2c01153){target="_blank"}
+* [2022 Automation of AMOEBA polarizable force field for small molecules: Poltype 2](https://doi.org/10.1002/jcc.26954){target="_blank"}
+* [2021 ParaMol: A Package for Automatic Parameterization of Molecular Mechanics Force Fields](https://doi.org/10.1021/acs.jcim.0c01444){target="_blank"}
+* [2021 Q-Force: Quantum Mechanically Augmented Molecular Force Fields](https://doi-org/10.1021/acs.jctc.1c00195){target="_blank"}
+* [2019 QUBEKit: Automating the Derivation of Force Field Parameters from Quantum Mechanics](https://doi-org/10.1021/acs.jcim.8b00767){target="_blank"}
+
+
+

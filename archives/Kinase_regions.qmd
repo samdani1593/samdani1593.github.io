@@ -1,0 +1,12 @@
+---
+title: "Kinase structures"
+subtitle: "Articles about different kinases regions"
+categories:
+- Kinome
+toc: false
+---
+
+* [2023 A critical evaluation of protein kinase regulation by activation loop autophosphorylation](https://doi.org/10.7554/eLife.88210){target="_blank"}
+
+
+

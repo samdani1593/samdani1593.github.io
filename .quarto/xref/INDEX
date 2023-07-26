@@ -265,5 +265,14 @@
   },
   "toolbox/Molecule_Synthesizability.qmd": {
     "Molecule_Synthesizability.html": "9537cc24"
+  },
+  "archives/Kinase_regions.qmd": {
+    "Kinase_regions.html": "6c48447d"
+  },
+  "archives/Ligand_parameterization.qmd": {
+    "Ligand_parameterization.html": "5d507154"
+  },
+  "toolbox/Ligand_Parameterization.qmd": {
+    "Ligand_Parameterization.html": "09418995"
   }
 }

@@ -5,6 +5,11 @@ categories:
 - PROTAC
 toc: false
 ---
+
+## PROTAC
+
+* [2023 Proximity-Based Modalities for Biology and Medicine](https://doi.org/10.1021/acscentsci.3c00395){target="_blank"}
+* [2023 Recent Advances in Pro-PROTAC Development to Address On-Target Off-Tumor Toxicity](https://doi.org/10.1021/acs.jmedchem.3c00302){target="_blank"}
 * [2023 Opportunities and challenges of protein-based targeted protein degradation](https://doi.org/10.1039/D3SC02361C){target="_blank"}
 * [2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs](https://doi.org/10.1016/j.bmc.2023.117334){target="_blank"}
 * [2023 Computer aided drug design in the development of proteolysis targeting chimeras](https://doi.org/10.1016/j.csbj.2023.02.042){target="_blank"}
@@ -16,6 +21,8 @@ toc: false
 * [2022 Cellular Principles of Targeted Protein Degradation](https://doi.org/10.1002/9783527836208.ch2){target="_blank"}
 * [2022 Inducing Targeted Protein Degradation: From Chemical Biology to Drug Discovery and Clinical Applications](10.1002/9783527836208){target="_blank"}
 
+## Molecular Glues
 
+* [2023 Molecular Glue Discovery: Current and Future Approaches](https://doi.org/10.1021/acs.jmedchem.3c00449){target="_blank"}
 
 
