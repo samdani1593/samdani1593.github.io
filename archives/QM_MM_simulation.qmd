@@ -6,5 +6,7 @@ categories:
 toc: false
 ---
 
-
+* [2023 Best Practices on QM/MM Simulations of Biological Systems](https://doi.org/10.1021/acs.jcim.2c01522){target="_blank"}
+* [2023 MiMiCPy: An Efficient Toolkit for MiMiC-Based QM/MM Simulations](https://doi.org/10.1021/acs.jcim.2c01620){target="_blank"}
+* [2023 Combining QM/MM Calculations with Classical Mining Minima to Predict Protein–Ligand Binding Free Energy](https://doi.org/10.1021/acs.jcim.2c01637){target="_blank"}
 * [2023 Drug Design in the Exascale Era: A Perspective from Massively Parallel QM/MM Simulations](https://doi.org/10.1021/acs.jcim.3c00557){target="_blank"}

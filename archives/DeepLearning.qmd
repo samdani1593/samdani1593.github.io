@@ -1,0 +1,8 @@
+---
+title: "DL application"
+subtitle: "Articles where molecule property predicting using Deep Learning"
+categories:
+- Deep Learning
+toc: false
+---
+* [2023 Using a Graph Convolutional Neural Network Model to Identify Bile Salt Export Pump Inhibitors](https://doi.org/10.1021/acsomega.3c01583){target="_blank"}

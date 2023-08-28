@@ -18,7 +18,7 @@
     "href": "archives.html",
     "title": "Archives",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nCRL complex\n\n\n\n\n\n\n\nCRL structures\n\n\n\n\n\n\n\nCheminformatics\n\n\n\n\n\n\n\nComputational Electrophysiology\n\n\n\n\n\n\n\nCovalent Kinase inhibitors\n\n\n\n\n\n\n\nEnhanced sampling MD\n\n\n\n\n\n\n\nFast molecules Generation\n\n\n\n\n\n\n\nFragment Based Drug Design\n\n\n\n\n\n\n\nFree Energy Perturbation\n\n\n\n\n\n\n\nHinge binders\n\n\n\n\n\n\n\nInduced Fit Docking\n\n\n\n\n\n\n\nInteresting articles\n\n\n\n\n\n\n\nKinase ligand interaction\n\n\n\n\n\n\n\nKinase off target prediction\n\n\n\n\n\n\n\nKinase structures\n\n\n\n\n\n\n\nLigand Parameterization\n\n\n\n\n\n\n\nLigand pKa calculation\n\n\n\n\n\n\n\nLigand preparion tools\n\n\n\n\n\n\n\nLogP calculation\n\n\n\n\n\n\n\nMD simulation workflows\n\n\n\n\n\n\n\nMolecular Docking\n\n\n\n\n\n\n\nMolecule Synthesizability\n\n\n\n\n\n\n\nPDB Structure Quality\n\n\n\n\n\n\n\nPMX\n\n\n\n\n\n\n\nPROTAC Cell Permeability\n\n\n\n\n\n\n\nPROTAC Reviews\n\n\n\n\n\n\n\nPROTAC applicability\n\n\n\n\n\n\n\nPROTAC modelling\n\n\n\n\n\n\n\nPositional Analogue Scanning(PAS)\n\n\n\n\n\n\n\nProtein pKa calculation\n\n\n\n\n\n\n\nProtein-Ligand binding affinity by DL\n\n\n\n\n\n\n\nProtein-peptide docking\n\n\n\n\n\n\n\nQM/MM MD simulation\n\n\n\n\n\n\n\nQuantum Mechanics\n\n\n\n\n\n\n\nSupervised Molecular Dynamics Simulation(SuMD)\n\n\n\n\n\n\n\nUltra Large Vitual Screening\n\n\n\n\n\n\n\nVideo lectures on MD\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nCRL complex\n\n\n\n\n\n\n\nCRL structures\n\n\n\n\n\n\n\nCheminformatics\n\n\n\n\n\n\n\nComputational Electrophysiology\n\n\n\n\n\n\n\nCovalent Kinase inhibitors\n\n\n\n\n\n\n\nDL application\n\n\n\n\n\n\n\nEnhanced sampling MD\n\n\n\n\n\n\n\nFast molecules Generation\n\n\n\n\n\n\n\nFragment Based Drug Design\n\n\n\n\n\n\n\nFree Energy Perturbation\n\n\n\n\n\n\n\nHinge binders\n\n\n\n\n\n\n\nInduced Fit Docking\n\n\n\n\n\n\n\nInteresting articles\n\n\n\n\n\n\n\nKinase ligand interaction\n\n\n\n\n\n\n\nKinase off target prediction\n\n\n\n\n\n\n\nKinase structures\n\n\n\n\n\n\n\nLigand Parameterization\n\n\n\n\n\n\n\nLigand pKa calculation\n\n\n\n\n\n\n\nLigand preparion tools\n\n\n\n\n\n\n\nLogP calculation\n\n\n\n\n\n\n\nMD simulation workflows\n\n\n\n\n\n\n\nMolecular Docking\n\n\n\n\n\n\n\nMolecule Synthesizability\n\n\n\n\n\n\n\nPDB Structure Quality\n\n\n\n\n\n\n\nPMX\n\n\n\n\n\n\n\nPROTAC Cell Permeability\n\n\n\n\n\n\n\nPROTAC Reviews\n\n\n\n\n\n\n\nPROTAC applicability\n\n\n\n\n\n\n\nPROTAC modelling\n\n\n\n\n\n\n\nPositional Analogue Scanning(PAS)\n\n\n\n\n\n\n\nProtein pKa calculation\n\n\n\n\n\n\n\nProtein-Ligand binding affinity by DL\n\n\n\n\n\n\n\nProtein-peptide docking\n\n\n\n\n\n\n\nQM/MM MD simulation\n\n\n\n\n\n\n\nQuantum Mechanics\n\n\n\n\n\n\n\nSupervised Molecular Dynamics Simulation(SuMD)\n\n\n\n\n\n\n\nUltra Large Vitual Screening\n\n\n\n\n\n\n\nVideo lectures on MD\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "archives/Enhanced_samplng.html",
@@ -60,7 +60,7 @@
     "href": "archives/Quantum_Mechanics.html",
     "title": "Quantum Mechanics",
     "section": "",
-    "text": "2023 QDπ: A Quantum Deep Potential Interaction Model for Drug Discovery\n2023 How well do semiempirical QM methods describe the structure of proteins?\n2023 Best Practices on QM/MM Simulations of Biological Systems\n2023 MiMiCPy: An Efficient Toolkit for MiMiC-Based QM/MM Simulations\n2023 Combining QM/MM Calculations with Classical Mining Minima to Predict Protein–Ligand Binding Free Energy\n2020 Benchmarking of Semiempirical Quantum-Mechanical Methods on Systems Relevant to Computer-Aided Drug Design\n2020 SQM/COSMO Scoring Function: Reliable Quantum-Mechanical Tool for Sampling and Ranking in Structure-Based Drug Design"
+    "text": "2023 eChem: A Notebook Exploration of Quantum Chemistry\n2023 QDπ: A Quantum Deep Potential Interaction Model for Drug Discovery\n2023 How well do semiempirical QM methods describe the structure of proteins?\n2020 Benchmarking of Semiempirical Quantum-Mechanical Methods on Systems Relevant to Computer-Aided Drug Design\n2020 SQM/COSMO Scoring Function: Reliable Quantum-Mechanical Tool for Sampling and Ranking in Structure-Based Drug Design"
   },
   {
     "objectID": "archives/Ultra_Large_Virtual_screening.html",
@@ -74,7 +74,7 @@
     "href": "index.html",
     "title": "Samdani Ansar",
     "section": "",
-    "text": "Welcome!\nI am Samdani Ansar and I am a PostDoctoral Fellow student in the Strucural Bioinformatics & Cheinformatics group of Prof. Dr. Pascal Bonnet at the Institut de Chimie Organique et Analytique (ICOA). I work under the supervision of Samia ACI-SÈCHE on Computational PROTAC modelling.\nI did my Ph.D. in Bioinformatics from SASTRA Deemed to be University, India under DBT-JRF fellowship. I have also qualified and ranked 8th in the DBT-BINC exam.\n\n\n\nEducation\n\n\n Ph.D in Bioinformatics, 2021\n\n\nSASTRA Deemed to be University, Thanjavur, India\n\n\n B.Tech in BioTechnology, 2015\n\n\nRajalakshmi Engineering College, Chennai, India\n\n\n\n\n\nExperience\n\n\n Post-Doctoral Fellow, May 2022 - present\n\n\nInstitut de Chimie Organique et Analytique, France\n\n\n Research Associate, Sep 2021 - Apr 2022\n\n\nVision Research Foundation, India\n\n\n\n\n\nAchievements\n\n\n Bioinformatics National Certification Exam (DBT‑BINC), 2018\n\n\nAll India ranking - 8th\n\n\n DBT - JRF Fellowship, 2015\n\n\nCategory - I\n\n\n Graduate Aptitude Test in Engineering (GATE), 2015\n\n\nAll India ranking - 1571\n\n\n Anna University Rank holder, 2018\n\n\nUniversity 8th"
+    "text": "Welcome!\nI am Samdani Ansar, and I am a Post-Doctoral Fellow student in the Strucural Bioinformatics & Cheminformatics group of Prof. Dr. Pascal Bonnet at the Institut de Chimie Organique et Analytique (ICOA). I work under the supervision of Samia ACI-SÈCHE on Computational PROTAC modelling.\nI did my Ph.D. in Bioinformatics from SASTRA Deemed to be University, India under DBT-JRF fellowship. I have also qualified and ranked 8th in the DBT-BINC exam.\n\n\n\nEducation\n\n\n Ph.D in Bioinformatics, 2021\n\n\nSASTRA Deemed to be University, Thanjavur, India\n\n\n B.Tech in BioTechnology, 2015\n\n\nRajalakshmi Engineering College, Chennai, India\n\n\n\n\n\nExperience\n\n\n Post-Doctoral Fellow, May 2022 - present\n\n\nInstitut de Chimie Organique et Analytique, France\n\n\n Research Associate, Sep 2021 - Apr 2022\n\n\nVision Research Foundation, India\n\n\n\n\n\nAchievements\n\n\n Bioinformatics National Certification Exam (DBT‑BINC), 2018\n\n\nAll India ranking - 8th\n\n\n DBT - JRF Fellowship, 2015\n\n\nCategory - I\n\n\n Graduate Aptitude Test in Engineering (GATE), 2015\n\n\nAll India ranking - 1571\n\n\n Anna University Rank holder, 2018\n\n\nUniversity 8th"
   },
   {
     "objectID": "posts.html",
@@ -522,7 +522,7 @@
     "href": "archives/PROTAC_Applicability.html#generalised",
     "title": "PROTAC applicability",
     "section": "Generalised",
-    "text": "Generalised\n\n2023 First-in-class metallo-PROTAC as an effective degrader of select Pt-binding proteins\n2023 Discovery of HyT-Based Degraders of CDK9-Cyclin T1 Complex\n2022 Targeted Protein Degradation for Infectious Diseases: from Basic Biology to Drug Discovery\n2022 A Perspective on Newly Emerging Proteolysis-Targeting Strategies in Antimicrobial Drug Discovery\n2022 Hijacking Methyl Reader Proteins for Nuclear-Specific Protein Degradation"
+    "text": "Generalised\n\n2023 Stimuli-responsive PROTACs for Controlled Protein Degradation\n2023 Hydrogen Peroxide-Inducible PROTACs for Targeted Protein Degradation in Cancer Cells\n2023 First-in-class metallo-PROTAC as an effective degrader of select Pt-binding proteins\n2023 Discovery of HyT-Based Degraders of CDK9-Cyclin T1 Complex\n2022 Targeted Protein Degradation for Infectious Diseases: from Basic Biology to Drug Discovery\n2022 A Perspective on Newly Emerging Proteolysis-Targeting Strategies in Antimicrobial Drug Discovery\n2022 Hijacking Methyl Reader Proteins for Nuclear-Specific Protein Degradation\n2023 DNA framework-engineered chimeras platform enables selectively targeted protein degradation ## Bacteria\n2022 BacPROTACs mediate targeted protein degradation in bacteria\n2021 Applications of Bacterial Degrons and Degraders — Toward Targeted Protein Degradation in Bacteria\n2020 Targeted protein degradation in antibacterial drug discovery?"
   },
   {
     "objectID": "archives/PROTAC_Applicability.html#bacteria",
@@ -774,7 +774,7 @@
     "href": "archives/Interesting_articles.html",
     "title": "Interesting articles",
     "section": "",
-    "text": "2023 Shielded Hydrogen Bonds as Structural Determinants of Binding Kinetics: Application in Drug Design\n2023 Structure property relationships of fluorinated carboxylic acid bioisosteres\n2022 Observing Noncovalent Interactions in Experimental Electron Density for Macromolecular Systems: A Novel Perspective for Protein–Ligand Interaction Research\n2022 Analysis of protein structures containing HEPES and MES molecules\n2019 Finding High-Quality Metal Ion-Centric Regions Across the Worldwide Protein Data Bank\n2019 Evaluating Unexpectedly Short Non-covalent Distances in X-ray Crystal Structures of Proteins with Electronic Structure Analysis"
+    "text": "2023 SQM2.20: Semiempirical quantum-mechanical scoring function yields DFT-quality protein–ligand binding affinity predictions in minutes\n2023 D3CARP: a comprehensive platform with multiple-conformation based docking, ligand similarity search and deep learning approaches for target prediction and virtual screening\n2023 Predicting Relative Populations of Protein Conformations without a Physics Engine Using AlphaFold2\n2023 Protein–Ligand CH−π Interactions: Structural Informatics, Energy Function Development, and Docking Implementation\n2023 Chamelogk: A Chromatographic Chameleonicity Quantifier to Design Orally Bioavailable Beyond-Rule-of-5 Drugs\n2023 SurfPB: A GPU-Accelerated Electrostatic Calculation and Visualization Tool for Biomolecules\n2023 Shielded Hydrogen Bonds as Structural Determinants of Binding Kinetics: Application in Drug Design\n2023 Structure property relationships of fluorinated carboxylic acid bioisosteres\n2022 Observing Noncovalent Interactions in Experimental Electron Density for Macromolecular Systems: A Novel Perspective for Protein–Ligand Interaction Research\n2022 Analysis of protein structures containing HEPES and MES molecules\n2019 Finding High-Quality Metal Ion-Centric Regions Across the Worldwide Protein Data Bank\n2019 Evaluating Unexpectedly Short Non-covalent Distances in X-ray Crystal Structures of Proteins with Electronic Structure Analysis"
   },
   {
     "objectID": "archives/Kinase_hinge_binders.html",
@@ -809,7 +809,7 @@
     "href": "archives/PROTAC_Review.html",
     "title": "PROTAC Reviews",
     "section": "",
-    "text": "2023 Proximity-Based Modalities for Biology and Medicine\n2023 Recent Advances in Pro-PROTAC Development to Address On-Target Off-Tumor Toxicity\n2023 Opportunities and challenges of protein-based targeted protein degradation\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Computer aided drug design in the development of proteolysis targeting chimeras\n2023 Progress of small molecules for targeted protein degradation: PROTACs and other technologies\n2023 The most common linkers in bioactive molecules and their bioisosteric replacement network\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Design and Evaluation of a Low Hydrogen Bond Donor Count Fragment Screening Set to Aid Hit Generation of PROTACs Intended for Oral Delivery\n2022 Biochemical Principles of Targeted Protein Degradation\n2022 Cellular Principles of Targeted Protein Degradation\n2022 Inducing Targeted Protein Degradation: From Chemical Biology to Drug Discovery and Clinical Applications"
+    "text": "2023 The rise of degrader drugs\n2023 Proximity-Based Modalities for Biology and Medicine\n2023 Recent Advances in Pro-PROTAC Development to Address On-Target Off-Tumor Toxicity\n2023 Opportunities and challenges of protein-based targeted protein degradation\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Computer aided drug design in the development of proteolysis targeting chimeras\n2023 Progress of small molecules for targeted protein degradation: PROTACs and other technologies\n2023 The most common linkers in bioactive molecules and their bioisosteric replacement network\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Design and Evaluation of a Low Hydrogen Bond Donor Count Fragment Screening Set to Aid Hit Generation of PROTACs Intended for Oral Delivery\n2022 Biochemical Principles of Targeted Protein Degradation\n2022 Cellular Principles of Targeted Protein Degradation\n2022 Inducing Targeted Protein Degradation: From Chemical Biology to Drug Discovery and Clinical Applications"
   },
   {
     "objectID": "posts/2023-05-03-Positional_Analogue_Scanning.html",
@@ -879,7 +879,7 @@
     "href": "archives/PROTAC_Applicability.html#others",
     "title": "PROTAC applicability",
     "section": "Others",
-    "text": "Others\n\n2023 Examination of the Impact of Triazole Position within Linkers on Solubility and Lipophilicity of a CDK9 Degrader Series\n2023 An in-silico approach for novel molecular glue design by rationalizing known molecular glue mediated ternary complex formation *2023 A New In-Silico Approach for PROTAC Design and Quantitative Rationalization of PROTAC mediated Ternary Complex Formation\n2023 Reversible Dual-Covalent Molecular Locking of the 14-3-3/ERRγ Protein–Protein Interaction as a Molecular Glue Drug Discovery Approach"
+    "text": "Others\n\n2023 Examination of the Impact of Triazole Position within Linkers on Solubility and Lipophilicity of a CDK9 Degrader Series\n2023 An in-silico approach for novel molecular glue design by rationalizing known molecular glue mediated ternary complex formation\n2023 A New In-Silico Approach for PROTAC Design and Quantitative Rationalization of PROTAC mediated Ternary Complex Formation\n2023 Reversible Dual-Covalent Molecular Locking of the 14-3-3/ERRγ Protein–Protein Interaction as a Molecular Glue Drug Discovery Approach"
   },
   {
     "objectID": "archives/PROTAC_Applicability.html#mitochondrial-protac",
@@ -914,7 +914,7 @@
     "href": "archives/QM_MM_simulation.html",
     "title": "QM/MM MD simulation",
     "section": "",
-    "text": "2023 Drug Design in the Exascale Era: A Perspective from Massively Parallel QM/MM Simulations"
+    "text": "2023 Best Practices on QM/MM Simulations of Biological Systems\n2023 MiMiCPy: An Efficient Toolkit for MiMiC-Based QM/MM Simulations\n2023 Combining QM/MM Calculations with Classical Mining Minima to Predict Protein–Ligand Binding Free Energy\n2023 Drug Design in the Exascale Era: A Perspective from Massively Parallel QM/MM Simulations"
   },
   {
     "objectID": "archives/Video_lectures.html",
@@ -1180,7 +1180,7 @@
     "href": "archives/PROTAC_Review.html#protac",
     "title": "PROTAC Reviews",
     "section": "",
-    "text": "2023 Proximity-Based Modalities for Biology and Medicine\n2023 Recent Advances in Pro-PROTAC Development to Address On-Target Off-Tumor Toxicity\n2023 Opportunities and challenges of protein-based targeted protein degradation\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Computer aided drug design in the development of proteolysis targeting chimeras\n2023 Progress of small molecules for targeted protein degradation: PROTACs and other technologies\n2023 The most common linkers in bioactive molecules and their bioisosteric replacement network\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Design and Evaluation of a Low Hydrogen Bond Donor Count Fragment Screening Set to Aid Hit Generation of PROTACs Intended for Oral Delivery\n2022 Biochemical Principles of Targeted Protein Degradation\n2022 Cellular Principles of Targeted Protein Degradation\n2022 Inducing Targeted Protein Degradation: From Chemical Biology to Drug Discovery and Clinical Applications"
+    "text": "2023 The rise of degrader drugs\n2023 Proximity-Based Modalities for Biology and Medicine\n2023 Recent Advances in Pro-PROTAC Development to Address On-Target Off-Tumor Toxicity\n2023 Opportunities and challenges of protein-based targeted protein degradation\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Computer aided drug design in the development of proteolysis targeting chimeras\n2023 Progress of small molecules for targeted protein degradation: PROTACs and other technologies\n2023 The most common linkers in bioactive molecules and their bioisosteric replacement network\n2023 A beginner’s guide to current synthetic linker strategies towards VHL-recruiting PROTACs\n2023 Design and Evaluation of a Low Hydrogen Bond Donor Count Fragment Screening Set to Aid Hit Generation of PROTACs Intended for Oral Delivery\n2022 Biochemical Principles of Targeted Protein Degradation\n2022 Cellular Principles of Targeted Protein Degradation\n2022 Inducing Targeted Protein Degradation: From Chemical Biology to Drug Discovery and Clinical Applications"
   },
   {
     "objectID": "archives/PROTAC_Review.html#molecular-glues",
@@ -1195,5 +1195,40 @@
     "title": "Ligand Parameterization",
     "section": "",
     "text": "AutoParams\nopenff-sage\nParaMol\nQUBEKit\nHFC-FFO\nqforce\npoltype2\nprotocolGromacs"
+  },
+  {
+    "objectID": "archives/DeepLearning.html",
+    "href": "archives/DeepLearning.html",
+    "title": "DL application",
+    "section": "",
+    "text": "2023 Using a Graph Convolutional Neural Network Model to Identify Bile Salt Export Pump Inhibitors"
+  },
+  {
+    "objectID": "toolbox/Free_energy_Pertrurbation.html#topology-builder",
+    "href": "toolbox/Free_energy_Pertrurbation.html#topology-builder",
+    "title": "FEP Sofwares",
+    "section": "",
+    "text": "Flexible Topology\nKartograf\nOpenfe"
+  },
+  {
+    "objectID": "toolbox/Free_energy_Pertrurbation.html#fep-workflows",
+    "href": "toolbox/Free_energy_Pertrurbation.html#fep-workflows",
+    "title": "FEP Sofwares",
+    "section": "FEP workflows",
+    "text": "FEP workflows\n\nOpenbiosim"
+  },
+  {
+    "objectID": "toolbox/Free_energy_Pertrurbation.html#free-energy-calculation",
+    "href": "toolbox/Free_energy_Pertrurbation.html#free-energy-calculation",
+    "title": "FEP Sofwares",
+    "section": "Free-energy calculation",
+    "text": "Free-energy calculation\n\nalchemlyb"
+  },
+  {
+    "objectID": "toolbox/Molecular_Docking.html",
+    "href": "toolbox/Molecular_Docking.html",
+    "title": "Molecular Docking Sofwares",
+    "section": "",
+    "text": "Uni-Dock\nUni-Mol"
   }
 ]

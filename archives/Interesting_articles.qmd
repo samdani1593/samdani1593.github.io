@@ -6,6 +6,12 @@ categories:
 - Others
 ---
 
+* [2023 SQM2.20: Semiempirical quantum-mechanical scoring function yields DFT-quality protein–ligand binding affinity predictions in minutes](https://doi.org/10.26434/chemrxiv-2023-zh03k){target="_blank"}
+* [2023 D3CARP: a comprehensive platform with multiple-conformation based docking, ligand similarity search and deep learning approaches for target prediction and virtual screening](https://doi.org/10.1016/j.compbiomed.2023.107283){target="_blank"}
+* [2023 Predicting Relative Populations of Protein Conformations without a Physics Engine Using AlphaFold2](https://doi.org/10.48550/arXiv.2307.14470){target="_blank"}
+* [2023 Protein–Ligand CH−π Interactions: Structural Informatics, Energy Function Development, and Docking Implementation](https://doi.org/10.1021/acs.jctc.3c00300){target="_blank"}
+* [2023 Chamelogk: A Chromatographic Chameleonicity Quantifier to Design Orally Bioavailable Beyond-Rule-of-5 Drugs](https://doi.org/10.1021/acs.jmedchem.3c00823){target="_blank"}
+* [2023 SurfPB: A GPU-Accelerated Electrostatic Calculation and Visualization Tool for Biomolecules](https://doi.org/10.1021/acs.jcim.3c00745){target="_blank"}
 * [2023 Shielded Hydrogen Bonds as Structural Determinants of Binding Kinetics: Application in Drug Design](https://doi.org/10.1021/ja207494u){target="_blank"}
 * [2023 Structure property relationships of fluorinated carboxylic acid bioisosteres](https://doi.org/10.1016/j.bmcl.2023.129363){target="_blank"}
 * [2022 Observing Noncovalent Interactions in Experimental Electron Density for Macromolecular Systems: A Novel Perspective for Protein–Ligand Interaction Research](https://doi.org/10.1021/acs.jcim.1c01406){target="_blank"}

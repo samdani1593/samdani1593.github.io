@@ -15,13 +15,14 @@ categories:
 
 
 ## Generalised
+* [2023 Stimuli-responsive PROTACs for Controlled Protein Degradation](https://doi.org/10.1002/anie.202306824){target="_blank"}
+* [2023 Hydrogen Peroxide-Inducible PROTACs for Targeted Protein Degradation in Cancer Cells](https://doi.org/10.1002/cbic.202300422){target="_blank"}
 * [2023 First-in-class metallo-PROTAC as an effective degrader of select Pt-binding proteins](https://doi.org/10.26434/chemrxiv-2023-r5l4k){target="_blank"}
 * [2023 Discovery of HyT-Based Degraders of CDK9-Cyclin T1 Complex](https://doi.org/10.1002/cbdv.202300769){target="_blank"}
 * [2022 Targeted Protein Degradation for Infectious Diseases: from Basic Biology to Drug Discovery](https://doi.org/10.1021/acsbiomedchemau.2c00063){target="_blank"}
 * [2022 A Perspective on Newly Emerging Proteolysis-Targeting Strategies in Antimicrobial Drug Discovery](https://doi.org/10.3390%2Fantibiotics11121717){target="_blank"}
 * [2022 Hijacking Methyl Reader Proteins for Nuclear-Specific Protein Degradation](https://doi.org/10.1021/jacs.2c00874){target="_blank"}
-
-
+* [2023 DNA framework-engineered chimeras platform enables selectively targeted protein degradation](https://doi.org/10.1038/s41467-023-40244-7){target="_blank"}
 ## Bacteria
 
 * [2022 BacPROTACs mediate targeted protein degradation in bacteria](https://doi.org/10.1016/j.cell.2022.05.009){target="_blank"}
@@ -41,7 +42,7 @@ categories:
 ## Others
 * [2023 Examination of the Impact of Triazole Position within Linkers on Solubility and Lipophilicity of a CDK9 Degrader Series](https://doi.org/10.1021/acsmedchemlett.3c00082){target="_blank"}
 * [2023 An in-silico approach for novel molecular glue design by rationalizing known molecular glue mediated ternary complex formation ](https://doi.org/10.1101/2022.10.04.510266){target="_blank"}
-*[2023 A New In-Silico Approach for PROTAC Design and Quantitative Rationalization of PROTAC mediated Ternary Complex Formation](https://doi.org/10.1101/2022.07.11.499663 ){target="_blank"}
+* [2023 A New In-Silico Approach for PROTAC Design and Quantitative Rationalization of PROTAC mediated Ternary Complex Formation](https://doi.org/10.1101/2022.07.11.499663 ){target="_blank"}
 * [2023 Reversible Dual-Covalent Molecular Locking of the 14-3-3/ERRγ Protein–Protein Interaction as a Molecular Glue Drug Discovery Approach](https://doi.org/10.1021/jacs.2c12781){target="_blank"}
 
 ## Mitochondrial PROTAC
