@@ -1,0 +1,23 @@
+
+---
+title: "Molecule Descriptors Calculation"
+subtitle: "Collection of different Molecule descriptors calculation modules"
+---
+
+* [Modred](https://github.com/mordred-descriptor/mordred)
+
+* [molfeat](https://github.com/datamol-io/molfeat)
+
+* [PyL3dMD](https://github.com/panwarp/PyL3dMD)
+* [Papyrus](https://github.com/CDDLeiden/Papyrus-scripts)
+* []()
+* []()
+* []()
+* []()
+
+
+
+
+
+
+

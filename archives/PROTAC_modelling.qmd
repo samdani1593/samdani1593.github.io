@@ -9,6 +9,7 @@ toc: true
 ## PROTAC
 
 * [Ciulli Group Journal Club](https://lifesci.dundee.ac.uk/groups/alessio-ciulli/publications/journal-club){target="_blank"}
+* [2023 Benchmarking of PROTAC docking and virtual screening tools](https://doi.org/10.1101/2023.08.30.555318)
 * [2023 A Systematic Approach to the Discovery of Protein–Protein Interaction Stabilizers](https://doi.org/10.1021/acscentsci.2c01449){target="_blank"}
 * [2023 Affinity and cooperativity modulate ternary complex formation to drive targeted protein degradation](https://doi.org/10.1038/s41467-023-39904-5){target="_blank"}
 * [2023 Methods for computer-assisted PROTAC design](https://doi.org/10.1016/bs.mie.2023.06.020){target="_blank"}

@@ -4,6 +4,7 @@ title: "Cheminformatics Sofwares"
 subtitle: "Collection of Cheminformatics Softwares"
 ---
 
+* [mayachemtools](http://www.mayachemtools.org/index.html)
 * [CReM: chemically reasonable mutations framework](https://github.com/DrrDom/crem)
 * [PMapper - 3D pharmacophore hashes](https://github.com/DrrDom/pmapper)
 * [EvoMol](https://github.com/jules-leguy/EvoMol)
