@@ -6,6 +6,12 @@ categories:
 - Others
 ---
 
+## Kinases
+* [2023 AlphaFold2 models of the active form of all 437 catalytically competent human protein kinase domains](https://doi.org/10.1101/2023.07.21.550125){target="_blank"}
+
+
+## Others
+
 * [2023 SQM2.20: Semiempirical quantum-mechanical scoring function yields DFT-quality protein–ligand binding affinity predictions in minutes](https://doi.org/10.26434/chemrxiv-2023-zh03k){target="_blank"}
 * [2023 D3CARP: a comprehensive platform with multiple-conformation based docking, ligand similarity search and deep learning approaches for target prediction and virtual screening](https://doi.org/10.1016/j.compbiomed.2023.107283){target="_blank"}
 * [2023 Predicting Relative Populations of Protein Conformations without a Physics Engine Using AlphaFold2](https://doi.org/10.48550/arXiv.2307.14470){target="_blank"}

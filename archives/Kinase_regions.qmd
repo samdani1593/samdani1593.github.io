@@ -6,6 +6,7 @@ categories:
 toc: false
 ---
 
+* [2023 Exploring kinase DFG loop conformational stability with AlphaFold2-RAVE](https://doi.org/10.48550/arXiv.2309.03649){target="_blank"}
 * [2023 A critical evaluation of protein kinase regulation by activation loop autophosphorylation](https://doi.org/10.7554/eLife.88210){target="_blank"}
 
 

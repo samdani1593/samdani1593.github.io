@@ -8,6 +8,7 @@ toc: false
 
 ## PROTAC
 
+* [2023 Revolutionizing Drug Targeting Strategies: Integrating Artificial Intelligence and Structure-Based Methods in PROTAC Development](https://doi.org/10.3390/ph16121649){target="_blank"}
 * [2023 The rise of degrader drugs](https://doi.org/10.1016/j.chembiol.2023.06.020){target="_blank"}
 * [2023 Proximity-Based Modalities for Biology and Medicine](https://doi.org/10.1021/acscentsci.3c00395){target="_blank"}
 * [2023 Recent Advances in Pro-PROTAC Development to Address On-Target Off-Tumor Toxicity](https://doi.org/10.1021/acs.jmedchem.3c00302){target="_blank"}

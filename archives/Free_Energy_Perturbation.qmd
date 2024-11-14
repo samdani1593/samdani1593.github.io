@@ -6,6 +6,9 @@ categories:
 toc: false
 ---
 
+* [2023 Standard Binding Free-Energy Calculations: How Far Are We from Automation?](https://doi.org/10.1021/acs.jpcb.3c04370){target="_blank"}
+* [2023 A Benchmark for Accurate GPCR Ligand Binding Affinity Prediction with Free Energy Perturbation](https://doi.org/10.26434/chemrxiv-2023-mhp2x){target="_blank"}
+* [2023 Alchemical Free Energy Workflows for the Computation of Protein-Ligand Binding Affinities](https://doi.org/10.1007/978-1-0716-3449-3_11){target="_blank"}
 * [2023 Identifying and Overcoming the Sampling Challenges in Relative Binding Free Energy Calculations of a Model Protein:Protein Complex](https://doi.org/10.1021/acs.jctc.3c00333){target="_blank"}
 * [2023 Broadening the scope of binding free energy calculations using a Separated Topologies approach](https://doi.org/10.26434/chemrxiv-2023-9678k){target="_blank"}
 * [2023 Flexible Topology: A new method for dynamic drug design](https://doi.org/10.26434/chemrxiv-2022-g7src-v2){target="_blank"}

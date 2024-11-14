@@ -12,6 +12,7 @@ subtitle: "Collection of Cheminformatics Softwares"
 * [Chemicalite-scripts](https://github.com/DrrDom/chemicalite-scripts)
 * [DrrDom - rdkit scripts](https://github.com/DrrDom/rdkit-scripts)
 * [ChEMBL structure curation pipeline](https://github.com/chembl/ChEMBL_Structure_Pipeline/releases/tag/1.0.0)
+* [Chemicalite - SQLite extension using RDkit](https://github.com/rvianello/chemicalite/tree/master)
 
 
 

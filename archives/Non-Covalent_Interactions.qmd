@@ -1,0 +1,38 @@
+---
+title: "Non-Covalent Interactions"
+subtitle: "Non-Covalent Interactions"
+toc: false
+categories:
+- Structural Bioinformatics
+---
+
+
+* [2023 The Realm of Unconventional Noncovalent Interactions in Proteins: Their Significance in Structure and Function](https://doi.org/10.1021/acsomega.3c00205){target="_blank"}
+* [2023 Halogen bonds, chalcogen bonds, pnictogen bonds, tetrel bonds and other σ-hole inter­actions: a snapshot of current progress](https://doi.org/10.1107/S2053229623004072){target="_blank"}
+* [2023 On the Importance of Halogen and Chalcogen Bonds in the Solid State of Nucleic Acids: A Combined Crystallographic and Theoretical Perspective](https://doi.org/10.3390/ijms241713035){target="_blank"}
+* [2023 Interplay between hydrogen and chalcogen bonds in cysteine](https://doi.org/10.1002/prot.26437){target="_blank"}
+* [2023 Sulfur-mediated chalcogen versus hydrogen bonds in proteins: a see-saw effect in the conformational space](https://doi.org/10.1017/qrd.2023.3){target="_blank"}
+* [2023 Automated identification of chalcogen bonds in AlphaFold protein structure database files: is it possible?](https://doi.org/10.3389/fmolb.2023.1155629){target="_blank"}
+* [2023 Non-classical Non-covalent σ-Hole Interactions in Protein Structure and Function: Concepts for Potential Protein Engineering Applications](https://doi.org/10.1002/asia.202300026){target="_blank"}
+* [2023 Tetrel bonds involving a CF3 group participate in protein–drug recognition: a combined crystallographic and computational study](https://doi.org/10.1039/D3CP00839H){target="_blank"}
+* [2022 Hydrogen Bonds with Fluorine in Ligand–Protein Complexes-the PDB Analysis and Energy Calculations](https://doi.org/10.3390/molecules27031005){target="_blank"}
+* [2022 Searching Geometric Patterns in Protein Binding Sites and Their Application to Data Mining in Protein Kinase Structures](https://doi.org/10.1021/acs.jmedchem.1c01046){target="_blank"}
+* [2022 Observing Noncovalent Interactions in Experimental Electron Density for Macromolecular Systems: A Novel Perspective for Protein–Ligand Interaction Research](https://doi.org/10.1021/acs.jcim.1c01406){target="_blank"}
+* [2022 Short Hydrogen Bonds in Proteins](https://doi.org/10.1016/B978-0-12-821978-2.00004-0){target="_blank"}
+* [2022 Intermolecular noncovalent interactions with carbon in solution](https://doi.org/10.1039/D2SC05431K){target="_blank"}
+* [2022 Carbon-Centered Hydrogen Bonds in Proteins](https://doi.org/10.1021/acs.jcim.2c00015){target="_blank"}
+* [2022 Impacts of noncovalent interactions involving sulfur atoms on protein stability, structure, folding, and bioactivity](https://doi.org/10.1039/D2OB01602H){target="_blank"}
+* [2022 Various Sorts of Chalcogen Bonds Formed by an Aromatic System](https://doi.org/10.1021/acs.jpca.2c02451){target="_blank"}
+* [2022 Noncovalent interactions in proteins and nucleic acids: beyond hydrogen bonding and p-stacking](https://doi.org/10.1039/D2CS00133K){target="_blank"}
+* [2022 Chalcogen bonds formed by protein sulfur atoms in proteins. A survey of high-resolution structures deposited in the protein data bank](https://doi.org/10.1080/07391102.2022.2143427){target="_blank"}
+* [2021 Biological halogen bonds in protein–ligand complexes: a combined QTAIM and NCIPlot study in four representative cases](https://doi.org/10.1039/D1OB01212F){target="_blank"}
+* [2021 Se⋅⋅⋅O/S and S⋅⋅⋅O Chalcogen Bonds in Small Molecules and Proteins: A Combined CSD and PDB Study](https://doi.org/10.1002/cbic.202100498){target="_blank"}
+* [2021 Towards developing a criterion to characterize non-covalent bonds: a quantum mechanical study](https://doi.org/10.1039/D0CP05689H){target="_blank"}
+* [2020 Versatility of the Cyano Group in Intermolecular Interactions](https://doi.org/10.3390/molecules25194495){target="_blank"}
+* [2020 Identification of Noncompetitive Protein–Ligand Interactions for Structural Optimization](https://doi.org/10.1021/acs.jcim.0c00858){target="_blank"}
+* [2020 Identifying intermolecular atom⋯atom interactions that are not just bonding but also competitive](https://doi.org/10.1039/D0CE00270D){target="_blank"}
+* [2020 Exploiting binding-site arginines in drug design: Recent examples](https://doi.org/10.1016/j.bmcl.2020.127442){target="_blank"}
+* [2019 Evaluating Unexpectedly Short Non-covalent Distances in X-ray Crystal Structures of Proteins with Electronic Structure Analysis](https://doi.org/10.1021/acs.jcim.9b00144){target="_blank"}
+* [2019 Intermolecular Non-Covalent Carbon-Bonding Interactions with Methyl Groups: A CSD, PDB and DFT Study](https://doi.org/10.3390/molecules24183370){target="_blank"}
+* [2019 How Significant Are Unusual Protein–Ligand Interactions? Insights from Database Mining](https://doi.org/10.1021/acs.jmedchem.9b01545){target="_blank"}
+* [2018 Noncovalent Carbon-Bonding Interactions in Proteins](https://doi.org/10.1002/anie.201811171){target="_blank"}
