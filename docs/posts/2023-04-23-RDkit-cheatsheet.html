@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-06-20">
 <meta name="description" content="Making RDkit easy">
 
-<title>Sam - RDkit cheatsheet</title>
+<title>RDkit cheatsheet – Sam</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -60,7 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -72,19 +72,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8b864f0777c60eecff11d75b6b2e1175.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e2d05a8a6221ce9ea7143d511787f362.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cf07a1bf53d04f6fc5f9a074663b8e5d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -93,13 +99,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 <script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
@@ -111,48 +118,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Sam</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Softwares.html" rel="" target="">
- <span class="menu-text">Softwares</span></a>
+    <a class="nav-link" href="../Softwares.html"> 
+<span class="menu-text">Softwares</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../Publications.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../posts.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../archives.html" rel="" target="">
- <span class="menu-text">Archives</span></a>
+    <a class="nav-link" href="../archives.html"> 
+<span class="menu-text">Archives</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../toolbox.html" rel="" target="">
- <span class="menu-text">ToolBox</span></a>
+    <a class="nav-link" href="../toolbox.html"> 
+<span class="menu-text">ToolBox</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -237,24 +244,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>This notebook will provide you the basic concepts used in RDkit and its functionalites.</p>
 <p>To run the notebook in Google Colab.<a href="https://colab.research.google.com/github/samdani1593/samdani1593.github.io/blob/main/posts/2023-04-23-RDkit-cheatsheet.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
 <section id="install-dependecies" class="level1">
 <h1>Install Dependecies</h1>
-<div class="cell">
+<div id="06d4fb60" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Install Conda Colab**</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#@markdown The kernel will be restarted after conda colab installed</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q condacolab</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> condacolab</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>condacolab.install()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
+<div id="2342a3d6" class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Install RDkit and mols2grid**</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>conda install <span class="op">-</span>c conda<span class="op">-</span>forge <span class="op">-</span>y rdkit mols2grid </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
+<div id="c0e82c7c" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title *Download Input files*</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>bash</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mkdir data</span>
@@ -265,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    wget $DATA_DIR_PATH<span class="op">/</span><span class="st">"$f"</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="1">
+<div id="128319d6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Import modules**</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> AllChem</span>
@@ -293,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Read molecules</h1>
 <p>For reading different files into RDkit * Chem.MolFromMolFile (From SDF file) * Chem.MolFromPDBFile (From PDB file) * Chem.MolFromSmarts (From smarts as string text) * Chem.MolFromSmiles (From smiles as string text) * Chem.MolFromMol2File (MOL2 file only tripos mol2 file format accepted)</p>
 <p>For reading multiple files: * Chem.SmilesMolSupplier * Chem.SDMolSupplier</p>
-<div class="cell" data-execution_count="2">
+<div id="752e746e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading Single smiles**</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>) <span class="co">#Reading smiles from text</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>m <span class="co">#RDkit mol object file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -621,7 +630,7 @@ L 180.1 67.2
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="3">
+<div id="e8c0bec9" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading single sdf**</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> Chem.MolFromMolFile(<span class="st">'data/CHEMBL559147.sdf'</span>) <span class="co">#Reading sdf file containing one compound</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -783,7 +792,7 @@ L 214.8 134.9
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="4">
+<div id="4e294c3f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading sdf file containing one compound as read object**</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>stringWithMolData <span class="op">=</span> <span class="bu">open</span>(<span class="st">'data/CHEMBL559147.sdf'</span>).read() </span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> Chem.MolFromMolBlock(stringWithMolData)</span>
@@ -946,7 +955,7 @@ L 214.8 134.9
 </svg>
 </div>
 </div>
-<div class="cell" data-code_folding="[]" data-execution_count="5">
+<div id="f82117e4" class="cell" data-code_folding="[]" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading Multiple smiles**</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SmilesMolSupplier(<span class="st">'data/Multiple_smiles.smi'</span>) <span class="im">as</span> inputmol: <span class="co">#inputmol has all molecules object</span></span>
@@ -959,7 +968,7 @@ L 214.8 134.9
 <pre><code>Total number of molecules: 3</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="6">
+<div id="0af78a92" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading large smiles with multithreading**</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.MultithreadedSmilesMolSupplier(<span class="st">'data/Multiple_smiles.smi'</span>) <span class="im">as</span> inputmol: <span class="co">#inputmol has all molecules object</span></span>
@@ -973,7 +982,7 @@ L 214.8 134.9
 <pre><code>Total number of molecules: 3</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="7">
+<div id="da4fd857" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading multiple sdf files**</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SDMolSupplier(<span class="st">'data/Multiple_SDF_compounds.sdf'</span>) <span class="im">as</span> inputmol: <span class="co">#inputmol has all molecules object</span></span>
@@ -985,7 +994,7 @@ L 214.8 134.9
 <pre><code>Total number of molecules: 14</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="8">
+<div id="e85635a3" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading multiple SDF files gz**</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gzip</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
@@ -999,7 +1008,7 @@ L 214.8 134.9
 <pre><code>Total number of molecules: 14</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="9">
+<div id="d77533e9" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Reading large sdf file with multithreading**</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Multithreading large sdf file not working and making kernel dead</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
@@ -1015,7 +1024,7 @@ L 214.8 134.9
 </section>
 <section id="compute-2d-coordinates" class="level1">
 <h1>Compute 2D coordinates</h1>
-<div class="cell" data-execution_count="10">
+<div id="7b59ea47" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>) <span class="co">#Reading smiles from text</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>inputmol.SetProp(<span class="st">'_Name'</span>,<span class="st">'Dasatinib'</span>) <span class="co">#Setting molecule name</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>inputmol_H <span class="op">=</span> Chem.AddHs(inputmol) <span class="co">#Adding H's for generating coordinates</span></span>
@@ -1154,7 +1163,7 @@ M  END
 </section>
 <section id="compute-3d-coordinates" class="level1">
 <h1>Compute 3D coordinates</h1>
-<div class="cell" data-execution_count="11">
+<div id="adf4eaef" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>) <span class="co">#Reading smiles from text</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>inputmol.SetProp(<span class="st">'_Name'</span>,<span class="st">'Dasatinib'</span>) <span class="co">#Setting molecule name</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>inputmol_H <span class="op">=</span> Chem.AddHs(inputmol) <span class="co">#Adding H's for generating coordinates</span></span>
@@ -1297,7 +1306,7 @@ M  END
 <h1>write molecules</h1>
 <p>For writing many molecules: * Chem.SDWriter (For saving in sdf file) * Chem.SmilesWriter (For saving in smiles file) * Chem.PDBWriter (For saving in smiles file)</p>
 <p>For single molecule * Chem.MolToMolFile (For saving sdf file) * Chem.MolToPDBFile (For saving pdb file) * Chem.MolToSmiles (For saving smiles file)</p>
-<div class="cell" data-execution_count="12">
+<div id="26325d81" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># object to text</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromMolFile(<span class="st">'data/CHEMBL559147.sdf'</span>) <span class="co">#Reading single sdf file containing one cmpd</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#inputmol is rdkit object</span></span>
@@ -1306,7 +1315,7 @@ M  END
 <pre><code>'C[C@@H](N)[C@H]1CC[C@H](C(=O)Nc2ccncc2)CC1'</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="13">
+<div id="0ecfe035" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># object to text</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromMolFile(<span class="st">'data/CHEMBL559147.sdf'</span>) <span class="co">#Reading single sdf file containing one cmpd</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co">#inputmol is rdkit object</span></span>
@@ -1315,7 +1324,7 @@ M  END
 <pre><code>'CC(N)C1CCC(C(=O)Nc2ccncc2)CC1'</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="14">
+<div id="52c2c98f" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'CC(O)c1ccccc1'</span>)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>Chem.Kekulize(inputmol) <span class="co">#For Kekulization</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>Chem.MolToSmiles(inputmol,kekuleSmiles<span class="op">=</span><span class="va">True</span>) <span class="co">#For printing Kekules smiles</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1323,7 +1332,7 @@ M  END
 <pre><code>'CC(O)C1=CC=CC=C1'</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="15">
+<div id="f6fcbe4f" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'CC(O)c1ccccc1'</span>)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>inputmol.SetProp(<span class="st">"_Name"</span>,<span class="st">"Mymolecule1"</span>) <span class="co"># For setting molecule name under "_Name" property</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Chem.MolToMolBlock(inputmol)) <span class="co"># For printing as sdf file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1355,7 +1364,7 @@ M  END
 </div>
 </div>
 <p>Writing multiple smiles</p>
-<div class="cell" data-execution_count="16">
+<div id="10b334fb" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Writing multiple smiles to a file</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SmilesMolSupplier(<span class="st">'data/Multiple_smiles.smi'</span>) <span class="im">as</span> inputmol: <span class="co">#inputmol has all molecules object</span></span>
@@ -1366,7 +1375,7 @@ M  END
 <span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> mol <span class="kw">in</span> mollist:</span>
 <span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>        w.write(mol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="17">
+<div id="1aaef9cb" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Storing multiple smile to a string object</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SmilesMolSupplier(<span class="st">'data/Multiple_smiles.smi'</span>) <span class="im">as</span> inputmol: <span class="co">#inputmol has all molecules object</span></span>
@@ -1390,7 +1399,7 @@ C=CCc1ccc(OC(=O)c2ccccc2OC(C)=O)c(OC)c1 ZINC103282979
 </div>
 <section id="writing-sdf-file" class="level2">
 <h2 class="anchored" data-anchor-id="writing-sdf-file">Writing SDF file</h2>
-<div class="cell" data-execution_count="18">
+<div id="fe775dec" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Writing multiple sdf to a file</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SmilesMolSupplier(<span class="st">'data/Multiple_smiles.smi'</span>) <span class="im">as</span> inputmol: <span class="co">#inputmol has all molecules object</span></span>
@@ -1404,7 +1413,7 @@ C=CCc1ccc(OC(=O)c2ccccc2OC(C)=O)c(OC)c1 ZINC103282979
 <span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> mol <span class="kw">in</span> mollist:</span>
 <span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>        w.write(mol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="19">
+<div id="6c4f6329" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Writing to string file object</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[]</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SmilesMolSupplier(<span class="st">'data/Multiple_smiles.smi'</span>) <span class="im">as</span> inputmol: <span class="co">#inputmol has all molecules object</span></span>
@@ -1614,7 +1623,7 @@ $$$$
 </section>
 <section id="conformer-generation" class="level1">
 <h1>Conformer generation</h1>
-<div class="cell" data-execution_count="20">
+<div id="569f2331" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From single smile text</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>) <span class="co">#Reading smiles from text</span></span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>inputmol.SetProp(<span class="st">'_Name'</span>,<span class="st">'Dasatinib'</span>) <span class="co">#Setting molecule name</span></span>
@@ -1639,7 +1648,7 @@ $$$$
 <span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>        w.write(inputmol_H, confId<span class="op">=</span>cid)</span>
 <span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a><span class="co"># print(Chem.MolTo) #Printing as MolBlock</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-scrolled="true" data-execution_count="21">
+<div id="4f94d460" class="cell" data-scrolled="true" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From multiple smiles</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># From single smile text</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.SmilesMolSupplier(<span class="st">'data/Multiple_smiles.smi'</span>) <span class="co">#Reading smiles from text</span></span>
@@ -1659,7 +1668,7 @@ $$$$
 </section>
 <section id="draw-molecules" class="level1">
 <h1>Draw Molecules</h1>
-<div class="cell" data-execution_count="22">
+<div id="6aba6c79" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Using rdkit.Chem.Draw**</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Draw</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1675,11 +1684,15 @@ $$$$
 <span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(mollist[:<span class="dv">10</span>], molsPerRow<span class="op">=</span><span class="dv">4</span>, subImgSize<span class="op">=</span>(<span class="dv">350</span>, <span class="dv">200</span>), legends<span class="op">=</span>prop_legends)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-26-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-26-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The RDKit has some built-in functionality for creating images from molecules found in the rdkit.Chem.Draw package</p>
-<div class="cell" data-execution_count="23">
+<div id="e1d877d4" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SDMolSupplier(<span class="st">'data/Multiple_SDF_compounds.sdf'</span>) <span class="im">as</span> inputmol:</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    mollist <span class="op">=</span> [lig <span class="cf">for</span> lig <span class="kw">in</span> inputmol <span class="cf">if</span> lig <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>]</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> mol <span class="kw">in</span> mollist:</span>
@@ -1690,10 +1703,14 @@ $$$$
 <span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="co"># img = Draw.MolsToGridImage(mollist,molsPerRow=2,subImgSize=(200,200),legends=[x.GetProp("_Name") for x in mollist])</span></span>
 <span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="co"># img.save('output/image_grid.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-27-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-27-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="24">
+</div>
+<div id="782d2551" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SDMolSupplier(<span class="st">'data/example_compounds.sdf'</span>) <span class="im">as</span> inputmol:</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    mollist <span class="op">=</span> [lig <span class="cf">for</span> lig <span class="kw">in</span> inputmol <span class="cf">if</span> lig <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>]</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> mol <span class="kw">in</span> mollist:</span>
@@ -1704,11 +1721,15 @@ $$$$
 <span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co"># img = Draw.MolsToGridImage(mollist,molsPerRow=2,subImgSize=(200,200),legends=[x.GetProp("_Name") for x in mollist])</span></span>
 <span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="co"># img.save('output/image_grid.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-28-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-28-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Atoms in a molecule can be highlighted by drawing a coloured solid or open circle around them, and bonds likewise can have a coloured outline applied. An obvious use is to show atoms and bonds that have matched a substructure query</p>
-<div class="cell" data-execution_count="25">
+<div id="8ad14bb0" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem.Draw <span class="im">import</span> rdMolDraw2D</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> SVG</span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'c1cc(F)ccc1Cl'</span>) <span class="co">#input molecule</span></span>
@@ -2078,7 +2099,7 @@ L 380.7 66.9
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="26">
+<div id="df2b2864" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>mol_with_atom_index(pattern)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -2368,14 +2389,14 @@ Q 47.9 58.3, 49.9 58.3
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="27">
+<div id="5b5ff558" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>hit_atoms <span class="op">=</span> <span class="bu">list</span>(inputmol.GetSubstructMatch(pattern)) <span class="co"># Return atom index of inputmol matching the pattern</span></span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>hit_atoms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>[7, 6, 5, 4, 2, 3]</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="28">
+<div id="6321ecac" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>hit_bonds<span class="op">=</span>[]</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bond <span class="kw">in</span> pattern.GetBonds():</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(bond.GetBeginAtomIdx(),bond.GetEndAtomIdx(),hit_atoms[bond.GetBeginAtomIdx()])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2387,7 +2408,7 @@ Q 47.9 58.3, 49.9 58.3
 4 5 2</code></pre>
 </div>
 </div>
-<div class="cell" data-code_folding="[]" data-scrolled="true" data-execution_count="29">
+<div id="7efa788d" class="cell" data-code_folding="[]" data-scrolled="true" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem.Draw <span class="im">import</span> rdMolDraw2D</span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> SVG</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'c1cc(F)ccc1Cl'</span>) <span class="co">#input molecule</span></span>
@@ -2403,7 +2424,11 @@ Q 47.9 58.3, 49.9 58.3
 <span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>drw.FinishDrawing()</span>
 <span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>SVG(drw.GetDrawingText())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-33-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-33-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -2417,7 +2442,7 @@ Q 47.9 58.3, 49.9 58.3
 <section id="maccs" class="level2">
 <h2 class="anchored" data-anchor-id="maccs">MACCS</h2>
 <p>The MACCS keys are a widely used set of 166 binary structural keys that encode various structural features of a molecule, such as presence or absence of certain functional groups, ring systems, and bond types. The resulting MACCS keys fingerprint is a binary vector that represents the presence or absence of each of the 166 keys in the molecule.</p>
-<div class="cell" data-execution_count="30">
+<div id="3151ee0e" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> MACCSkeys</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> DataStructs</span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2426,20 +2451,24 @@ Q 47.9 58.3, 49.9 58.3
 <span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[mol1,mol2]</span>
 <span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(mollist,legends<span class="op">=</span>[<span class="st">'mol1'</span>,<span class="st">'mol2'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-34-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-34-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="31">
+</div>
+<div id="4604cae5" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>fp1 <span class="op">=</span> MACCSkeys.GenMACCSKeys(mol1)</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>fp2 <span class="op">=</span> MACCSkeys.GenMACCSKeys(mol2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="32">
+<div id="5e05258a" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>fp1.ToBitString()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>'00000000000000000000000010000000000000100000000000000000010000100000000110010111001101110001101111101011100100110000011111101100110001110110001001011011110011110111110'</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="33">
+<div id="6be31bef" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>DataStructs.FingerprintSimilarity(fp1,fp2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 <pre><code>0.9375</code></pre>
@@ -2448,26 +2477,30 @@ Q 47.9 58.3, 49.9 58.3
 </section>
 <section id="ecfp4" class="level2">
 <h2 class="anchored" data-anchor-id="ecfp4">ECFP4</h2>
-<div class="cell" data-execution_count="34">
+<div id="70659e02" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>mol1 <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Clc1ccc(-c2ccc(C3ON=C(c4ccccc4)N3c3ccc(N4CCNCC4)cc3)o2)cc1'</span>)</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>mol2 <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Clc1ccc(-c2ccc(C3=NOC(c4cccnc4)N3c3ccc(N4CCNCC4)cc3)o2)cc1'</span>) <span class="co">#,'C1CC1Oc1cc2ccncn2c1','CNC(=O)c1nccc2cccn12'</span></span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>mollist<span class="op">=</span>[mol1,mol2]</span>
 <span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(mollist,legends<span class="op">=</span>[<span class="st">'mol1'</span>,<span class="st">'mol2'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="34">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-38-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-38-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="35">
+</div>
+<div id="f6873a23" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>fp1 <span class="op">=</span> AllChem.GetMorganFingerprintAsBitVect(mol1, radius <span class="op">=</span> <span class="dv">2</span>)</span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>fp2 <span class="op">=</span> AllChem.GetMorganFingerprintAsBitVect(mol2, radius <span class="op">=</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="36">
+<div id="84618e06" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>fp1.ToBitString()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="36">
 <pre><code>'00000000000000000000000001000000000100000000000000000000000000000000000000000000000000000000000100000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000100000000000100000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000001000000000000000000000000000010000000000100000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000001000000010000000000000000000000000000000000000000000000000000000000000000000000000001000100000000000000000000000000000010000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000010000000000010000000000000000000000000000000000000000000000001000000000000000000001010000000100000000000000000000000000000100000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000010000000000000000000000000000000100000000000000000100000000000000000000000001000000011000000000000000000000000000000000000100000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000010000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000000000000000000000010000000100000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000'</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="37">
+<div id="10e2f50b" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>DataStructs.FingerprintSimilarity(fp1,fp2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="37">
 <pre><code>0.6461538461538462</code></pre>
@@ -2480,7 +2513,7 @@ Q 47.9 58.3, 49.9 58.3
 <section id="recap" class="level2">
 <h2 class="anchored" data-anchor-id="recap">RECAP</h2>
 <p>RECAP module is used to break down a molecule into fragments and generate a hierarchical representation of the molecule’s scaffold. This can be useful for analyzing and comparing the structures of related molecules. It breaks the molecules based on chemical transformations mimicking common reactions carried out in the lab in order to decompose a molecule into a series of reasonable fragments.</p>
-<div class="cell" data-execution_count="38">
+<div id="a5357af8" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># These are the definitions that will be applied to fragment molecules:</span></span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>reactionDefs <span class="op">=</span> (</span>
 <span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"[#7;+0;D2,D3:1]!@C(!@=O)!@[#7;+0;D2,D3:2]&gt;&gt;[*][#7:1].[#7:2][*]"</span>, <span class="co"># urea</span></span>
@@ -2510,7 +2543,7 @@ Q 47.9 58.3, 49.9 58.3
 <span id="cb61-27"><a href="#cb61-27" aria-hidden="true" tabindex="-1"></a>  <span class="st">"[#7;+0;D2,D3:1]-!@[S:2](=[O:3])=[O:4]&gt;&gt;[#7:1][*].[*][S:2](=[O:3])=[O:4]"</span>, <span class="co"># sulphonamide</span></span>
 <span id="cb61-28"><a href="#cb61-28" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="39">
+<div id="755aa911" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Recap</span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>ligand <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>)</span>
@@ -2545,7 +2578,7 @@ Q 47.9 58.3, 49.9 58.3
 <span id="cb62-32"><a href="#cb62-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
 <span id="cb62-33"><a href="#cb62-33" aria-hidden="true" tabindex="-1"></a>    g1_child.append(Chem.MolFromSmiles(g1.smiles))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="40">
+<div id="b0a4ca36" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>ligand</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="40">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -2871,7 +2904,7 @@ L 180.1 67.2
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="41">
+<div id="ba5906ab" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="op">=</span> g1_parent <span class="op">+</span> g1_child</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>prop_labels <span class="op">=</span>[]</span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(g1_parent)):</span>
@@ -2884,10 +2917,14 @@ L 180.1 67.2
 <pre><code>G1-child: 2 G1-parent: 6</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="41">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-45-output-2.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-45-output-2.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="42">
+</div>
+<div id="3ed61f4f" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>g2 <span class="op">=</span> g2_parent <span class="op">+</span> g2_child</span>
 <span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>prop_labels <span class="op">=</span>[]</span>
 <span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(g2_parent)):</span>
@@ -2900,10 +2937,14 @@ L 180.1 67.2
 <pre><code>G2-child: 12 G2-parent: 12</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="42">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-46-output-2.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-46-output-2.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="43">
+</div>
+<div id="30c361dd" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>g3 <span class="op">=</span> g3_parent <span class="op">+</span> g3_child</span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>prop_labels <span class="op">=</span>[]</span>
 <span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(g3_parent)):</span>
@@ -2916,10 +2957,14 @@ L 180.1 67.2
 <pre><code>G3-child: 24 G3-parent: 8</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="43">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-47-output-2.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-47-output-2.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="44">
+</div>
+<div id="d70d6439" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>leaf <span class="op">=</span> recap_tree.GetLeaves()</span>
 <span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>leaf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="44">
@@ -2930,7 +2975,7 @@ L 180.1 67.2
  '*N1CCN(*)CC1': &lt;rdkit.Chem.Recap.RecapHierarchyNode at 0x1f4ddd18550&gt;}</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="45">
+<div id="28225c6d" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>child <span class="op">=</span> []</span>
 <span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g1 <span class="kw">in</span> g1_child:</span>
 <span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>    child.append(Chem.MolToSmiles(g1))</span>
@@ -2951,7 +2996,7 @@ L 180.1 67.2
 <section id="brics" class="level2">
 <h2 class="anchored" data-anchor-id="brics">BRICS</h2>
 <p>BRICS provides another method for fragmenting molecules along synthetically accessible bonds:</p>
-<div class="cell" data-execution_count="46">
+<div id="b5516451" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># These are the definitions that will be applied to fragment molecules:</span></span>
 <span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>environs <span class="op">=</span> {</span>
 <span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">'L1'</span>:<span class="st">'[C;D3]([#0,#6,#7,#8])(=O)'</span>,</span>
@@ -2995,7 +3040,7 @@ L 180.1 67.2
 <span id="cb74-41"><a href="#cb74-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">'L16b'</span>:<span class="st">'[c;$(c(:c):c)]'</span>,</span>
 <span id="cb74-42"><a href="#cb74-42" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="47">
+<div id="b49f05b8" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> BRICS</span>
 <span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>ligand <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>)</span>
 <span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>ligand</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3323,12 +3368,16 @@ L 180.1 67.2
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="48">
+<div id="b6ca4232" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>frags_smiles <span class="op">=</span> BRICS.BRICSDecompose(ligand)</span>
 <span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>frags <span class="op">=</span> [Chem.MolFromSmiles(f)<span class="cf">for</span> f <span class="kw">in</span> frags_smiles]</span>
 <span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(frags, molsPerRow<span class="op">=</span><span class="dv">4</span>, subImgSize<span class="op">=</span>(<span class="dv">350</span>, <span class="dv">200</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="48">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-52-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-52-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -3342,13 +3391,13 @@ L 180.1 67.2
 <p>2D descriptors: polarizability, electronegativity, and hydrogen bonding potential</p>
 <p>3D descriptors: molecular volume, solvent-accessible surface area, moment of inertia, distance matrix</p>
 <p>More information on available descriptors in rdkit is available <a href="https://www.rdkit.org/docs/GettingStartedInPython.html#list-of-available-descriptors">here</a></p>
-<div class="cell" data-execution_count="49">
+<div id="73f414d2" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **Descriptors**</span></span>
 <span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Descriptors</span>
 <span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> rdMolDescriptors</span>
 <span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>ligand <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="50">
+<div id="a237ce0b" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Individual properties</span></span>
 <span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'QED'</span>, Descriptors.qed(ligand))</span>
 <span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'MolWt'</span>, Descriptors.MolWt(ligand))</span>
@@ -3359,7 +3408,7 @@ MolWt 488.01700000000034
 TPSA 106.50999999999999</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="51">
+<div id="ef3d9104" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> desc_name, desc_fun <span class="kw">in</span> Descriptors.descList: <span class="co">#Contains tuples of ('descriptor_name',descriptor_function)</span></span>
 <span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(desc_name,desc_fun(ligand))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3573,7 +3622,7 @@ fr_unbrch_alkane 0
 fr_urea 0</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="52">
+<div id="694a8871" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co">#@title **3D-descriptors**</span></span>
 <span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="co">#@markdown More information for 3D descriptors can be found at [here](https://www.rdkit.org/docs/source/rdkit.Chem.Descriptors3D.html)</span></span>
 <span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>inputmol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1'</span>) <span class="co">#Reading smiles from text</span></span>
@@ -3607,7 +3656,7 @@ SpherocityIndex 0.09650294365144833</code></pre>
 </section>
 <section id="reading-as-pandas-dataframe" class="level1">
 <h1>Reading as pandas dataframe</h1>
-<div class="cell" data-execution_count="53">
+<div id="0778efb0" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> PandasTools</span>
 <span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.core.display <span class="im">import</span> HTML</span>
@@ -3620,7 +3669,7 @@ SpherocityIndex 0.09650294365144833</code></pre>
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -3924,14 +3973,14 @@ SpherocityIndex 0.09650294365144833</code></pre>
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="54">
+<div id="8be713f2" class="cell" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Filter the dataframe and view the content</span></span>
 <span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>HTML(df[df[<span class="st">'Molecular Weight'</span>] <span class="op">&lt;</span> <span class="dv">200</span>].to_html(notebook<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="54">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -4141,7 +4190,7 @@ SpherocityIndex 0.09650294365144833</code></pre>
 <section id="maximum-common-substructure" class="level1">
 <h1>Maximum common substructure</h1>
 <p>MCS (Maximum Common Substructure) is a commonly used algorithm in cheminformatics for identifying the largest common substructure among a set of molecules. In RDKit, the <strong><em>rdkit.Chem.rdFMCS</em></strong> module provides a function <strong><em>FindMCS</em></strong> to calculate the MCS of a set of molecules.</p>
-<div class="cell" data-execution_count="55">
+<div id="3ec456aa" class="cell" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> rdFMCS</span>
 <span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>mol1 <span class="op">=</span> Chem.MolFromSmiles(<span class="st">"O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C"</span>) <span class="co">#molecule 1</span></span>
 <span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>mol2 <span class="op">=</span> Chem.MolFromSmiles(<span class="st">"CC(C)CCCCCC(=O)NCC1=CC(=C(C=C1)O)OC"</span>) <span class="co">#molecule 2</span></span>
@@ -4158,14 +4207,18 @@ SpherocityIndex 0.09650294365144833</code></pre>
 <span id="cb86-14"><a href="#cb86-14" aria-hidden="true" tabindex="-1"></a>highlight_mcs <span class="op">=</span> [mol.GetSubstructMatch(pattern_match) <span class="cf">for</span> mol <span class="kw">in</span> mols]</span>
 <span id="cb86-15"><a href="#cb86-15" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(mols,subImgSize<span class="op">=</span>(<span class="dv">350</span>,<span class="dv">200</span>),highlightAtomLists <span class="op">=</span> highlight_mcs, legends<span class="op">=</span>prop_labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="55">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-59-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-59-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="substructure-match" class="level1">
 <h1>Substructure match</h1>
 <p>Substructure matching is the process of finding substructures (i.e., patterns) within a molecule that match a given query pattern. Substructure matching can be used for a variety of tasks in cheminformatics, including <strong>identifying compounds that contain a particular functional group or substructure, filtering a set of molecules based on a specific pattern, and identifying potential toxicophores or structural alerts in a dataset</strong>.</p>
-<div class="cell" data-execution_count="56">
+<div id="3ed831a6" class="cell" data-execution_count="56">
 <div class="sourceCode cell-code" id="cb87"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co">#pattern = Chem.MolFromSmiles('N1C=CC=N1')</span></span>
 <span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'ClC1=CC=CC=C1'</span>)</span>
 <span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>pattern</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4211,7 +4264,7 @@ L 346.6 63.0
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="57">
+<div id="5908b7a4" class="cell" data-execution_count="57">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>matches <span class="op">=</span> []</span>
 <span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> Chem.SmilesMolSupplier(<span class="st">'data/MAPK2.smi'</span>) <span class="im">as</span> inputmol: <span class="co">#load input file</span></span>
 <span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> mol <span class="kw">in</span> inputmol:</span>
@@ -4222,19 +4275,23 @@ L 346.6 63.0
 <pre><code>Total ligands having match: 12</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="58">
+<div id="8af61edb" class="cell" data-execution_count="58">
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Include mol name and molecular weight</span></span>
 <span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>prop_legends <span class="op">=</span> [<span class="ss">f"</span><span class="sc">{</span>mol<span class="sc">.</span>GetProp(<span class="st">'_Name'</span>)<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>Chem<span class="sc">.</span>rdMolDescriptors<span class="sc">.</span>CalcExactMolWt(mol)<span class="sc">:.1f}</span><span class="ss">g/mol"</span> <span class="cf">for</span> mol <span class="kw">in</span> matches]</span>
 <span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(matches, molsPerRow<span class="op">=</span><span class="dv">4</span>, subImgSize<span class="op">=</span>(<span class="dv">350</span>, <span class="dv">200</span>), legends<span class="op">=</span>prop_legends)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="58">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-62-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-62-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <section id="sterochemistry-in-substructures" class="level3">
 <h3 class="anchored" data-anchor-id="sterochemistry-in-substructures">Sterochemistry in substructures</h3>
 <p>By default information about stereochemistry is not used in substructure searches. useChirality can be used to set sterochemistry based pattern search.</p>
-<div class="cell" data-execution_count="59">
+<div id="05621a37" class="cell" data-execution_count="59">
 <div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>mol <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'CC[C@H](F)Cl'</span>)</span>
 <span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>mol_with_atom_index(mol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="59">
@@ -4450,7 +4507,7 @@ L 267.2 132.6
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="60">
+<div id="bdcd5d89" class="cell" data-execution_count="60">
 <div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>Chem.MolFromSmiles(<span class="st">'C[C@H](F)Cl'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="60">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -4500,19 +4557,19 @@ L 233.2 6.8
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="61">
+<div id="a7e7478e" class="cell" data-execution_count="61">
 <div class="sourceCode cell-code" id="cb93"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>mol.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'C[C@H](F)Cl'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="61">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="62">
+<div id="414698a2" class="cell" data-execution_count="62">
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>mol.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'C[C@H](F)Cl'</span>),useChirality<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="62">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="63">
+<div id="d340799e" class="cell" data-execution_count="63">
 <div class="sourceCode cell-code" id="cb97"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>Chem.MolFromSmiles(<span class="st">'C[C@@H](F)Cl'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="63">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -4567,19 +4624,19 @@ L 233.2 6.8
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="64">
+<div id="ed9d1666" class="cell" data-execution_count="64">
 <div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>mol.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'C[C@@H](F)Cl'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="64">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="65">
+<div id="15397f24" class="cell" data-execution_count="65">
 <div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>mol.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'C[C@@H](F)Cl'</span>),useChirality<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="65">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="66">
+<div id="0e2fdae0" class="cell" data-execution_count="66">
 <div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>Chem.MolFromSmiles(<span class="st">'CC(F)Cl'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="66">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -4629,20 +4686,20 @@ L 231.3 6.8
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="67">
+<div id="91c63e6d" class="cell" data-execution_count="67">
 <div class="sourceCode cell-code" id="cb103"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>mol.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'CC(F)Cl'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="67">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="68">
+<div id="13d476d0" class="cell" data-execution_count="68">
 <div class="sourceCode cell-code" id="cb105"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>mol.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'CC(F)Cl'</span>),useChirality<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="68">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Notice that when useChirality is set a non-chiral query does match a chiral molecule. The same is not true for a chiral query and a non-chiral molecule:</p>
-<div class="cell" data-execution_count="69">
+<div id="0f96dd22" class="cell" data-execution_count="69">
 <div class="sourceCode cell-code" id="cb107"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>Chem.MolFromSmiles(<span class="st">'CC(F)Cl'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="69">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -4692,13 +4749,13 @@ L 231.3 6.8
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="70">
+<div id="faf5367f" class="cell" data-execution_count="70">
 <div class="sourceCode cell-code" id="cb108"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>mol.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'CC(F)Cl'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="70">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="71">
+<div id="a8dd46cc" class="cell" data-execution_count="71">
 <div class="sourceCode cell-code" id="cb110"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a>mol2 <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'CCC(F)Cl'</span>)</span>
 <span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>mol2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="71">
@@ -4750,7 +4807,7 @@ L 264.2 119.9
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="72">
+<div id="6067be84" class="cell" data-execution_count="72">
 <div class="sourceCode cell-code" id="cb111"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>mol2.HasSubstructMatch(Chem.MolFromSmiles(<span class="st">'C[C@H](F)Cl'</span>),useChirality<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="72">
 <pre><code>False</code></pre>
@@ -4761,7 +4818,7 @@ L 264.2 119.9
 <section id="synthetic-accessibility" class="level1">
 <h1>Synthetic accessibility</h1>
 <p>Synthetic accessibility is a measure of how easy or difficult it is to synthesize a given molecule using established chemical methods. SAscores can be useful for prioritizing compounds for synthesis and for identifying potentially problematic structures that may be difficult or costly to synthesize.The SA_score ranges from 1 to 10, with higher scores indicating greater synthetic accessibility.</p>
-<div class="cell" data-execution_count="73">
+<div id="7853a8c2" class="cell" data-execution_count="73">
 <div class="sourceCode cell-code" id="cb113"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>sys.path.append(os.path.join(RDConfig.RDContribDir, <span class="st">'SA_Score'</span>)) <span class="co">#Load SA_score from rdkit contrib</span></span>
 <span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a><span class="co"># now you can import sascore!</span></span>
@@ -4776,7 +4833,7 @@ L 264.2 119.9
 </section>
 <section id="clustering-molecules" class="level1">
 <h1>Clustering molecules</h1>
-<div class="cell" data-execution_count="74">
+<div id="c87dbb91" class="cell" data-execution_count="74">
 <div class="sourceCode cell-code" id="cb115"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> DataStructs</span>
 <span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.ML.Cluster <span class="im">import</span> Butina</span>
@@ -4792,33 +4849,33 @@ L 264.2 119.9
 <pre><code>50</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="75">
+<div id="061e68d6" class="cell" data-execution_count="75">
 <div class="sourceCode cell-code" id="cb117"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a>fps <span class="op">=</span> [] <span class="co">#Store fingerprint of all the molecules</span></span>
 <span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> mol <span class="kw">in</span> mollist:</span>
 <span id="cb117-4"><a href="#cb117-4" aria-hidden="true" tabindex="-1"></a>    fp <span class="op">=</span> AllChem.GetMorganFingerprintAsBitVect(mol, <span class="dv">2</span>) <span class="co">#Calculte ECFP4 fingerprint</span></span>
 <span id="cb117-5"><a href="#cb117-5" aria-hidden="true" tabindex="-1"></a>    fps.append(fp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="76">
+<div id="899c082f" class="cell" data-execution_count="76">
 <div class="sourceCode cell-code" id="cb118"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(fps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="76">
 <pre><code>50</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="77">
+<div id="b14720df" class="cell" data-execution_count="77">
 <div class="sourceCode cell-code" id="cb120"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>distance_matrix <span class="op">=</span> [] <span class="co">#Store distance matrix</span></span>
 <span id="cb120-2"><a href="#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, fp <span class="kw">in</span> <span class="bu">enumerate</span>(fps):</span>
 <span id="cb120-3"><a href="#cb120-3" aria-hidden="true" tabindex="-1"></a>  similarities <span class="op">=</span> DataStructs.BulkTanimotoSimilarity(fps[i], fps[:i<span class="op">+</span><span class="dv">1</span>]) <span class="co">#Calculate taniomoto similarity between vectors</span></span>
 <span id="cb120-4"><a href="#cb120-4" aria-hidden="true" tabindex="-1"></a>  distance_matrix.extend([<span class="dv">1</span><span class="op">-</span>sim <span class="cf">for</span> sim <span class="kw">in</span> similarities])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="78">
+<div id="147015a5" class="cell" data-execution_count="78">
 <div class="sourceCode cell-code" id="cb121"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a>clusters <span class="op">=</span> Butina.ClusterData(distance_matrix, <span class="bu">len</span>(fps), <span class="fl">0.2</span>, isDistData<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>[00:43:14] WARNING: Distance matrix is too long
 </code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="79">
+<div id="731934fa" class="cell" data-execution_count="79">
 <div class="sourceCode cell-code" id="cb123"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="bu">id</span>,clust <span class="kw">in</span> <span class="bu">enumerate</span>(clusters):</span>
 <span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"cluster-id: </span><span class="sc">{</span><span class="bu">id</span><span class="sc">}</span><span class="ss">"</span>,clust)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4847,23 +4904,27 @@ cluster-id: 21 (2, 1)
 cluster-id: 22 (0,)</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="80">
+<div id="f5a3b832" class="cell" data-execution_count="80">
 <div class="sourceCode cell-code" id="cb125"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="co">#View the cluster-0</span></span>
 <span id="cb125-2"><a href="#cb125-2" aria-hidden="true" tabindex="-1"></a>cluster0 <span class="op">=</span> [mollist[f] <span class="cf">for</span> f <span class="kw">in</span> clusters[<span class="dv">0</span>]]</span>
 <span id="cb125-3"><a href="#cb125-3" aria-hidden="true" tabindex="-1"></a>prop_legends <span class="op">=</span> [<span class="ss">f"</span><span class="sc">{</span>mol<span class="sc">.</span>GetProp(<span class="st">'_Name'</span>)<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>Chem<span class="sc">.</span>rdMolDescriptors<span class="sc">.</span>CalcExactMolWt(mol)<span class="sc">:.1f}</span><span class="ss">g/mol"</span> <span class="cf">for</span> mol <span class="kw">in</span> cluster0]</span>
 <span id="cb125-4"><a href="#cb125-4" aria-hidden="true" tabindex="-1"></a>Draw.MolsToGridImage(cluster0, molsPerRow<span class="op">=</span><span class="dv">4</span>, subImgSize<span class="op">=</span>(<span class="dv">350</span>, <span class="dv">200</span>), legends<span class="op">=</span>prop_legends)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="80">
-<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-84-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="2023-04-23-RDkit-cheatsheet_files/figure-html/cell-84-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="bond-order-pdb" class="level1">
 <h1>Bond order PDB</h1>
-<div class="cell" data-execution_count="81">
+<div id="69ff82f0" class="cell" data-execution_count="81">
 <div class="sourceCode cell-code" id="cb126"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a>template_lig <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'COc1cc2c(cc1OCCCN3CCOCC3)/C(=N/c4ccc(c(c4)Cl)F)/N=CN2'</span>) <span class="co">#Gefitinib</span></span>
 <span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a>input_pdb <span class="op">=</span> Chem.MolFromPDBFile(<span class="st">'data/lig.pdb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="82">
+<div id="c212a81e" class="cell" data-execution_count="82">
 <div class="sourceCode cell-code" id="cb127"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a>template_lig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="82">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -5104,7 +5165,7 @@ L 271.7 30.5
 </svg>
 </div>
 </div>
-<div class="cell" data-execution_count="83">
+<div id="8664a1c3" class="cell" data-execution_count="83">
 <div class="sourceCode cell-code" id="cb128"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a>mols2grid.display([input_pdb],size<span class="op">=</span>(<span class="dv">400</span>,<span class="dv">400</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -5669,7 +5730,7 @@ listObj.on(&quot;updated&quot;, function (list) {
 </iframe>
 </div>
 </div>
-<div class="cell" data-execution_count="84">
+<div id="6c5cab6c" class="cell" data-execution_count="84">
 <div class="sourceCode cell-code" id="cb129"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a>new_lig <span class="op">=</span> AllChem.AssignBondOrdersFromTemplate(template_lig,input_pdb) <span class="co">#This function will add bond order from template mol</span></span>
 <span id="cb129-2"><a href="#cb129-2" aria-hidden="true" tabindex="-1"></a>mols2grid.display([new_lig],size<span class="op">=</span>(<span class="dv">400</span>,<span class="dv">400</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -6243,7 +6304,7 @@ listObj.on(&quot;updated&quot;, function (list) {
 <section id="join-two-molecule" class="level1">
 <h1>Join two molecule</h1>
 <p>molzip lets you take a molecule containing multiple fragments and “zip” them together. The atoms which should be bonded in the final molecule are labelled by connecting them to dummy atoms. The code identifies matching dummy atoms (by default this means dummies with the same isotopic label) in the fragments, adds bonds between the atoms connected to the dummies, and then removes the dummies.</p>
-<div class="cell" data-execution_count="85">
+<div id="689addf8" class="cell" data-execution_count="85">
 <div class="sourceCode cell-code" id="cb131"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> Chem.MolFromSmiles(<span class="st">'[*:1]c1nc([*:2])ncc1.CO[*:1].[*:2]N(C)C'</span>)</span>
 <span id="cb131-2"><a href="#cb131-2" aria-hidden="true" tabindex="-1"></a>sample</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="85">
@@ -6534,7 +6595,7 @@ L 223.3 28.2
 <p>Now the molzip will take the fragments frag1 and combine to frag3 by search dummy atom labels [*:1]</p>
 <p>similary frag2 is attached to frag3 by searching dummy atom label [*:2].</p>
 <p>By specifying at which particular point the fragments to be connected by the dummy atom labelling the molecules could be combined.</p>
-<div class="cell" data-execution_count="86">
+<div id="c1c3783e" class="cell" data-execution_count="86">
 <div class="sourceCode cell-code" id="cb132"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>Chem.molzip(sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="86">
 <!--?xml version='1.0' encoding='iso-8859-1'?-->
@@ -6684,6 +6745,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -6750,13 +6838,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'alternate';
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -6791,18 +6881,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -6834,11 +6913,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -6848,8 +6966,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -6861,7 +6988,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -6905,6 +7155,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -6930,6 +7181,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -6990,6 +7267,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

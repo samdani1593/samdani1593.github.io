@@ -6,6 +6,7 @@
       "/archives/CRL_structures_modelling.html",
       "/archives/Cheminformatics.html",
       "/archives/Computational_Electrophysiology.html",
+      "/archives/Cosolvent_MD_simulation.html",
       "/archives/Covalent_kinase_inhibitors.html",
       "/archives/DeepLearning.html",
       "/archives/Enhanced_sampling.html",
@@ -25,6 +26,7 @@
       "/archives/MD_simulation_workflows.html",
       "/archives/Molecular_Docking.html",
       "/archives/Molecule_synthesizability.html",
+      "/archives/Non-Covalent_Interactions.html",
       "/archives/PDB_Structure_Quality.html",
       "/archives/PMX.html",
       "/archives/PROTAC_Permeability.html",
@@ -46,43 +48,28 @@
     "listing": "/posts.html",
     "items": [
       "/posts/2023-04-23-RDkit-cheatsheet.html",
-      "/posts/2023-05-21-PLIP-cheatsheet.html",
       "/posts/2023-05-21-PROTAC_enumeration.html",
+      "/posts/2023-05-21-PLIP-cheatsheet.html",
       "/posts/2023-04-24-Prody-cheatsheet.html"
     ]
   },
   {
     "listing": "/toolbox.html",
     "items": [
-      "/toolbox/Cheminformatics.html",
-      "/toolbox/Cheminformatics_blogs.html",
-      "/toolbox/Free_energy_Pertrurbation.html",
-      "/toolbox/Ligand_Parameterization.html",
-      "/toolbox/Molecular_Docking.html",
-      "/toolbox/Molecular_Dynamics_Simulation.html",
-      "/toolbox/Molecular_Modelling.html",
       "/toolbox/Molecule_Descriptor_Calculation.html",
       "/toolbox/Molecule_Synthesizability.html",
+      "/toolbox/Cheminformatics.html",
+      "/toolbox/Molecular_Dynamics_Simulation.html",
+      "/toolbox/Free_energy_Pertrurbation.html",
       "/toolbox/PROTAC_modelling.html",
+      "/toolbox/Quantum_Mechanics.html",
+      "/toolbox/Molecular_Docking.html",
       "/toolbox/Protein_pKa.html",
+      "/toolbox/Molecular_Modelling.html",
+      "/toolbox/Cheminformatics_blogs.html",
       "/toolbox/QM_MM_Simulation.html",
-      "/toolbox/Quantum_Mechanics.html"
-    ]
-  },
-  {
-    "listing": "/archives/DeepLearning_Binding_Affinity_predictions.html",
-    "items": [
-      "/archives/Enhanced_samplng.html",
-      "/archives/Fast_Molecule_generation.html",
-      "/archives/Fragment_Based_Drug_Design.html",
-      "/archives/Ligand_pKa.html",
-      "/archives/Ligand_preparation_for_VS.html",
-      "/archives/Solubility.html",
-      "/archives/PROTAC.html",
-      "/archives/PROTAC_Permeability.html",
-      "/archives/Positional_Analogue_Scanning.html",
-      "/archives/Quantum_Mechanics.html",
-      "/archives/Ultra_Large_Virtual_screening.html"
+      "/toolbox/Ligand_Parameterization.html",
+      "/toolbox/Cosolvent_MD_simulation.html"
     ]
   }
 ]
